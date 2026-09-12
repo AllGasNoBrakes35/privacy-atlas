@@ -1,5 +1,8 @@
 # Privacy Atlas — Esmeralda testnet contract
 
+Public dashboard: https://privacy-atlas-john.johnnytsunami14.chatgpt.site
+Public access enabled on 2026-09-12. This hosting setting is not stored in the contract.
+
 **Status: deployed on Esmeralda testnet.** The publisher supplied accepted wallet receipts for template publication and component creation. See [deployment details](artifacts/deployment.json) for the exact addresses, transaction IDs and immutable research URL. The dashboard verifies saved research bytes against the recorded fingerprint without requiring a wallet. It does not perform a live indexer query.
 
 ## What this contract does

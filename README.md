@@ -1,5 +1,10 @@
 # Privacy Atlas
 
+**Public website:** [Open Privacy Atlas](https://privacy-atlas-john.johnnytsunami14.chatgpt.site)
+
+The website is publicly accessible. Hosting access is managed separately from
+the immutable Ootle testnet record; making the site public does not change that record.
+
 An immutable Ootle research-snapshot component is deployed on **Esmeralda testnet**.
 See [`contracts/`](contracts/README.md) for the accepted deployment details.
 The dashboard checks saved research bytes against the receipt-recorded fingerprint;
