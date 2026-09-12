@@ -1,0 +1,2523 @@
+{
+  "schema": "privacy-atlas-research-v1",
+  "marketSnapshotFetchedAt": "2026-09-11T23:17:02.534Z",
+  "forecastModelReviewed": "2026-09-12",
+  "limitations": "Editorial research and speculative scenarios, not verified facts or guaranteed returns. The on-chain commitment establishes data integrity only. Refreshed browser quotes are not part of this saved edition.",
+  "sourceFileHashes": {
+    "dist/profiles.js": "b59bb4c2fbb7bb526e763e73b4a1f354288387fbfbe082121fced187838b3721",
+    "dist/privacy-scores.js": "ed5c362bf35fba2e94e24dcfc91d026eacb4828bcb0e52dfaab929d709a5173f",
+    "dist/forecasts.js": "f96971503d2ea22843266266f49cc6e2e02fc1196f3a50cc907600a0ff5c70c4",
+    "dist/data/snapshot.json": "7310a68d6ffe39b2f60406dd0590cff46e605a0ef6e32f186a605fe7cd899d0e"
+  },
+  "assets": [
+    {
+      "id": "zcash",
+      "name": "Zcash",
+      "symbol": "zec",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 1159.89,
+      "circulatingSupply": 16925695.4780448,
+      "profile": {
+        "mode": "Optional",
+        "protocol": "Shielded transfers use zero-knowledge proofs; transparent transfers also exist. Shielded-to-shielded protection must not be assumed for every transfer.",
+        "goal": "Usable encrypted electronic cash, including private payments and encrypted memos.",
+        "economics": "Supply cap of 21 million; mining issuance and development funding should be reviewed alongside circulating supply.",
+        "risks": "Privacy depends on the transaction path and wallet support. Shielded usage, pool transitions and implementation security affect the thesis.",
+        "sources": [
+          "https://z.cash/",
+          "https://z.cash/learn/what-is-the-difference-between-shielded-and-transparent-zcash/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 8,
+        "reason": "Shielded-to-shielded transfers conceal transaction details with zero-knowledge proofs. Transparent transfers and movement between pools make privacy dependent on the chosen path.",
+        "sources": [
+          "https://z.cash/learn/what-is-the-difference-between-shielded-and-transparent-zcash/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.08,
+        "adoption": 0.04,
+        "dilution": 0.04,
+        "meritReason": "Shielded payments and zero-knowledge engineering support technical differentiation.",
+        "adoptionReason": "Wallet usability may broaden use; transparent transfers do not establish shielded adoption."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 1249.112307692308,
+            "low": 858.7647115384617,
+            "high": 1639.459903846154,
+            "cap": 21987778319.392914,
+            "futureSupply": 17602723.297166593,
+            "growth": 0.12,
+            "anchorCap": 19631944928.029385
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 1448.6746290395997,
+            "low": 470.74851837199895,
+            "high": 3275.433530160092,
+            "cap": 27581469123.846474,
+            "futureSupply": 19039105.518215388,
+            "growth": 0.12,
+            "anchorCap": 19631944928.029385
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 1680.1196881169326,
+            "low": 258.04992283908865,
+            "high": 6543.901918752722,
+            "cap": 34598194868.953026,
+            "futureSupply": 20592696.528501764,
+            "growth": 0.12,
+            "anchorCap": 19631944928.029385
+          }
+        }
+      ]
+    },
+    {
+      "id": "monero",
+      "name": "Monero",
+      "symbol": "xmr",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 515.9,
+      "circulatingSupply": 18803411.04251033,
+      "profile": {
+        "mode": "Default",
+        "protocol": "Ring signatures, RingCT and stealth addresses conceal the spending source, amount and destination.",
+        "goal": "Private, fungible digital cash with permissionless mining and continued privacy research.",
+        "economics": "Ongoing tail emission: 0.6 XMR per block; no fixed lifetime cap. Mining rewards are issuance, not holder yield.",
+        "risks": "Exchange access, wallet/network metadata and transaction-analysis research remain relevant. Privacy does not guarantee anonymity in every use case.",
+        "sources": [
+          "https://www.getmonero.org/get-started/faq/",
+          "https://www.getmonero.org/resources/about/",
+          "https://www.getmonero.org/resources/moneropedia/tail-emission.html"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 9,
+        "reason": "Mandatory sender, recipient and amount protections provide strong everyday transaction privacy. Ring-based decoys and network or user metadata still leave analysis risks.",
+        "sources": [
+          "https://www.getmonero.org/get-started/faq/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.08,
+        "adoption": 0.04,
+        "dilution": 0.01,
+        "meritReason": "Default private cash and ongoing protocol research support a differentiated use case.",
+        "adoptionReason": "Payment utility supports the thesis; exchange access limits distribution."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 573.0029618702988,
+            "low": 393.9395362858304,
+            "high": 752.0663874547671,
+            "cap": 10864761327.65081,
+            "futureSupply": 18961091.04251033,
+            "growth": 0.12,
+            "anchorCap": 9700679756.83108
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 707.0158598877822,
+            "low": 229.7456322047457,
+            "high": 1598.5531929738165,
+            "cap": 13628756609.405178,
+            "futureSupply": 19276451.04251033,
+            "growth": 0.12,
+            "anchorCap": 9700679756.83108
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 872.6050008211661,
+            "low": 134.02357863163917,
+            "high": 3398.7111630046143,
+            "cap": 17095912290.837858,
+            "futureSupply": 19591811.04251033,
+            "growth": 0.12,
+            "anchorCap": 9700679756.83108
+          }
+        }
+      ]
+    },
+    {
+      "id": "decred",
+      "name": "Decred",
+      "symbol": "dcr",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 15.88,
+      "circulatingSupply": 17598043.62355595,
+      "profile": {
+        "mode": "Optional",
+        "protocol": "Privacy tools complement a public base ledger; amounts are not confidential merely because outputs are mixed.",
+        "goal": "Digital currency with stakeholder participation and governance.",
+        "economics": "Governance and issuance require separate assessment from circulating supply; mixing does not create investment yield.",
+        "risks": "Public-ledger analysis and user behavior limit privacy. Do not treat mixing as equivalent to shielded transfers.",
+        "sources": [
+          "https://docs.decred.org/privacy/general-privacy/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 3,
+        "reason": "Mixing can reduce direct ownership links, but public amounts and a transparent base ledger leave considerable information available for analysis.",
+        "sources": [
+          "https://docs.decred.org/privacy/general-privacy/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.05,
+        "adoption": 0,
+        "dilution": 0.04,
+        "meritReason": "Stakeholder governance adds utility; mixing provides limited ledger confidentiality.",
+        "adoptionReason": "Broader demand depends on governance and payment usefulness, beyond privacy branding."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 16.032692307692308,
+            "low": 10.688461538461539,
+            "high": 21.376923076923074,
+            "cap": 293429779.37917197,
+            "futureSupply": 18301965.36849819,
+            "growth": 0.05,
+            "anchorCap": 279456932.7420685
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 16.342495626137918,
+            "low": 4.842220926263088,
+            "high": 38.737767410104674,
+            "cap": 323506331.76553714,
+            "futureSupply": 19795405.742567644,
+            "growth": 0.05,
+            "anchorCap": 279456932.7420685
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 16.658285343765773,
+            "low": 2.193683666668744,
+            "high": 70.19787733339975,
+            "cap": 356665730.77150476,
+            "futureSupply": 21410710.851161163,
+            "growth": 0.05,
+            "anchorCap": 279456932.7420685
+          }
+        }
+      ]
+    },
+    {
+      "id": "zano",
+      "name": "Zano",
+      "symbol": "zano",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 6.08,
+      "circulatingSupply": 15452122.3,
+      "profile": {
+        "mode": "Default",
+        "protocol": "Confidential transfers and confidential assets; privacy also extends to the staking design.",
+        "goal": "Private payments, confidential asset issuance and applications built around financial privacy.",
+        "economics": "Hybrid mining and staking economics; assess emission and fee-burning rules separately from nominal staking rewards.",
+        "risks": "Application demand, market liquidity and cryptographic implementation are key uncertainties.",
+        "sources": [
+          "https://zano.org/",
+          "https://docs.zano.org/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 9,
+        "reason": "Amounts, addresses and asset types are hidden by default. This is strong protocol coverage, but does not remove wallet, network or implementation risks.",
+        "sources": [
+          "https://docs.zano.org/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.07,
+        "adoption": 0.05,
+        "dilution": 0.04,
+        "meritReason": "Confidential assets and private staking expand functionality beyond payments.",
+        "adoptionReason": "Applications offer potential demand; sustained usage and liquidity remain unverified."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 6.547692307692308,
+            "low": 4.501538461538463,
+            "high": 8.593846153846155,
+            "cap": 105222772.01408002,
+            "futureSupply": 16070207.192000002,
+            "growth": 0.12000000000000001,
+            "anchorCap": 93948903.584
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 7.593773327264454,
+            "low": 2.467605541647703,
+            "high": 17.169417671825226,
+            "cap": 131991445.214462,
+            "futureSupply": 17381536.0988672,
+            "growth": 0.12000000000000001,
+            "anchorCap": 93948903.584
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 8.806979716827414,
+            "low": 1.3526657966373181,
+            "high": 34.30232493255097,
+            "cap": 165570068.87702116,
+            "futureSupply": 18799869.444534767,
+            "growth": 0.12000000000000001,
+            "anchorCap": 93948903.584
+          }
+        }
+      ]
+    },
+    {
+      "id": "nockchain",
+      "name": "Nockchain",
+      "symbol": "nock",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.03647551,
+      "circulatingSupply": 2312454144,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "pirate-chain",
+      "name": "Pirate Chain",
+      "symbol": "arrr",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.236541,
+      "circulatingSupply": 196213797.97055,
+      "profile": {
+        "mode": "Default",
+        "protocol": "Mandatory shielded peer-to-peer transfers use zk-SNARKs.",
+        "goal": "Private digital cash and payment integrations; ongoing wallet and protocol upgrades.",
+        "economics": "Review current mining emission and supply rules; a privacy claim is not proof of supply integrity.",
+        "risks": "Upgrade coordination, implementation security and exchange access remain important. Project statements of absolute privacy should not be read as guarantees.",
+        "sources": [
+          "https://piratechain.com/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 9,
+        "reason": "Mandatory shielded peer-to-peer transactions conceal sender, recipient and amount. Shielding does not guarantee network anonymity; cryptographic assumptions and upgrade adoption still matter.",
+        "sources": [
+          "https://piratechain.com/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.04,
+        "adoption": -0.01,
+        "dilution": 0.01,
+        "meritReason": "Mandatory shielded transfers provide a focused private-cash design.",
+        "adoptionReason": "Wallet integrations help accessibility, but demand and exchange depth remain uncertain."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.24122498019801977,
+            "low": 0.15925532673267329,
+            "high": 0.3231946336633663,
+            "cap": 47804986.22532442,
+            "futureSupply": 198175935.9502555,
+            "growth": 0.03,
+            "anchorCap": 46412607.98575187
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.25087303351836016,
+            "low": 0.07218867079814541,
+            "high": 0.6033642391417652,
+            "cap": 50716309.88644668,
+            "futureSupply": 202159272.26285565,
+            "growth": 0.03,
+            "anchorCap": 46412607.98575187
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.26090697113971995,
+            "low": 0.03272232269097386,
+            "high": 1.1264060945216914,
+            "cap": 53804933.158531286,
+            "futureSupply": 206222673.63533905,
+            "growth": 0.03,
+            "anchorCap": 46412607.98575187
+          }
+        }
+      ]
+    },
+    {
+      "id": "verge",
+      "name": "Verge",
+      "symbol": "xvg",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00256609,
+      "circulatingSupply": 16521951234.841335,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "zcoin",
+      "name": "Firo",
+      "symbol": "firo",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.738984,
+      "circulatingSupply": 19023769.57599005,
+      "profile": {
+        "mode": "Shielded",
+        "protocol": "Lelantus Spark conceals sender, recipient and amount without a trusted setup. Transparent paths exist.",
+        "goal": "The published roadmap includes Spark Assets and private asset swaps. Roadmap items are goals, not guaranteed deliveries.",
+        "economics": "Check current issuance and funding allocations in the project specifications; provider supply fields alone do not establish an unlock schedule.",
+        "risks": "Adoption, exchange depth and delivery of privacy assets/swaps are key execution risks.",
+        "sources": [
+          "https://firo.org/pillars/private/",
+          "https://firo.org/about/roadmap/",
+          "https://firo.org/about/faq/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 8,
+        "reason": "Spark offers sender, recipient and amount privacy without a trusted setup. Transparent paths and how coins enter or leave private use remain relevant.",
+        "sources": [
+          "https://firo.org/pillars/private/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.06,
+        "adoption": 0.01,
+        "dilution": 0.05,
+        "meritReason": "Spark and private-asset tooling offer technical differentiation.",
+        "adoptionReason": "Asset and swap plans require delivery and repeat users to create demand."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.7530598857142857,
+            "low": 0.5067318857142857,
+            "high": 0.9993878857142856,
+            "cap": 15042339.629887473,
+            "futureSupply": 19974958.054789554,
+            "growth": 0.06999999999999999,
+            "anchorCap": 14058261.336343432
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.782021100366699,
+            "low": 0.23826740095626828,
+            "high": 1.827814723586653,
+            "cap": 17221974.642258167,
+            "futureSupply": 22022391.255405486,
+            "growth": 0.06999999999999999,
+            "anchorCap": 14058261.336343432
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.8120961068569921,
+            "low": 0.11203430444964126,
+            "high": 3.342952933006918,
+            "cap": 19717438.76792138,
+            "futureSupply": 24279686.35908455,
+            "growth": 0.06999999999999999,
+            "anchorCap": 14058261.336343432
+          }
+        }
+      ]
+    },
+    {
+      "id": "minotari",
+      "name": "MinoTari (Tari)",
+      "symbol": "xtm",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00173049,
+      "circulatingSupply": 6473570541,
+      "profile": {
+        "mode": "Layer-dependent",
+        "protocol": "Tari privacy properties must be evaluated separately for its base layer and Ootle resources; not every application state is private.",
+        "goal": "The September 2026 update targets programmable privacy through Ootle and community-led governance; launch plans are not proof of delivery.",
+        "economics": "21 billion XTM is an emission target, not a hard lifetime cap: the published policy includes perpetual 1% tail emission and a 30% premine with vesting.",
+        "risks": "Unlocks, application adoption and execution risk; wrapped XTM introduces distinct bridge and liquidity risks.",
+        "sources": [
+          "https://tari.com/tokenomics",
+          "https://tari.com/updates/2026-09-01-update-143",
+          "https://ootle.tari.com/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 6,
+        "reason": "Rates native base-layer XTM: default confidentiality is valuable, but Mimblewimble-style confidentiality should not be equated with complete transaction-graph concealment. This rating does not cover wrapped XTM or Ootle applications.",
+        "sources": [
+          "https://tari.com/",
+          "https://rfc.tari.com/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.05,
+        "adoption": 0.07,
+        "dilution": 0.25,
+        "meritReason": "Programmable privacy is a promising design thesis with delivery risk.",
+        "adoptionReason": "Ootle applications could create demand; goals are not evidence of live adoption or XTM value capture."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.00155051904,
+            "low": 0.00106598184,
+            "high": 0.0020350562400000003,
+            "cap": 12546742.975754501,
+            "futureSupply": 8091963176.25,
+            "growth": 0.12000000000000001,
+            "anchorCap": 11202449.08549509
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.0012447814936166403,
+            "low": 0.0004044932050790402,
+            "high": 0.002814433938570241,
+            "cap": 15738634.38878645,
+            "futureSupply": 12643692462.890625,
+            "growth": 0.12000000000000001,
+            "anchorCap": 11202449.08549509
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.000999330499579337,
+            "low": 0.00015348737362647235,
+            "high": 0.0038922945906281195,
+            "cap": 19742542.977293726,
+            "futureSupply": 19755769473.2666,
+            "growth": 0.12000000000000001,
+            "anchorCap": 11202449.08549509
+          }
+        }
+      ]
+    },
+    {
+      "id": "ycash",
+      "name": "Ycash",
+      "symbol": "yec",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.569611,
+      "circulatingSupply": 16917518.75,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "xeqm-labs",
+      "name": "Exiom",
+      "symbol": "xeqm",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.02725985,
+      "circulatingSupply": 280149003,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "epic-cash",
+      "name": "Epic Private Internet Cash",
+      "symbol": "epic",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.300724,
+      "circulatingSupply": 19275959,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "blackcoin-3",
+      "name": "BLACKCOIN",
+      "symbol": "blackcoin",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00519746,
+      "circulatingSupply": 999972378.846169,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "particl",
+      "name": "Particl",
+      "symbol": "part",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.273593,
+      "circulatingSupply": 15895671.19296508,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "nav-coin",
+      "name": "Navio",
+      "symbol": "nav",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.04167189,
+      "circulatingSupply": 77077429,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "zclassic",
+      "name": "Zclassic",
+      "symbol": "zcl",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.295331,
+      "circulatingSupply": 10344811,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "grin",
+      "name": "Grin",
+      "symbol": "grin",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.01073749,
+      "circulatingSupply": 223786020,
+      "profile": {
+        "mode": "Default",
+        "protocol": "Mimblewimble removes public amounts and conventional addresses and supports transaction aggregation.",
+        "goal": "A minimal, community-built private currency with a simple monetary policy.",
+        "economics": "Linear issuance of one GRIN per second indefinitely; percentage inflation falls as supply grows.",
+        "risks": "Transaction graph observations, small market depth and sustainable development funding are important uncertainties.",
+        "sources": [
+          "https://grin.mw/",
+          "https://docs.grin.mw/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 6,
+        "reason": "Mimblewimble conceals amounts and avoids conventional public addresses. Aggregation helps, but observing transaction propagation can reveal links; amount confidentiality is not complete graph privacy.",
+        "sources": [
+          "https://docs.grin.mw/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.04,
+        "adoption": -0.02,
+        "dilution": 0.1,
+        "meritReason": "Minimal Mimblewimble design offers a clear technical focus.",
+        "adoptionReason": "Payment friction, funding and limited market depth constrain the adoption thesis."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.009599478160667835,
+            "low": 0.0063055395761249505,
+            "high": 0.012893416745210719,
+            "cap": 2450958.154927596,
+            "futureSupply": 255322020,
+            "growth": 0.02,
+            "anchorCap": 2402900.1518898
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.008008871725626854,
+            "low": 0.0022698399247034606,
+            "high": 0.019405843471125162,
+            "cap": 2549976.864386671,
+            "futureSupply": 318394020,
+            "growth": 0.02,
+            "anchorCap": 2402900.1518898
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.006954737225894701,
+            "low": 0.0008504599766659514,
+            "high": 0.030400638313260255,
+            "cap": 2652995.9297078927,
+            "futureSupply": 381466020,
+            "growth": 0.02,
+            "anchorCap": 2402900.1518898
+          }
+        }
+      ]
+    },
+    {
+      "id": "nerva",
+      "name": "Nerva",
+      "symbol": "xnv",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.093997,
+      "circulatingSupply": 19257743.9794,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "pivx",
+      "name": "PIVX",
+      "symbol": "pivx",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.01607464,
+      "circulatingSupply": 106663205.9118416,
+      "profile": {
+        "mode": "Optional",
+        "protocol": "SHIELD offers optional zero-knowledge privacy on a proof-of-stake chain.",
+        "goal": "Private digital cash with staking and community governance.",
+        "economics": "Staking/masternode rewards are linked to issuance; nominal rewards are not inflation-adjusted returns.",
+        "risks": "Optional privacy usage, staking economics, wallet support and market depth should be assessed.",
+        "sources": [
+          "https://pivx.org/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 7,
+        "reason": "SHIELD provides optional zero-knowledge transaction privacy. Transparent activity and the user’s choice of transfer mode limit protection across the whole network.",
+        "sources": [
+          "https://pivx.org/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.03,
+        "adoption": 0,
+        "dilution": 0.08,
+        "meritReason": "Optional shielded payments and governance provide practical functionality.",
+        "adoptionReason": "Wallet availability alone does not establish growing private-payment usage."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.015330443703703706,
+            "low": 0.010121069629629631,
+            "high": 0.020539817777777778,
+            "cap": 1766009.8153670875,
+            "futureSupply": 115196262.38478893,
+            "growth": 0.03,
+            "anchorCap": 1714572.6362787257
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.013943816636882081,
+            "low": 0.004012330758522584,
+            "high": 0.03353569013717421,
+            "cap": 1873559.813122943,
+            "futureSupply": 134364920.44561782,
+            "growth": 0.03,
+            "anchorCap": 1714572.6362787257
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.012682608942102363,
+            "low": 0.0015906222074252763,
+            "high": 0.05475425951408996,
+            "cap": 1987659.6057421304,
+            "futureSupply": 156723243.20776868,
+            "growth": 0.03,
+            "anchorCap": 1714572.6362787257
+          }
+        }
+      ]
+    },
+    {
+      "id": "xelis",
+      "name": "Xelis",
+      "symbol": "xel",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.246207,
+      "circulatingSupply": 5974620.90950768,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": 5,
+        "reason": "Homomorphic encryption protects transferred amounts and balances. This review does not establish equivalent sender/recipient unlinkability; encrypted values alone do not imply anonymity.",
+        "sources": [
+          "https://docs.xelis.io/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "loyal",
+      "name": "Loyal",
+      "symbol": "loyal",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.107078,
+      "circulatingSupply": 12494801.114466,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "dragonx-2",
+      "name": "DragonX",
+      "symbol": "drgx",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.04202581,
+      "circulatingSupply": 9290566,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "neptune-privacy",
+      "name": "Neptune Privacy",
+      "symbol": "xnt",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.160057,
+      "circulatingSupply": 2339293,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "bitcoinz",
+      "name": "BitcoinZ",
+      "symbol": "btcz",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00002164,
+      "circulatingSupply": 12604557974,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "karbo",
+      "name": "Karbo",
+      "symbol": "krb",
+      "quoteTime": "2026-09-02T22:08:40.000Z",
+      "price": 0.01938279,
+      "circulatingSupply": 10315778.93747955,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "ryo",
+      "name": "Ryo Currency",
+      "symbol": "ryo",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00289173,
+      "circulatingSupply": 62033493,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "zero",
+      "name": "Zero",
+      "symbol": "zer",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.01003401,
+      "circulatingSupply": 14652725.4,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "black-hole-2",
+      "name": "BLACK HOLE",
+      "symbol": "blkh",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00023745,
+      "circulatingSupply": 542322570.6309185,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "salvium",
+      "name": "Salvium",
+      "symbol": "sal",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00277621,
+      "circulatingSupply": 45246943.76037996,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "-7",
+      "name": "Voidify",
+      "symbol": "∅",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00011465,
+      "circulatingSupply": 959620890.297927,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "dero",
+      "name": "Dero",
+      "symbol": "dero",
+      "quoteTime": "2026-08-29T05:14:30.000Z",
+      "price": 0.00841989,
+      "circulatingSupply": 12677351,
+      "profile": {
+        "mode": "Default",
+        "protocol": "Homomorphic encryption and an account-based protocol for private transfers and applications.",
+        "goal": "Enable privacy-preserving smart contracts and services.",
+        "economics": "Verify issuance in current project specifications; do not infer a lifetime cap from a single data vendor field.",
+        "risks": "Complex cryptography, implementation review, liquidity and application adoption are key research areas.",
+        "sources": [
+          "https://docs.dero.io/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 7,
+        "reason": "Encrypted balances and private transfers provide meaningful confidentiality. The account-based and application-specific design needs separate scrutiny; broad project privacy claims are not treated as guarantees.",
+        "sources": [
+          "https://docs.dero.io/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.04,
+        "adoption": 0.01,
+        "dilution": 0.05,
+        "meritReason": "Private smart contracts offer differentiation with substantial implementation uncertainty.",
+        "adoptionReason": "Application utility must translate into sustained users and token demand."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.00841989,
+            "low": 0.00561326,
+            "high": 0.011226519999999999,
+            "cap": 112078.9959569595,
+            "futureSupply": 13311218.55,
+            "growth": 0.05,
+            "anchorCap": 106741.90091139
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.00841989,
+            "low": 0.0024947822222222225,
+            "high": 0.01995825777777777,
+            "cap": 123567.09304254786,
+            "futureSupply": 14675618.451375002,
+            "growth": 0.05,
+            "anchorCap": 106741.90091139
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.008419890000000001,
+            "low": 0.0011087920987654322,
+            "high": 0.0354813471604938,
+            "cap": 136232.72007940905,
+            "futureSupply": 16179869.342640942,
+            "growth": 0.05,
+            "anchorCap": 106741.90091139
+          }
+        }
+      ]
+    },
+    {
+      "id": "stellite",
+      "name": "Scala",
+      "symbol": "xla",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00000685,
+      "circulatingSupply": 14439015316,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "junocash",
+      "name": "JunoCash",
+      "symbol": "juno",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.04793441,
+      "circulatingSupply": 1954681.24990004,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "kryptokrona",
+      "name": "Kryptokrona",
+      "symbol": "xkr",
+      "quoteTime": "2026-08-28T15:55:00.000Z",
+      "price": 0.00014061,
+      "circulatingSupply": 608958178,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "conceal",
+      "name": "Conceal",
+      "symbol": "ccx",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00347737,
+      "circulatingSupply": 22288881,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "maryjanecoin",
+      "name": "MaryJaneCoin",
+      "symbol": "maryj",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00006892,
+      "circulatingSupply": 999999515.609124,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "machines-cash",
+      "name": "Machines-cash",
+      "symbol": "machines",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 4.70509e-7,
+      "circulatingSupply": 99999999999.99998,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "tritcoin",
+      "name": "Tritcoin",
+      "symbol": "trit",
+      "quoteTime": "2026-09-11T23:04:50.000Z",
+      "price": 0.00003416,
+      "circulatingSupply": 999103026.497904,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "prcy-coin",
+      "name": "PRivaCY Coin",
+      "symbol": "prcy",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00145886,
+      "circulatingSupply": 17211498.312714987,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "hush",
+      "name": "Hush",
+      "symbol": "hush",
+      "quoteTime": "2026-07-11T17:21:10.000Z",
+      "price": 0.00127979,
+      "circulatingSupply": 16423739,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "5ive-privacy",
+      "name": "5ive Privacy",
+      "symbol": "five",
+      "quoteTime": "2026-09-11T19:07:40.000Z",
+      "price": 1.77757e-7,
+      "circulatingSupply": 100000000000,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "nulltrace",
+      "name": "NullTrace",
+      "symbol": "null",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00001211,
+      "circulatingSupply": 995655333.285974,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "poseidon-4",
+      "name": "Poseidon",
+      "symbol": "pos",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00000961,
+      "circulatingSupply": 986896243.996728,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "lethe",
+      "name": "Lethe",
+      "symbol": "lethe",
+      "quoteTime": "2026-09-01T04:18:50.000Z",
+      "price": 0.00000941,
+      "circulatingSupply": 974904806.49,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "shady-labs",
+      "name": "Shady Labs",
+      "symbol": "shady",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.00000294,
+      "circulatingSupply": 999595997.581278,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "ghost-by-mcafee",
+      "name": "Ghost",
+      "symbol": "ghost",
+      "quoteTime": "2026-07-19T01:43:20.000Z",
+      "price": 8.01561e-7,
+      "circulatingSupply": 29491292.03608739,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "bytecoin",
+      "name": "Bytecoin",
+      "symbol": "bcn",
+      "quoteTime": "2026-09-09T18:51:20.000Z",
+      "price": 0.00003299,
+      "circulatingSupply": 0,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "spectrecoin",
+      "name": "Alias",
+      "symbol": "alias",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.04886991,
+      "circulatingSupply": 0,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "mimblewimblecoin",
+      "name": "MimbleWimbleCoin",
+      "symbol": "mwc",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 10.46,
+      "circulatingSupply": 0,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": null,
+        "reason": "Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.",
+        "sources": [],
+        "reviewed": null
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "neptune-cash",
+      "name": "Neptune Cash",
+      "symbol": "npt",
+      "quoteTime": "2026-09-11T23:10:10.000Z",
+      "price": 0.12997,
+      "circulatingSupply": 0,
+      "profile": {
+        "mode": "Unreviewed",
+        "protocol": "No editorial protocol review yet. Category inclusion is not a privacy guarantee.",
+        "goal": "Project goals not yet independently summarized. Use the project links on the market-data source to investigate.",
+        "economics": "Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.",
+        "risks": "Insufficient reviewed evidence to rank long-term prospects or privacy strength.",
+        "sources": [],
+        "reviewed": null
+      },
+      "privacy": {
+        "score": 8,
+        "reason": "The documented zk-STARK and mutator-set design targets strong transaction privacy. This provisional assessment has limited independent validation and does not extend to similarly named tokens.",
+        "sources": [
+          "https://neptune.cash/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": null,
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": null
+        },
+        {
+          "years": 3,
+          "scenario": null
+        },
+        {
+          "years": 5,
+          "scenario": null
+        }
+      ]
+    },
+    {
+      "id": "dash",
+      "name": "Dash",
+      "symbol": "dash",
+      "quoteTime": "2026-09-11T23:17:10.000Z",
+      "price": 55.77,
+      "circulatingSupply": 12825459.78087892,
+      "profile": {
+        "mode": "Optional",
+        "protocol": "CoinJoin mixes denominations; base-chain addresses and amounts remain public.",
+        "goal": "Everyday digital payments with InstantSend, governance and application infrastructure.",
+        "economics": "Block subsidy falls by roughly 7.14% per year; supply and reward allocation depend on protocol rules.",
+        "risks": "Mixing is not full ledger confidentiality. Market access, user behavior and masternode assumptions matter.",
+        "sources": [
+          "https://docs.dash.org/en/stable/docs/user/introduction/features.html"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 3,
+        "reason": "CoinJoin offers optional mixing. Public amounts, denominations and base-ledger activity remain observable; this is substantially narrower than shielded transaction privacy.",
+        "sources": [
+          "https://docs.dash.org/en/stable/docs/user/introduction/features.html"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.04,
+        "adoption": 0.01,
+        "dilution": 0.04,
+        "meritReason": "Payment and application infrastructure support a practical use case.",
+        "adoptionReason": "Merchant access can help adoption, but durable demand faces competing payment networks."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 56.30625,
+            "low": 37.5375,
+            "high": 75.07499999999999,
+            "cap": 751039686.5785983,
+            "futureSupply": 13338478.172114078,
+            "growth": 0.05,
+            "anchorCap": 715275891.9796174
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 57.39426832932692,
+            "low": 17.005709134615387,
+            "high": 136.04567307692304,
+            "cap": 828021254.4529046,
+            "futureSupply": 14426897.990958586,
+            "growth": 0.05,
+            "anchorCap": 715275891.9796174
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 58.50331068147461,
+            "low": 7.70413967821888,
+            "high": 246.53246970300398,
+            "cap": 912893433.0343275,
+            "futureSupply": 15604132.867020808,
+            "growth": 0.05,
+            "anchorCap": 715275891.9796174
+          }
+        }
+      ]
+    },
+    {
+      "id": "zephyr-protocol",
+      "name": "Zephyr Protocol",
+      "symbol": "zeph",
+      "quoteTime": "2026-09-11T23:17:10.000Z",
+      "price": 0.422876,
+      "circulatingSupply": 12999950.88306835,
+      "profile": {
+        "mode": "Default",
+        "protocol": "Monero-derived transaction privacy combined with a crypto-backed stablecoin mechanism.",
+        "goal": "Provide private, overcollateralized stable-value transfers. ZEPH is the volatile reserve asset, not the stablecoin.",
+        "economics": "Reserve backing and mint/redemption rules matter alongside ZEPH emissions. Market cap is not the reserve balance.",
+        "risks": "Collateral drawdowns, redemptions and depeg risk can dominate the investment case.",
+        "sources": [
+          "https://zephyrprotocol.com/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 8,
+        "reason": "Monero-derived transaction protections support private reserve-asset payments. Stablecoin minting and redemption introduce a more complex transaction context; this is not a rating of collateral safety.",
+        "sources": [
+          "https://zephyrprotocol.com/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.02,
+        "adoption": 0.02,
+        "dilution": 0.1,
+        "meritReason": "Private stable-value transfers address a use case, with complex reserve risk.",
+        "adoptionReason": "Demand must persist through collateral stress; ZEPH is the volatile reserve asset."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.3998100363636363,
+            "low": 0.2652585818181818,
+            "high": 0.5343614909090909,
+            "cap": 5717261.918813548,
+            "futureSupply": 14299945.971375186,
+            "growth": 0.04,
+            "anchorCap": 5497367.229628411
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.35738391349661897,
+            "low": 0.10437157917655897,
+            "high": 0.853256063293764,
+            "cap": 6183790.4913887335,
+            "futureSupply": 17302934.62536398,
+            "growth": 0.04,
+            "anchorCap": 5497367.229628411
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.31945986846111,
+            "low": 0.041067197393355154,
+            "high": 1.362459537099076,
+            "cap": 6688387.795486054,
+            "futureSupply": 20936550.896690413,
+            "growth": 0.04,
+            "anchorCap": 5497367.229628411
+          }
+        }
+      ]
+    },
+    {
+      "id": "beam",
+      "name": "BEAM",
+      "symbol": "beam",
+      "quoteTime": "2026-09-11T23:17:10.000Z",
+      "price": 0.01077807,
+      "circulatingSupply": 201543500,
+      "profile": {
+        "mode": "Default",
+        "protocol": "Mimblewimble-based confidential transactions and confidential assets.",
+        "goal": "Confidential DeFi and programmable assets through the Beam Virtual Machine.",
+        "economics": "Mining-based issuance; evaluate resource demand, issuance and funding separately from token price.",
+        "risks": "Smart-contract and cryptographic implementation risk. The official site reports a July 2026 emergency rangeproof patch; assess release adoption.",
+        "sources": [
+          "https://www.beam.mw/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "privacy": {
+        "score": 7,
+        "reason": "Confidential transactions and assets offer substantial privacy. Transaction construction and use of privacy features affect linkability; application state needs separate assessment.",
+        "sources": [
+          "https://www.beam.mw/"
+        ],
+        "reviewed": "2026-09-11"
+      },
+      "assumptions": {
+        "merit": 0.03,
+        "adoption": 0.01,
+        "dilution": 0.04,
+        "meritReason": "Confidential programmability offers utility, tempered by implementation risk.",
+        "adoptionReason": "DeFi adoption requires secure applications and durable liquidity."
+      },
+      "forecasts": [
+        {
+          "years": 1,
+          "scenario": {
+            "years": 1,
+            "price": 0.01077807,
+            "low": 0.007150834903846154,
+            "high": 0.014405305096153847,
+            "cap": 2259139.9490868,
+            "futureSupply": 209605240,
+            "growth": 0.04,
+            "anchorCap": 2172249.951045
+          }
+        },
+        {
+          "years": 3,
+          "scenario": {
+            "years": 3,
+            "price": 0.010778069999999999,
+            "low": 0.003147663182064677,
+            "high": 0.025732701531322903,
+            "cap": 2443485.768932283,
+            "futureSupply": 226709027.58400002,
+            "growth": 0.04,
+            "anchorCap": 2172249.951045
+          }
+        },
+        {
+          "years": 5,
+          "scenario": {
+            "years": 5,
+            "price": 0.01077807,
+            "low": 0.0013855421976525452,
+            "high": 0.045967226912600766,
+            "cap": 2642874.2076771576,
+            "futureSupply": 245208484.23485443,
+            "growth": 0.04,
+            "anchorCap": 2172249.951045
+          }
+        }
+      ]
+    }
+  ]
+}

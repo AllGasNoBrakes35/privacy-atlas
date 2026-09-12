@@ -1,8 +1,6 @@
 # Privacy Atlas — Esmeralda testnet contract
 
-**Status: compiled and prepared; NOT deployed.** No template address, component
-address or confirmed deployment transaction exists yet. The website currently
-remains an off-chain research dashboard.
+**Status: deployed on Esmeralda testnet.** The publisher supplied accepted wallet receipts for template publication and component creation. See [deployment details](artifacts/deployment.json) for the exact addresses, transaction IDs and immutable research URL. The dashboard verifies saved research bytes against the recorded fingerprint without requiring a wallet. It does not perform a live indexer query.
 
 ## What this contract does
 
@@ -53,20 +51,9 @@ node scripts/prepare-ootle.mjs
 The prepared WASM was built using Rust 1.98.1 and `tari_template_lib` 0.31.1,
 matching the library version used by wallet release 0.40.0. `Cargo.lock` pins
 dependencies. Validation tests check digest format. The WASM build succeeds;
-on-chain execution, access rules and fee estimation have **not** been verified
-against testnet. Run the wallet's estimate/dry-run before publication.
+component creation was accepted on testnet. The receipt contains the expected digest, URL, owner rule and public read access rules. Public read methods have not been independently called from this environment.
 
-`artifacts/SHA256SUMS` contains checksums for the exact saved WASM and research
-JSON. Hash the file bytes, including the final newline, without reformatting JSON.
-Running the preparation script resets the deployment status to not deployed.
-
-## Deployment blocker observed
-
-The local official wallet reported network `esmeralda`, version `0.40.0`, but
-account access returned `401: Access denied. No bearer token provided`.
-Separately, the public indexer `https://ootle-indexer-a.tari.com/` returned
-Cloudflare HTTP 403 / error 1010 from this execution environment. No funding,
-template publication, or component creation transaction was submitted.
+`artifacts/SHA256SUMS` contains checksums of the saved WASM and research bytes. The preparation script refuses to overwrite this deployed edition. New research needs a new edition and component.
 
 ## Official references
 

@@ -6,6 +6,8 @@ import {assumptions,projectForecast,reviewed} from '../dist/forecasts.js';
 
 const root=new URL('../',import.meta.url);
 const file=p=>new URL(p,root);
+const existing=await readFile(file('contracts/artifacts/deployment.json'),'utf8').then(JSON.parse).catch(e=>{if(e.code==='ENOENT')return null;throw e;});
+if(existing?.componentAddress)throw Error('This edition is deployed. Preserve its artifacts; prepare a new edition in a separate directory.');
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const market=JSON.parse(await readFile(file('dist/data/snapshot.json'),'utf8'));
 const wasm=await readFile(file('contracts/target/wasm32-unknown-unknown/release/privacy_atlas_snapshot.wasm'));

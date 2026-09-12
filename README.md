@@ -1,8 +1,9 @@
 # Privacy Atlas
 
-An immutable Ootle research-snapshot contract is compiled and prepared under
-[`contracts/`](contracts/README.md). **Testnet deployment is not complete**;
-see that guide for the WASM file, exact constructor arguments and remaining steps.
+An immutable Ootle research-snapshot component is deployed on **Esmeralda testnet**.
+See [`contracts/`](contracts/README.md) for the accepted deployment details.
+The dashboard checks saved research bytes against the receipt-recorded fingerprint;
+it does not perform live indexer queries. Refreshed quotes are separate from that edition.
 
 Cryptocurrency research dashboard with market comparisons, privacy protocol
 summaries, editorial privacy scores and valuation scenarios. No wallet connection is included.
