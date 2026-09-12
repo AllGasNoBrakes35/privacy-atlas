@@ -1,0 +1,1 @@
+{"name":"privacy-atlas","private":true,"type":"module","scripts":{"test":"node --test test/*.test.js","snapshot":"node scripts/snapshot.mjs"}}

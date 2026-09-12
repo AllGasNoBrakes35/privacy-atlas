@@ -1,0 +1,585 @@
+{
+  "zcash": {
+    "source": "https://api.github.com/repos/zcash/zcash/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:30.262099+00:00",
+    "people": [
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 2899
+      },
+      {
+        "name": "str4d",
+        "url": "https://github.com/str4d",
+        "commits": 2688
+      },
+      {
+        "name": "nuttycom",
+        "url": "https://github.com/nuttycom",
+        "commits": 1286
+      }
+    ]
+  },
+  "decred": {
+    "source": "https://api.github.com/repos/decred/dcrd/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:30.364461+00:00",
+    "people": [
+      {
+        "name": "davecgh",
+        "url": "https://github.com/davecgh",
+        "commits": 4463
+      },
+      {
+        "name": "dajohi",
+        "url": "https://github.com/dajohi",
+        "commits": 600
+      },
+      {
+        "name": "jrick",
+        "url": "https://github.com/jrick",
+        "commits": 523
+      }
+    ]
+  },
+  "monero": {
+    "source": "https://api.github.com/repos/monero-project/monero/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:30.486630+00:00",
+    "people": [
+      {
+        "name": "fluffypony",
+        "url": "https://github.com/fluffypony",
+        "commits": 3078
+      },
+      {
+        "name": "moneromooo-monero",
+        "url": "https://github.com/moneromooo-monero",
+        "commits": 3058
+      },
+      {
+        "name": "luigi1111",
+        "url": "https://github.com/luigi1111",
+        "commits": 1630
+      }
+    ]
+  },
+  "zano": {
+    "source": "https://api.github.com/repos/hyle-team/zano/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:30.265603+00:00",
+    "people": [
+      {
+        "name": "sowle",
+        "url": "https://github.com/sowle",
+        "commits": 2558
+      },
+      {
+        "name": "cryptozoidberg",
+        "url": "https://github.com/cryptozoidberg",
+        "commits": 2135
+      },
+      {
+        "name": "dimmarvel",
+        "url": "https://github.com/dimmarvel",
+        "commits": 98
+      }
+    ]
+  },
+  "nockchain": {
+    "source": "https://api.github.com/repos/nockchain/nockchain/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:36.744890+00:00",
+    "people": [
+      {
+        "name": "tacryt-socryp",
+        "url": "https://github.com/tacryt-socryp",
+        "commits": 253
+      },
+      {
+        "name": "bitemyapp",
+        "url": "https://github.com/bitemyapp",
+        "commits": 17
+      }
+    ]
+  },
+  "zclassic": {
+    "source": "https://api.github.com/repos/ZclassicCommunity/zclassic/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:36.554290+00:00",
+    "people": [
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 2818
+      },
+      {
+        "name": "gavinandresen",
+        "url": "https://github.com/gavinandresen",
+        "commits": 1097
+      },
+      {
+        "name": "sipa",
+        "url": "https://github.com/sipa",
+        "commits": 970
+      }
+    ]
+  },
+  "nav-coin": {
+    "source": "https://api.github.com/repos/navcoin/navcoin-core/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:36.708563+00:00",
+    "people": [
+      {
+        "name": "aguycalled",
+        "url": "https://github.com/aguycalled",
+        "commits": 1261
+      },
+      {
+        "name": "mxaddict",
+        "url": "https://github.com/mxaddict",
+        "commits": 284
+      },
+      {
+        "name": "proletesseract",
+        "url": "https://github.com/proletesseract",
+        "commits": 176
+      }
+    ]
+  },
+  "grin": {
+    "source": "https://api.github.com/repos/mimblewimble/grin/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:36.581269+00:00",
+    "people": [
+      {
+        "name": "ignopeverell",
+        "url": "https://github.com/ignopeverell",
+        "commits": 603
+      },
+      {
+        "name": "antiochp",
+        "url": "https://github.com/antiochp",
+        "commits": 574
+      },
+      {
+        "name": "quentinlesceller",
+        "url": "https://github.com/quentinlesceller",
+        "commits": 185
+      }
+    ]
+  },
+  "prcy-coin": {
+    "source": "https://api.github.com/repos/PRCYCoin/PRCYCoin/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:44.941038+00:00",
+    "people": [
+      {
+        "name": "lyricidal",
+        "url": "https://github.com/lyricidal",
+        "commits": 2118
+      },
+      {
+        "name": "lopeed",
+        "url": "https://github.com/lopeed",
+        "commits": 367
+      },
+      {
+        "name": "PRCYDev",
+        "url": "https://github.com/PRCYDev",
+        "commits": 49
+      }
+    ]
+  },
+  "minotari": {
+    "source": "https://api.github.com/repos/tari-project/tari/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:45.051741+00:00",
+    "people": [
+      {
+        "name": "SWvheerden",
+        "url": "https://github.com/SWvheerden",
+        "commits": 1290
+      },
+      {
+        "name": "sdbondi",
+        "url": "https://github.com/sdbondi",
+        "commits": 1178
+      },
+      {
+        "name": "CjS77",
+        "url": "https://github.com/CjS77",
+        "commits": 1088
+      }
+    ]
+  },
+  "zcoin": {
+    "source": "https://api.github.com/repos/firoorg/firo/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:45.107145+00:00",
+    "people": [
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 4464
+      },
+      {
+        "name": "sipa",
+        "url": "https://github.com/sipa",
+        "commits": 1304
+      },
+      {
+        "name": "gavinandresen",
+        "url": "https://github.com/gavinandresen",
+        "commits": 1101
+      }
+    ]
+  },
+  "dero": {
+    "source": "https://api.github.com/repos/deroproject/derohe/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:45.048015+00:00",
+    "people": [
+      {
+        "name": "CaptainDero",
+        "url": "https://github.com/CaptainDero",
+        "commits": 90
+      },
+      {
+        "name": "Slixe",
+        "url": "https://github.com/Slixe",
+        "commits": 14
+      },
+      {
+        "name": "8lecramm",
+        "url": "https://github.com/8lecramm",
+        "commits": 6
+      }
+    ]
+  },
+  "zephyr-protocol": {
+    "source": "https://api.github.com/repos/ZephyrProtocol/zephyr/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:50.683436+00:00",
+    "people": [
+      {
+        "name": "fluffypony",
+        "url": "https://github.com/fluffypony",
+        "commits": 3078
+      },
+      {
+        "name": "moneromooo-monero",
+        "url": "https://github.com/moneromooo-monero",
+        "commits": 3050
+      },
+      {
+        "name": "luigi1111",
+        "url": "https://github.com/luigi1111",
+        "commits": 1469
+      }
+    ]
+  },
+  "beam": {
+    "source": "https://api.github.com/repos/BeamMW/beam/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:50.836581+00:00",
+    "people": [
+      {
+        "name": "valdok",
+        "url": "https://github.com/valdok",
+        "commits": 5860
+      },
+      {
+        "name": "anatolse",
+        "url": "https://github.com/anatolse",
+        "commits": 2110
+      },
+      {
+        "name": "chapati",
+        "url": "https://github.com/chapati",
+        "commits": 1295
+      }
+    ]
+  },
+  "pivx": {
+    "source": "https://api.github.com/repos/PIVX-Project/PIVX/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:50.828406+00:00",
+    "people": [
+      {
+        "name": "furszy",
+        "url": "https://github.com/furszy",
+        "commits": 2982
+      },
+      {
+        "name": "random-zebra",
+        "url": "https://github.com/random-zebra",
+        "commits": 2764
+      },
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 2487
+      }
+    ]
+  },
+  "pirate-chain": {
+    "source": "https://api.github.com/repos/PirateNetwork/pirate/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:51.151979+00:00",
+    "people": [
+      {
+        "name": "jl777",
+        "url": "https://github.com/jl777",
+        "commits": 13790
+      },
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 2818
+      },
+      {
+        "name": "CryptoForge",
+        "url": "https://github.com/CryptoForge",
+        "commits": 1196
+      }
+    ]
+  },
+  "verge": {
+    "source": "https://api.github.com/repos/vergecurrency/verge/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:57.128988+00:00",
+    "people": [
+      {
+        "name": "justinvforvendetta",
+        "url": "https://github.com/justinvforvendetta",
+        "commits": 1548
+      },
+      {
+        "name": "marpme",
+        "url": "https://github.com/marpme",
+        "commits": 314
+      },
+      {
+        "name": "mkinney",
+        "url": "https://github.com/mkinney",
+        "commits": 187
+      }
+    ]
+  },
+  "bitcoinz": {
+    "source": "https://api.github.com/repos/btcz/bitcoinz/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:57.261392+00:00",
+    "people": [
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 2818
+      },
+      {
+        "name": "gavinandresen",
+        "url": "https://github.com/gavinandresen",
+        "commits": 1097
+      },
+      {
+        "name": "sipa",
+        "url": "https://github.com/sipa",
+        "commits": 969
+      }
+    ]
+  },
+  "karbo": {
+    "source": "https://api.github.com/repos/Karbovanets/karbowanec/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:57.248401+00:00",
+    "people": [
+      {
+        "name": "aivve",
+        "url": "https://github.com/aivve",
+        "commits": 1394
+      },
+      {
+        "name": "Lastick",
+        "url": "https://github.com/Lastick",
+        "commits": 97
+      },
+      {
+        "name": "seredat",
+        "url": "https://github.com/seredat",
+        "commits": 52
+      }
+    ]
+  },
+  "ryo": {
+    "source": "https://api.github.com/repos/ryo-currency/ryo-currency/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:56:57.181918+00:00",
+    "people": [
+      {
+        "name": "fireice-uk",
+        "url": "https://github.com/fireice-uk",
+        "commits": 260
+      },
+      {
+        "name": "psychocrypt",
+        "url": "https://github.com/psychocrypt",
+        "commits": 193
+      },
+      {
+        "name": "mosu-forge",
+        "url": "https://github.com/mosu-forge",
+        "commits": 25
+      }
+    ]
+  },
+  "salvium": {
+    "source": "https://api.github.com/repos/salvium/salvium/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:04.526208+00:00",
+    "people": [
+      {
+        "name": "jeffro256",
+        "url": "https://github.com/jeffro256",
+        "commits": 81
+      },
+      {
+        "name": "akildemir",
+        "url": "https://github.com/akildemir",
+        "commits": 61
+      },
+      {
+        "name": "somerandomcryptoguy",
+        "url": "https://github.com/somerandomcryptoguy",
+        "commits": 51
+      }
+    ]
+  },
+  "stellite": {
+    "source": "https://api.github.com/repos/scala-network/Scala/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:04.648259+00:00",
+    "people": [
+      {
+        "name": "hayzamjs",
+        "url": "https://github.com/hayzamjs",
+        "commits": 208
+      },
+      {
+        "name": "tobtoht",
+        "url": "https://github.com/tobtoht",
+        "commits": 23
+      },
+      {
+        "name": "ahmyi",
+        "url": "https://github.com/ahmyi",
+        "commits": 18
+      }
+    ]
+  },
+  "conceal": {
+    "source": "https://api.github.com/repos/ConcealNetwork/conceal-core/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:04.790978+00:00",
+    "people": [
+      {
+        "name": "cryptokatz",
+        "url": "https://github.com/cryptokatz",
+        "commits": 843
+      },
+      {
+        "name": "krypt0x",
+        "url": "https://github.com/krypt0x",
+        "commits": 318
+      },
+      {
+        "name": "AxVultis",
+        "url": "https://github.com/AxVultis",
+        "commits": 300
+      }
+    ]
+  },
+  "kryptokrona": {
+    "source": "https://api.github.com/repos/kryptokrona/kryptokrona/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:04.681211+00:00",
+    "people": [
+      {
+        "name": "zpalmtree",
+        "url": "https://github.com/zpalmtree",
+        "commits": 498
+      },
+      {
+        "name": "brandonlehmann",
+        "url": "https://github.com/brandonlehmann",
+        "commits": 336
+      },
+      {
+        "name": "RocksteadyTC",
+        "url": "https://github.com/RocksteadyTC",
+        "commits": 313
+      }
+    ]
+  },
+  "hush": {
+    "source": "https://api.github.com/repos/MyHush/hush3/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:10.728485+00:00",
+    "people": [
+      {
+        "name": "jl777",
+        "url": "https://github.com/jl777",
+        "commits": 12058
+      },
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 2818
+      },
+      {
+        "name": "leto",
+        "url": "https://github.com/leto",
+        "commits": 1127
+      }
+    ]
+  },
+  "ghost-by-mcafee": {
+    "source": "https://api.github.com/repos/ghost-coin/ghost-core/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:10.860323+00:00",
+    "people": [
+      {
+        "name": "laanwj",
+        "url": "https://github.com/laanwj",
+        "commits": 6838
+      },
+      {
+        "name": "sipa",
+        "url": "https://github.com/sipa",
+        "commits": 1890
+      },
+      {
+        "name": "gavinandresen",
+        "url": "https://github.com/gavinandresen",
+        "commits": 1101
+      }
+    ]
+  },
+  "mimblewimblecoin": {
+    "source": "https://api.github.com/repos/mwcproject/mwc-node/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:10.532548+00:00",
+    "people": [
+      {
+        "name": "ignopeverell",
+        "url": "https://github.com/ignopeverell",
+        "commits": 603
+      },
+      {
+        "name": "antiochp",
+        "url": "https://github.com/antiochp",
+        "commits": 532
+      },
+      {
+        "name": "bayk",
+        "url": "https://github.com/bayk",
+        "commits": 408
+      }
+    ]
+  },
+  "neptune-cash": {
+    "source": "https://api.github.com/repos/Neptune-Crypto/neptune-core/contributors?per_page=3",
+    "checkedAt": "2026-09-11T23:57:10.550185+00:00",
+    "people": [
+      {
+        "name": "Sword-Smith",
+        "url": "https://github.com/Sword-Smith",
+        "commits": 2347
+      },
+      {
+        "name": "aszepieniec",
+        "url": "https://github.com/aszepieniec",
+        "commits": 1206
+      },
+      {
+        "name": "dan-da",
+        "url": "https://github.com/dan-da",
+        "commits": 419
+      }
+    ]
+  }
+}

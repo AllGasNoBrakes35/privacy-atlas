@@ -1,0 +1,1141 @@
+{
+  "projects": {
+    "zcash": {
+      "id": "zcash",
+      "name": "Zcash",
+      "marketSource": "https://www.coingecko.com/en/coins/zcash",
+      "checkedAt": "2026-09-11T23:51:01.306333+00:00",
+      "hashingAlgorithm": "Equihash",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "Zero Knowledge (ZK)",
+        "Proof of Work (PoW)",
+        "Pantera Capital Portfolio",
+        "Made in USA",
+        "Coinbase 50 Index",
+        "Quantum-Resistant",
+        "Privacy"
+      ],
+      "websites": [
+        "https://z.cash/"
+      ],
+      "repositories": [
+        "https://github.com/zcash/zcash",
+        "https://github.com/zcash/librustzcash"
+      ],
+      "github": {
+        "url": "https://github.com/zcash/zcash",
+        "name": "zcash/zcash",
+        "owner": "zcash",
+        "ownerUrl": "https://github.com/zcash",
+        "description": "Zcash - Internet Money",
+        "pushedAt": "2026-07-19T15:11:43Z",
+        "license": "NOASSERTION",
+        "archived": true,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:51:07.360436+00:00",
+        "apiSource": "https://api.github.com/repos/zcash/zcash"
+      },
+      "logo": "logos/zcash.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/486/large/Brandmark-Yellow_%281%29.png?1785810558"
+    },
+    "decred": {
+      "id": "decred",
+      "name": "Decred",
+      "marketSource": "https://www.coingecko.com/en/coins/decred",
+      "checkedAt": "2026-09-11T23:51:01.525587+00:00",
+      "hashingAlgorithm": "Blake-256",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "Proof of Stake (PoS)",
+        "Proof of Work (PoW)",
+        "Blockchain Capital Portfolio",
+        "Made in USA",
+        "Privacy"
+      ],
+      "websites": [
+        "https://decred.org/"
+      ],
+      "repositories": [
+        "https://github.com/decred/dcrd",
+        "https://github.com/decred/dcrandroid",
+        "https://github.com/decred/politeiagui",
+        "https://github.com/decred/decrediton",
+        "https://github.com/decred/dcrwallet",
+        "https://github.com/decred/dcrdata"
+      ],
+      "github": {
+        "url": "https://github.com/decred/dcrd",
+        "name": "decred/dcrd",
+        "owner": "decred",
+        "ownerUrl": "https://github.com/decred",
+        "description": "Decred daemon in Go (golang).",
+        "pushedAt": "2026-09-11T15:31:12Z",
+        "license": "ISC",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:51:07.504240+00:00",
+        "apiSource": "https://api.github.com/repos/decred/dcrd"
+      },
+      "logo": "logos/decred.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/329/large/dcr.png?1762890696"
+    },
+    "monero": {
+      "id": "monero",
+      "name": "Monero",
+      "marketSource": "https://www.coingecko.com/en/coins/monero",
+      "checkedAt": "2026-09-11T23:51:01.494069+00:00",
+      "hashingAlgorithm": "RandomX",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "Proof of Work (PoW)",
+        "Galaxy Digital Portfolio",
+        "Privacy"
+      ],
+      "websites": [
+        "https://www.getmonero.org/"
+      ],
+      "repositories": [
+        "https://github.com/monero-project/monero",
+        "https://github.com/monero-project/monero-gui",
+        "https://github.com/monero-project/kastelo"
+      ],
+      "github": {
+        "url": "https://github.com/monero-project/monero",
+        "name": "monero-project/monero",
+        "owner": "monero-project",
+        "ownerUrl": "https://github.com/monero-project",
+        "description": "Monero: the secure, private, untraceable cryptocurrency",
+        "pushedAt": "2026-09-10T13:41:53Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:51:07.430462+00:00",
+        "apiSource": "https://api.github.com/repos/monero-project/monero"
+      },
+      "logo": "logos/monero.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/69/large/monero_logo.png?1696501460"
+    },
+    "zano": {
+      "id": "zano",
+      "name": "Zano",
+      "marketSource": "https://www.coingecko.com/en/coins/zano",
+      "checkedAt": "2026-09-11T23:51:19.368816+00:00",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "Proof of Stake (PoS)",
+        "Proof of Work (PoW)",
+        "Zano Ecosystem",
+        "Privacy Blockchain",
+        "Privacy Infrastructure",
+        "Privacy"
+      ],
+      "websites": [
+        "https://zano.org",
+        "https://explorer.zano.org/",
+        "https://blog.zano.org/"
+      ],
+      "repositories": [
+        "https://github.com/hyle-team/zano"
+      ],
+      "github": {
+        "url": "https://github.com/hyle-team/zano",
+        "name": "hyle-team/zano",
+        "owner": "hyle-team",
+        "ownerUrl": "https://github.com/hyle-team",
+        "description": "Confidential, Secure, Easy-to-Use",
+        "pushedAt": "2026-09-08T02:38:42Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:51:28.816371+00:00",
+        "apiSource": "https://api.github.com/repos/hyle-team/zano"
+      },
+      "logo": "logos/zano.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/8370/large/Icon-App-512x512.png?1761825305"
+    },
+    "nockchain": {
+      "id": "nockchain",
+      "name": "Nockchain",
+      "marketSource": "https://www.coingecko.com/en/coins/nockchain",
+      "checkedAt": "2026-09-11T23:51:19.454807+00:00",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Infrastructure",
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Zero Knowledge (ZK)",
+        "Base Ecosystem",
+        "Proof of Work (PoW)",
+        "Made in USA",
+        "Base Native",
+        "Privacy"
+      ],
+      "websites": [
+        "https://www.nockchain.org/"
+      ],
+      "repositories": [
+        "https://github.com/zorp-corp/nockchain"
+      ],
+      "github": {
+        "url": "https://github.com/nockchain/nockchain",
+        "name": "nockchain/nockchain",
+        "owner": "nockchain",
+        "ownerUrl": "https://github.com/nockchain",
+        "description": "Nockchain protocol monorepo",
+        "pushedAt": "2026-09-11T13:19:32Z",
+        "license": "Apache-2.0",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:51:28.993606+00:00",
+        "apiSource": "https://api.github.com/repos/zorp-corp/nockchain"
+      }
+    },
+    "pirate-chain": {
+      "id": "pirate-chain",
+      "name": "Pirate Chain",
+      "marketSource": "https://www.coingecko.com/en/coins/pirate-chain",
+      "logo": "logos/pirate-chain.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/6905/large/Pirate_Chain.png?1696507223",
+      "checkedAt": "2026-09-11T23:57:16.665621+00:00",
+      "hashingAlgorithm": "Equihash",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Zero Knowledge (ZK)",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://piratechain.com/"
+      ],
+      "repositories": [
+        "https://github.com/PirateNetwork/pirate",
+        "https://github.com/PirateNetwork/SevenSeas",
+        "https://github.com/PirateNetwork/PirateOcean"
+      ],
+      "github": {
+        "url": "https://github.com/PirateNetwork/pirate",
+        "name": "PirateNetwork/pirate",
+        "owner": "PirateNetwork",
+        "ownerUrl": "https://github.com/PirateNetwork",
+        "description": "Pirate Chain (ARRR) - Untraceable, Anonymous, Private Cryptocurrency",
+        "pushedAt": "2026-09-10T05:09:49Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:57:23.612683+00:00",
+        "apiSource": "https://api.github.com/repos/PirateNetwork/pirate"
+      }
+    },
+    "verge": {
+      "id": "verge",
+      "name": "Verge",
+      "marketSource": "https://www.coingecko.com/en/coins/verge",
+      "checkedAt": "2026-09-11T23:57:25.899191+00:00",
+      "hashingAlgorithm": "Scrypt",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Work (PoW)",
+        "Made in USA",
+        "Privacy"
+      ],
+      "websites": [],
+      "repositories": [
+        "https://github.com/vergecurrency/verge"
+      ],
+      "github": {
+        "url": "https://github.com/vergecurrency/verge",
+        "name": "vergecurrency/verge",
+        "owner": "vergecurrency",
+        "ownerUrl": "https://github.com/vergecurrency",
+        "description": "Official Verge Core Source Code Repository",
+        "pushedAt": "2026-09-09T17:13:53Z",
+        "license": "MIT",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:57:32.373824+00:00",
+        "apiSource": "https://api.github.com/repos/vergecurrency/verge"
+      }
+    },
+    "zcoin": {
+      "id": "zcoin",
+      "name": "Firo",
+      "marketSource": "https://www.coingecko.com/en/coins/zcoin",
+      "logo": "logos/zcoin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/479/large/firocoingecko.png?1696501734",
+      "checkedAt": "2026-09-11T23:57:26.038903+00:00",
+      "hashingAlgorithm": "MTP",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Masternodes",
+        "Zero Knowledge (ZK)",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://firo.org/"
+      ],
+      "repositories": [
+        "https://github.com/firoorg/firo"
+      ],
+      "github": {
+        "url": "https://github.com/firoorg/firo",
+        "name": "firoorg/firo",
+        "owner": "firoorg",
+        "ownerUrl": "https://github.com/firoorg",
+        "description": "The privacy-focused cryptocurrency",
+        "pushedAt": "2026-09-10T18:22:53Z",
+        "license": "MIT",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:57:32.472644+00:00",
+        "apiSource": "https://api.github.com/repos/firoorg/firo"
+      }
+    },
+    "ycash": {
+      "id": "ycash",
+      "name": "Ycash",
+      "marketSource": "https://www.coingecko.com/en/coins/ycash",
+      "logo": "logos/ycash.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/8978/large/ycash_white_orange_200x200.png?1737720685",
+      "checkedAt": "2026-09-11T23:57:47.150217+00:00",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Zero Knowledge (ZK)",
+        "Proof of Work (PoW)",
+        "Made in USA",
+        "Privacy"
+      ],
+      "websites": [
+        "https://y.cash/"
+      ],
+      "repositories": [
+        "https://github.com/YcashFoundation/ycash/"
+      ],
+      "github": {
+        "url": "https://github.com/ycashfoundation/ycash",
+        "name": "ycashfoundation/ycash",
+        "owner": "ycashfoundation",
+        "ownerUrl": "https://github.com/ycashfoundation",
+        "description": "Ycash",
+        "pushedAt": "2026-05-01T10:40:08Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": true,
+        "checkedAt": "2026-09-11T23:57:54.543251+00:00",
+        "apiSource": "https://api.github.com/repos/YcashFoundation/ycash"
+      }
+    },
+    "minotari": {
+      "id": "minotari",
+      "name": "MinoTari (Tari)",
+      "marketSource": "https://www.coingecko.com/en/coins/minotari",
+      "logo": "logos/minotari.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/55885/large/XTM-200x200.png?1747557841",
+      "checkedAt": "2026-09-11T23:57:47.091180+00:00",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "DePIN",
+        "Proof of Work (PoW)",
+        "Privacy Blockchain",
+        "Privacy"
+      ],
+      "websites": [
+        "https://www.tari.com"
+      ],
+      "repositories": [
+        "https://github.com/tari-project"
+      ]
+    },
+    "xeqm-labs": {
+      "id": "xeqm-labs",
+      "name": "Exiom",
+      "marketSource": "https://www.coingecko.com/en/coins/xeqm-labs",
+      "error": "Source unavailable or rate limited"
+    },
+    "epic-cash": {
+      "id": "epic-cash",
+      "name": "Epic Private Internet Cash",
+      "marketSource": "https://www.coingecko.com/en/coins/epic-cash",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/epic-cash.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/9520/large/Epic_Coin_NO_drop_shadow.png?1696509605"
+    },
+    "blackcoin-3": {
+      "id": "blackcoin-3",
+      "name": "BLACKCOIN",
+      "marketSource": "https://www.coingecko.com/en/coins/blackcoin-3",
+      "error": "Source unavailable or rate limited"
+    },
+    "particl": {
+      "id": "particl",
+      "name": "Particl",
+      "marketSource": "https://www.coingecko.com/en/coins/particl",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/particl.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/839/large/Particl.png?1696501978"
+    },
+    "zclassic": {
+      "id": "zclassic",
+      "name": "Zclassic",
+      "marketSource": "https://www.coingecko.com/en/coins/zclassic",
+      "checkedAt": "2026-09-11T23:52:30.748233+00:00",
+      "hashingAlgorithm": "Equihash",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://zclassic.org/"
+      ],
+      "repositories": [
+        "https://github.com/ZclassicCommunity/zclassic"
+      ],
+      "github": {
+        "url": "https://github.com/ZclassicCommunity/zclassic",
+        "name": "ZclassicCommunity/zclassic",
+        "owner": "ZclassicCommunity",
+        "ownerUrl": "https://github.com/ZclassicCommunity",
+        "description": "ZClassic",
+        "pushedAt": "2026-06-09T16:20:29Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": true,
+        "checkedAt": "2026-09-11T23:52:35.954744+00:00",
+        "apiSource": "https://api.github.com/repos/ZclassicCommunity/zclassic"
+      },
+      "logo": "logos/zclassic.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/540/large/zclassic.png?1696501759"
+    },
+    "nav-coin": {
+      "id": "nav-coin",
+      "name": "Navio",
+      "marketSource": "https://www.coingecko.com/en/coins/nav-coin",
+      "checkedAt": "2026-09-11T23:52:30.818031+00:00",
+      "hashingAlgorithm": "Proof of Stake",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "BNB Chain Ecosystem",
+        "Proof of Stake (PoS)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://nav.io/"
+      ],
+      "repositories": [
+        "https://github.com/nav-io",
+        "https://github.com/NAVCoin/npips",
+        "https://github.com/NAVCoin/navcoin-dev-tools"
+      ],
+      "github": {
+        "url": "https://github.com/navcoin/npips",
+        "name": "navcoin/npips",
+        "owner": "navcoin",
+        "ownerUrl": "https://github.com/navcoin",
+        "description": "NavCoin Protocol Improvement Proposals   http://www.navcoin.org",
+        "pushedAt": "2020-08-11T07:59:17Z",
+        "license": null,
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:52:35.846156+00:00",
+        "apiSource": "https://api.github.com/repos/NAVCoin/npips"
+      },
+      "logo": "logos/nav-coin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/233/large/Navio_logo.png?1750844506"
+    },
+    "pivx": {
+      "id": "pivx",
+      "name": "PIVX",
+      "marketSource": "https://www.coingecko.com/en/coins/pivx",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/pivx.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/548/large/PIVX-Shield.png?1696501766"
+    },
+    "nerva": {
+      "id": "nerva",
+      "name": "Nerva",
+      "marketSource": "https://www.coingecko.com/en/coins/nerva",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/nerva.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/5048/large/nerva-logo-300x300.png?1696505578"
+    },
+    "grin": {
+      "id": "grin",
+      "name": "Grin",
+      "marketSource": "https://www.coingecko.com/en/coins/grin",
+      "checkedAt": "2026-09-11T23:52:41.323110+00:00",
+      "hashingAlgorithm": "Multiple Algorithms",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://grin.mw/"
+      ],
+      "repositories": [
+        "https://github.com/mimblewimble/grin"
+      ],
+      "github": {
+        "url": "https://github.com/mimblewimble/grin",
+        "name": "mimblewimble/grin",
+        "owner": "mimblewimble",
+        "ownerUrl": "https://github.com/mimblewimble",
+        "description": "Minimal implementation of the Mimblewimble protocol.",
+        "pushedAt": "2026-08-11T21:07:55Z",
+        "license": "Apache-2.0",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:52:47.720660+00:00",
+        "apiSource": "https://api.github.com/repos/mimblewimble/grin"
+      },
+      "logo": "logos/grin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/7340/large/grin.png?1696507624"
+    },
+    "loyal": {
+      "id": "loyal",
+      "name": "Loyal",
+      "marketSource": "https://www.coingecko.com/en/coins/loyal",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/loyal.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/70178/large/LinkedIn_Avatar_Preview_%281%29.png?1768637534"
+    },
+    "xelis": {
+      "id": "xelis",
+      "name": "Xelis",
+      "marketSource": "https://www.coingecko.com/en/coins/xelis",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/xelis.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/37615/large/green_background_black_logo.png?1715061546"
+    },
+    "dragonx-2": {
+      "id": "dragonx-2",
+      "name": "DragonX",
+      "marketSource": "https://www.coingecko.com/en/coins/dragonx-2",
+      "error": "Source unavailable or rate limited"
+    },
+    "neptune-privacy": {
+      "id": "neptune-privacy",
+      "name": "Neptune Privacy",
+      "marketSource": "https://www.coingecko.com/en/coins/neptune-privacy",
+      "checkedAt": "2026-09-11T23:59:01.287050+00:00",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://neptune.io/"
+      ],
+      "repositories": [
+        "https://github.com/neptuneprivacy"
+      ]
+    },
+    "bitcoinz": {
+      "id": "bitcoinz",
+      "name": "BitcoinZ",
+      "marketSource": "https://www.coingecko.com/en/coins/bitcoinz",
+      "logo": "logos/bitcoinz.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/1004/large/BTCZ_LOGO-1.png?1696502115",
+      "checkedAt": "2026-09-11T23:59:07.783136+00:00",
+      "hashingAlgorithm": "Equihash",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "BNB Chain Ecosystem",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://getbtcz.com/",
+        "https://btcz.rocks/"
+      ],
+      "repositories": [
+        "https://github.com/bitcoinz-pod/bitcoinz"
+      ],
+      "github": {
+        "url": "https://github.com/btcz/bitcoinz",
+        "name": "btcz/bitcoinz",
+        "owner": "btcz",
+        "ownerUrl": "https://github.com/btcz",
+        "description": "BitcoinZ",
+        "pushedAt": "2026-03-20T15:01:47Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:59:14.910813+00:00",
+        "apiSource": "https://api.github.com/repos/bitcoinz-pod/bitcoinz"
+      }
+    },
+    "ryo": {
+      "id": "ryo",
+      "name": "Ryo Currency",
+      "marketSource": "https://www.coingecko.com/en/coins/ryo",
+      "logo": "logos/ryo.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/5046/large/roy-logo.png?1696505576",
+      "checkedAt": "2026-09-11T23:59:23.302821+00:00",
+      "hashingAlgorithm": "Cryptonight",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Layer 1 (L1)",
+        "Proof of Work (PoW)",
+        "Privacy Blockchain",
+        "Privacy"
+      ],
+      "websites": [
+        "https://ryo-currency.com/"
+      ],
+      "repositories": [
+        "https://github.com/ryo-currency/ryo-currency"
+      ],
+      "github": {
+        "url": "https://github.com/ryo-currency/ryo-currency",
+        "name": "ryo-currency/ryo-currency",
+        "owner": "ryo-currency",
+        "ownerUrl": "https://github.com/ryo-currency",
+        "description": "Ryo - Privacy for eveRYOne",
+        "pushedAt": "2026-08-14T08:30:48Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-11T23:59:29.292997+00:00",
+        "apiSource": "https://api.github.com/repos/ryo-currency/ryo-currency"
+      }
+    },
+    "karbo": {
+      "id": "karbo",
+      "name": "Karbo",
+      "marketSource": "https://www.coingecko.com/en/coins/karbo",
+      "logo": "logos/karbo.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/2430/large/karbo_coin.png?1696503263",
+      "checkedAt": "2026-09-11T23:59:15.134972+00:00",
+      "hashingAlgorithm": "Cryptonight",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://karbo.io/"
+      ],
+      "repositories": [
+        "https://github.com/seredat/karbowanec"
+      ],
+      "github": {
+        "url": "https://github.com/seredat/karbowanec",
+        "name": "seredat/karbowanec",
+        "owner": "seredat",
+        "ownerUrl": "https://github.com/seredat",
+        "description": "Karbo (Karbovanets) - Digital Exchange Medium - cryptocurrency made in Ukraine, CryptoNote protocol implementation.",
+        "pushedAt": "2026-06-07T16:34:18Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": true,
+        "checkedAt": "2026-09-11T23:59:20.837646+00:00",
+        "apiSource": "https://api.github.com/repos/seredat/karbowanec"
+      }
+    },
+    "black-hole-2": {
+      "id": "black-hole-2",
+      "name": "BLACK HOLE",
+      "marketSource": "https://www.coingecko.com/en/coins/black-hole-2",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/black-hole-2.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/70836/large/dexscreener-icon.png?1764102990"
+    },
+    "zero": {
+      "id": "zero",
+      "name": "Zero",
+      "marketSource": "https://www.coingecko.com/en/coins/zero",
+      "logo": "logos/zero.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/1292/large/Zero_Full_Logo.png?1696502363",
+      "checkedAt": "2026-09-11T23:59:23.318241+00:00",
+      "hashingAlgorithm": "Equihash",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://zerocurrency.io/"
+      ],
+      "repositories": [
+        "https://github.com/zerocurrencycoin/Zero"
+      ],
+      "github": {
+        "url": "https://github.com/zerocurrencycoin/Zero",
+        "name": "zerocurrencycoin/Zero",
+        "owner": "zerocurrencycoin",
+        "ownerUrl": "https://github.com/zerocurrencycoin",
+        "description": "Zero Currency Blockchain Project",
+        "pushedAt": "2026-09-09T18:48:26Z",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": true,
+        "checkedAt": "2026-09-11T23:59:29.468486+00:00",
+        "apiSource": "https://api.github.com/repos/zerocurrencycoin/Zero"
+      }
+    },
+    "salvium": {
+      "id": "salvium",
+      "name": "Salvium",
+      "marketSource": "https://www.coingecko.com/en/coins/salvium",
+      "error": "Source unavailable or rate limited"
+    },
+    "-7": {
+      "id": "-7",
+      "name": "Voidify",
+      "marketSource": "https://www.coingecko.com/en/coins/-7",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/-7.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/54502/large/voidify_200x200.png?1759855474"
+    },
+    "dero": {
+      "id": "dero",
+      "name": "Dero",
+      "marketSource": "https://www.coingecko.com/en/coins/dero",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/dero.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/3522/large/dero_logo_png.png?1696504212"
+    },
+    "stellite": {
+      "id": "stellite",
+      "name": "Scala",
+      "marketSource": "https://www.coingecko.com/en/coins/stellite",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/stellite.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/3736/large/round_128x128.png?1696504405"
+    },
+    "junocash": {
+      "id": "junocash",
+      "name": "JunoCash",
+      "marketSource": "https://www.coingecko.com/en/coins/junocash",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/junocash.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/102172825/large/icon.png?1776002141"
+    },
+    "conceal": {
+      "id": "conceal",
+      "name": "Conceal",
+      "marketSource": "https://www.coingecko.com/en/coins/conceal",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/conceal.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/6382/large/conceal.png?1696506751"
+    },
+    "kryptokrona": {
+      "id": "kryptokrona",
+      "name": "Kryptokrona",
+      "marketSource": "https://www.coingecko.com/en/coins/kryptokrona",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/kryptokrona.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/13163/large/XKRlogo.png?1696512947"
+    },
+    "machines-cash": {
+      "id": "machines-cash",
+      "name": "Machines-cash",
+      "marketSource": "https://www.coingecko.com/en/coins/machines-cash",
+      "checkedAt": "2026-09-11T23:53:58.209774+00:00",
+      "hashingAlgorithm": null,
+      "platform": "base",
+      "categories": [
+        "Privacy Coins",
+        "Payment Solutions",
+        "Base Ecosystem",
+        "Neobank",
+        "Base Native",
+        "Privacy"
+      ],
+      "websites": [
+        "https://www.machines.cash/"
+      ],
+      "repositories": [],
+      "logo": "logos/machines-cash.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/70436/large/Machines-Cash-Logo-for-CircleAvatars.png?1767714190"
+    },
+    "tritcoin": {
+      "id": "tritcoin",
+      "name": "Tritcoin",
+      "marketSource": "https://www.coingecko.com/en/coins/tritcoin",
+      "checkedAt": "2026-09-11T23:53:58.316159+00:00",
+      "hashingAlgorithm": null,
+      "platform": "solana",
+      "categories": [
+        "Privacy Coins",
+        "Solana Ecosystem",
+        "Pump.fun Ecosystem",
+        "Privacy"
+      ],
+      "websites": [
+        "https://tritcoin.vercel.app",
+        "https://x.com/tritcoin",
+        "https://linktr.ee/tritcoin"
+      ],
+      "repositories": [
+        "https://github.com/favourablegroup"
+      ],
+      "logo": "logos/tritcoin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/54868/large/logo_transparent_4.png?1742198146"
+    },
+    "maryjanecoin": {
+      "id": "maryjanecoin",
+      "name": "MaryJaneCoin",
+      "marketSource": "https://www.coingecko.com/en/coins/maryjanecoin",
+      "checkedAt": "2026-09-11T23:53:58.235261+00:00",
+      "hashingAlgorithm": null,
+      "platform": "solana",
+      "categories": [
+        "Privacy Coins",
+        "Solana Ecosystem",
+        "Meme",
+        "Solana Meme",
+        "Solana Token-2022",
+        "Privacy"
+      ],
+      "websites": [
+        "https://maryjanecoin.net/"
+      ],
+      "repositories": [
+        "http://github.com/Jahvinci/"
+      ],
+      "logo": "logos/maryjanecoin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/102173385/large/1024x1024.png?1779326186"
+    },
+    "hush": {
+      "id": "hush",
+      "name": "Hush",
+      "marketSource": "https://www.coingecko.com/en/coins/hush",
+      "checkedAt": "2026-09-11T23:54:09.802277+00:00",
+      "hashingAlgorithm": "Equihash",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Zero Knowledge (ZK)",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://hush.is",
+        "https://git.hush.is/hush/"
+      ],
+      "repositories": [],
+      "logo": "logos/hush.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/701/large/HUSH_200x200.png?1696501889"
+    },
+    "prcy-coin": {
+      "id": "prcy-coin",
+      "name": "PRivaCY Coin",
+      "marketSource": "https://www.coingecko.com/en/coins/prcy-coin",
+      "checkedAt": "2026-09-11T23:54:09.739091+00:00",
+      "hashingAlgorithm": "Proof of Stake",
+      "platform": "ethereum",
+      "categories": [
+        "Privacy Coins",
+        "Masternodes",
+        "BNB Chain Ecosystem",
+        "Polygon Ecosystem",
+        "Ethereum Ecosystem",
+        "Tron Ecosystem",
+        "Privacy"
+      ],
+      "websites": [
+        "https://prcycoin.com/"
+      ],
+      "repositories": [
+        "https://github.com/PRCYCoin/PRCYCoin"
+      ],
+      "github": {
+        "url": "https://github.com/PRCYCoin/PRCYCoin",
+        "name": "PRCYCoin/PRCYCoin",
+        "owner": "PRCYCoin",
+        "ownerUrl": "https://github.com/PRCYCoin",
+        "description": "PRivaCY Coin (PRCY) uses Bulletproofs and RingCT & Ring Signatures (Random Sizes 27-32) in a staking chain. With PRCY it is possible to stake, run masternodes and mine PoA blocks. ",
+        "pushedAt": "2026-08-02T19:39:51Z",
+        "license": "MIT",
+        "archived": false,
+        "fork": true,
+        "checkedAt": "2026-09-11T23:54:16.611011+00:00",
+        "apiSource": "https://api.github.com/repos/PRCYCoin/PRCYCoin"
+      },
+      "logo": "logos/prcy-coin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/14151/large/prcy.png?1696513870"
+    },
+    "5ive-privacy": {
+      "id": "5ive-privacy",
+      "name": "5ive Privacy",
+      "marketSource": "https://www.coingecko.com/en/coins/5ive-privacy",
+      "checkedAt": "2026-09-11T23:54:18.818914+00:00",
+      "hashingAlgorithm": null,
+      "platform": "base",
+      "categories": [
+        "Privacy Coins",
+        "Base Ecosystem",
+        "Privacy"
+      ],
+      "websites": [
+        "https://5iveprivacy.com/"
+      ],
+      "repositories": []
+    },
+    "nulltrace": {
+      "id": "nulltrace",
+      "name": "NullTrace",
+      "marketSource": "https://www.coingecko.com/en/coins/nulltrace",
+      "checkedAt": "2026-09-11T23:54:18.745284+00:00",
+      "hashingAlgorithm": null,
+      "platform": "solana",
+      "categories": [
+        "Privacy Coins",
+        "Decentralized Finance (DeFi)",
+        "Solana Ecosystem",
+        "Pump.fun Ecosystem",
+        "Privacy"
+      ],
+      "websites": [
+        "https://nulltrace.app",
+        "https://t.me/nulltracechat",
+        "https://t.me/nulltracebot"
+      ],
+      "repositories": [],
+      "logo": "logos/nulltrace.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/66160/large/nulltrace_logo.png?1748498959"
+    },
+    "poseidon-4": {
+      "id": "poseidon-4",
+      "name": "Poseidon",
+      "marketSource": "https://www.coingecko.com/en/coins/poseidon-4",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/poseidon-4.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/70845/large/pos.png?1764158959"
+    },
+    "shady-labs": {
+      "id": "shady-labs",
+      "name": "Shady Labs",
+      "marketSource": "https://www.coingecko.com/en/coins/shady-labs",
+      "logo": "logos/shady-labs.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/70183/large/pfp.png?1760945799",
+      "checkedAt": "2026-09-12T00:00:46.755020+00:00",
+      "hashingAlgorithm": null,
+      "platform": "solana",
+      "categories": [
+        "Privacy Coins",
+        "Solana Ecosystem",
+        "Pump.fun Ecosystem",
+        "Privacy"
+      ],
+      "websites": [
+        "https://shady.to/"
+      ],
+      "repositories": []
+    },
+    "lethe": {
+      "id": "lethe",
+      "name": "Lethe",
+      "marketSource": "https://www.coingecko.com/en/coins/lethe",
+      "checkedAt": "2026-09-12T00:00:37.966949+00:00",
+      "hashingAlgorithm": null,
+      "platform": "solana",
+      "categories": [
+        "Privacy Coins",
+        "Solana Ecosystem",
+        "Pump.fun Ecosystem",
+        "Privacy"
+      ],
+      "websites": [
+        "https://www.lethe.run/"
+      ],
+      "repositories": []
+    },
+    "spectrecoin": {
+      "id": "spectrecoin",
+      "name": "Alias",
+      "marketSource": "https://www.coingecko.com/en/coins/spectrecoin",
+      "logo": "logos/spectrecoin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/546/large/Alias-Icon-Orange.png?1696501764",
+      "checkedAt": "2026-09-12T00:01:11.654128+00:00",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Stake (PoS)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://alias.cash"
+      ],
+      "repositories": [
+        "https://github.com/aliascash"
+      ]
+    },
+    "bytecoin": {
+      "id": "bytecoin",
+      "name": "Bytecoin",
+      "marketSource": "https://www.coingecko.com/en/coins/bytecoin",
+      "logo": "logos/bytecoin.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/92/large/bytecoin-logo.png?1696501475",
+      "checkedAt": "2026-09-12T00:01:11.707439+00:00",
+      "hashingAlgorithm": "Cryptonight",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://bytecoin.org"
+      ],
+      "repositories": [
+        "https://github.com/bcndev/bytecoin",
+        "https://github.com/bcndev/bytecoin-gui"
+      ],
+      "github": {
+        "url": "https://github.com/bcndev/bytecoin",
+        "name": "bcndev/bytecoin",
+        "owner": "bcndev",
+        "ownerUrl": "https://github.com/bcndev",
+        "description": null,
+        "pushedAt": "2021-08-19T17:53:17Z",
+        "license": "LGPL-3.0",
+        "archived": false,
+        "fork": false,
+        "checkedAt": "2026-09-12T00:01:18.749382+00:00",
+        "apiSource": "https://api.github.com/repos/bcndev/bytecoin"
+      }
+    },
+    "ghost-by-mcafee": {
+      "id": "ghost-by-mcafee",
+      "name": "Ghost",
+      "marketSource": "https://www.coingecko.com/en/coins/ghost-by-mcafee",
+      "logo": "logos/ghost-by-mcafee.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/11339/large/ghost-on-circle-bg.png?1761067330",
+      "checkedAt": "2026-09-12T00:00:52.927010+00:00",
+      "hashingAlgorithm": "Proof of Stake",
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Stake (PoS)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://ghostbyjohnmcafee.com/"
+      ],
+      "repositories": [
+        "https://github.com/ghost-coin"
+      ]
+    },
+    "neptune-cash": {
+      "id": "neptune-cash",
+      "name": "Neptune Cash",
+      "marketSource": "https://www.coingecko.com/en/coins/neptune-cash",
+      "error": "Source unavailable or rate limited"
+    },
+    "dash": {
+      "id": "dash",
+      "name": "Dash",
+      "marketSource": "https://www.coingecko.com/en/coins/dash",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/dash.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/19/large/dash-logo.png?1696501423"
+    },
+    "mimblewimblecoin": {
+      "id": "mimblewimblecoin",
+      "name": "MimbleWimbleCoin",
+      "marketSource": "https://www.coingecko.com/en/coins/mimblewimblecoin",
+      "checkedAt": "2026-09-12T00:01:11.631660+00:00",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Smart Contract Platform",
+        "Privacy Coins",
+        "Proof of Work (PoW)",
+        "Privacy"
+      ],
+      "websites": [
+        "https://www.mwc.mw/",
+        "https://www.mwc.net/",
+        "https://www.mwc.locker/"
+      ],
+      "repositories": [
+        "https://github.com/mwcproject/mwc-node"
+      ],
+      "github": {
+        "url": "https://github.com/mwcproject/mwc-node",
+        "name": "mwcproject/mwc-node",
+        "owner": "mwcproject",
+        "ownerUrl": "https://github.com/mwcproject",
+        "description": "Mimblewimble applied in the base layer. Scarce, censorship resistant, durable, indestructible, salable, portable, fungible, private & divisible.‍ Good money.",
+        "pushedAt": "2026-08-25T03:38:53Z",
+        "license": "Apache-2.0",
+        "archived": false,
+        "fork": true,
+        "checkedAt": "2026-09-12T00:01:18.596877+00:00",
+        "apiSource": "https://api.github.com/repos/mwcproject/mwc-node"
+      }
+    },
+    "beam": {
+      "id": "beam",
+      "name": "BEAM",
+      "marketSource": "https://www.coingecko.com/en/coins/beam",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/beam.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/7339/large/BEAM.png?1696507623"
+    },
+    "zephyr-protocol": {
+      "id": "zephyr-protocol",
+      "name": "Zephyr Protocol",
+      "marketSource": "https://www.coingecko.com/en/coins/zephyr-protocol",
+      "error": "Source unavailable or rate limited",
+      "logo": "logos/zephyr-protocol.png",
+      "logoSource": "https://coin-images.coingecko.com/coins/images/30865/large/ZephyrLogo200x200.png?1696529712"
+    }
+  },
+  "checkedAt": "2026-09-12T00:01:41.201667+00:00"
+}
