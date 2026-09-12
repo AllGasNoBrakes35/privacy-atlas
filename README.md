@@ -1,5 +1,9 @@
 # Privacy Atlas
 
+An immutable Ootle research-snapshot contract is compiled and prepared under
+[`contracts/`](contracts/README.md). **Testnet deployment is not complete**;
+see that guide for the WASM file, exact constructor arguments and remaining steps.
+
 Cryptocurrency research dashboard with market comparisons, privacy protocol
 summaries, editorial privacy scores and valuation scenarios. No wallet connection is included.
 

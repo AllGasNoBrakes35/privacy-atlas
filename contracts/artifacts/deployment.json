@@ -1,0 +1,19 @@
+{
+  "status": "prepared-not-deployed",
+  "network": "esmeralda",
+  "walletVersionChecked": "0.40.0",
+  "templateLibraryVersion": "0.31.1",
+  "templateAddress": null,
+  "componentAddress": null,
+  "transactionId": null,
+  "wasmSha256": "955c71a50d5d10a752ebb777f0c29aebcd15838881bf4877ea449738fc3724fd",
+  "wasmBytes": 109816,
+  "researchSha256": "707e20adaa21925eb612fdb7b45e4d4c3d50c564ff252dd479456b2f781fe861",
+  "constructor": {
+    "function": "new",
+    "arguments": [
+      "707e20adaa21925eb612fdb7b45e4d4c3d50c564ff252dd479456b2f781fe861",
+      "https://raw.githubusercontent.com/johnnysessa/privacy-atlas/main/contracts/artifacts/research-snapshot.json"
+    ]
+  }
+}
