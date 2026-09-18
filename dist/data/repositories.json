@@ -334,5 +334,20 @@
     "checkedAt": "2026-09-12T00:02:14.252581+00:00",
     "apiSource": "https://api.github.com/repos/dashpay/dash",
     "selection": "Project-specific repository; confirm scope using its README"
+  },
+  "zcash": {
+    "url": "https://github.com/ZcashFoundation/zebra",
+    "name": "ZcashFoundation/zebra",
+    "owner": "ZcashFoundation",
+    "ownerUrl": "https://github.com/ZcashFoundation",
+    "description": "Zcash - Financial Privacy in Rust \ud83e\udd93",
+    "pushedAt": "2026-09-18T19:15:52Z",
+    "license": "Apache-2.0",
+    "archived": false,
+    "fork": false,
+    "checkedAt": "2026-09-18T23:11:35.169Z",
+    "apiSource": "https://api.github.com/repos/ZcashFoundation/zebra",
+    "selection": "Zebra full node; replaces the retired zcashd node. Other Zcash ecosystem repositories are not included.",
+    "selectionSource": "https://zcash.github.io/zcash/user/end-of-life.html"
   }
 }

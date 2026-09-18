@@ -1,3 +1,4 @@
+import {renderDevelopment} from './development-ui.js';
 const $=id=>document.getElementById(id);
 export const projectData=await fetch('data/projects.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(()=>({projects:{}}));
 const repoData=await fetch('data/repositories.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(()=>({}));
@@ -32,6 +33,7 @@ export function logo(c,large=false){
 let currentCoin,currentProfile,refreshing=false;
 export function renderProject(c,profile){
  currentCoin=c;currentProfile=profile;const m=projectData.projects[c.id]??{},e=editorial[c.id]??{},g=m.github;
+ renderDevelopment(c,g);
  $('projectTitle').replaceChildren(logo(c,true),document.createTextNode(`${c.name} · Project overview`));
  let summary=e.summary;
  if(!summary&&profile.reviewed)summary=`${profile.goal} ${profile.protocol}`;
@@ -44,7 +46,7 @@ export function renderProject(c,profile){
  field('Main developers / teams',e.team||'Current lead developers not verified',e.teamSource);
  if(g)field('Repository owner',g.owner+' (not necessarily the lead developer)',g.ownerUrl);
  const people=contributors[c.id];
- if(people?.people?.length){field('GitHub contributors',people.people.map(p=>`${p.name} (${p.commits.toLocaleString()} commits)`).join(', '),people.source);field('Contributor scope','Top returned historical contributors to the tracked repository; may include upstream authors. Not a list of current leads.');}
+ if(people?.people?.length&&people.source?.toLowerCase().startsWith(('https://api.github.com/repos/'+g?.name+'/contributors').toLowerCase())){field('GitHub contributors',people.people.map(p=>`${p.name} (${p.commits.toLocaleString()} commits)`).join(', '),people.source);field('Contributor scope','Top returned historical contributors to the tracked repository; may include upstream authors. Not a list of current leads.');}
  const license=g?.license;
  field('Open source?',e.openSource||(g?(openLicenses.has(license)?`Yes — selected repository: ${license}`:`Public code; open-source license ${license&&license!=='NOASSERTION'?license:'not confirmed'}`):'Unknown — no verified repository/license'),e.openSource?e.source:g?.url);
  let algorithm=e.algorithm;
@@ -55,7 +57,7 @@ export function renderProject(c,profile){
  if(!algorithm&&m.hashingAlgorithm)algorithm=m.hashingAlgorithm+' (vendor-reported; current mining use not independently verified)';
  field('Proof-of-work algorithm',algorithm||'Not verified',e.algorithmSource||m.marketSource);
  field('Last GitHub push',g?timestamp(g.pushedAt):'Unavailable',g?.url);
- if(g){field('Tracked repository',g.name,g.url);field('Repository selection',g.selection||'First provider-listed repository');field('Repository status',g.archived?'Archived':g.fork?'Public fork':'Public repository');field('GitHub checked',timestamp(g.checkedAt),g.apiSource);}
+ if(g){field('Tracked repository',g.name,g.url);field('Repository selection',g.selection||'First provider-listed repository',g.selectionSource);field('Repository status',g.archived?'Archived':g.fork?'Public fork':'Public repository');field('GitHub checked',timestamp(g.checkedAt),g.apiSource);}
  field('Project metadata checked',timestamp(m.checkedAt),m.marketSource);
  $('projectLinks').replaceChildren();
  for(const url of [...new Set([...(m.websites??[]),...(m.repositories??[])])].slice(0,8)){$('projectLinks').append(link(url,new URL(url).hostname==='github.com'?url.replace('https://github.com/',''):new URL(url).hostname),document.createTextNode(' · '));}

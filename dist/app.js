@@ -1,3 +1,4 @@
+import {developmentRating} from './development-ui.js';
 import {loadHistory,priceSamples,ranges} from './history.js';
 import {drawPriceChart} from './chart.js';
 import {newestHistory,availableHistory,readHistoryCache,saveHistoryCache} from './history-cache.js';
@@ -11,7 +12,7 @@ import {profiles,unknown} from './profiles.js';
 import {privacyRating} from './privacy-scores.js';
 import {logo,renderProject} from './project-info.js';
 const $=id=>document.getElementById(id), api='https://api.coingecko.com/api/v3';
-let data,selected='monero',mode='Bundled snapshot',busy=false;
+let data,selected=null,mode='Bundled snapshot',busy=false;
 const valid=n=>Number.isFinite(n);
 const positive=n=>valid(n)&&n>0;
 const usd=n=>valid(n)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:n<1?8:n<100?4:2}).format(n):'—';
@@ -30,7 +31,7 @@ function render(){
  $('freshness').textContent=`${mode} · fetched ${when(data.fetchedAt)}`;
  const query=$('search').value.trim().toLowerCase(),privacy=$('privacy').value,sort=$('sort').value;
  const rows=data.coins.filter(c=>(!query||`${c.name} ${c.symbol}`.toLowerCase().includes(query))&&(!privacy||profile(c).mode===privacy));
- rows.sort((a,b)=>sort==='privacy_score'?(privacyRating(b.id).score??-1)-(privacyRating(a.id).score??-1):sort==='name'?a.name.localeCompare(b.name):(b[sort]??-Infinity)-(a[sort]??-Infinity));
+ rows.sort((a,b)=>sort==='development_score'?(developmentRating(b.id).score??-1)-(developmentRating(a.id).score??-1):sort==='privacy_score'?(privacyRating(b.id).score??-1)-(privacyRating(a.id).score??-1):sort==='name'?a.name.localeCompare(b.name):(b[sort]??-Infinity)-(a[sort]??-Infinity));
  $('rows').replaceChildren();
  for(const c of rows){
   const rating=privacyRating(c.id),tr=node('tr');tr.classList.add('project-row');if(c.id===selected)tr.classList.add('selected');
@@ -42,15 +43,16 @@ function render(){
   const change=node('td',percent(c.price_change_percentage_24h),c.price_change_percentage_24h<0?'down':'up');
   const privacyCell=node('td');privacyCell.append(tag(profile(c).mode));
   tr.append(first,quote,change,node('td',compact(c.market_cap)),node('td',compact(c.total_volume)),privacyCell,node('td',rating.score===null?'Not rated':`${rating.score} / 10`));
+  const development=developmentRating(c.id);const activity=node('td',development.score===null?development.label:`${development.score.toFixed(1)} / 10`);activity.title=development.label+' · Tracked repository activity';tr.append(activity);
   $('rows').append(tr);
  }
- if(!rows.length){const tr=node('tr'),td=node('td','No assets match these filters.');td.colSpan=7;tr.append(td);$('rows').append(tr);}
+ if(!rows.length){const tr=node('tr'),td=node('td','No assets match these filters.');td.colSpan=8;tr.append(td);$('rows').append(tr);}
  $('coverage').textContent=`Showing ${rows.length} of ${data.coins.length} covered assets. Universe: ${data.scope}. Coverage is not exhaustive; category membership is not a privacy guarantee. Protocol reviews available for ${data.coins.filter(c=>profile(c)!==unknown).length} assets.`;
  renderDetail();
 }
 function select(id){if(!data.coins.some(c=>c.id===id))throw Error('Unknown asset');selected=id;render();$('detail').scrollIntoView({behavior:'auto',block:'start'});}
 function renderDetail(){
- const c=current();if(!c)return;const p=profile(c),rating=privacyRating(c.id);
+ const c=current();$('detail').hidden=!c;if(!c)return;const p=profile(c),rating=privacyRating(c.id);
  renderProject(c,p);
  $('privacyScore').textContent=rating.score===null?'Not rated':`${rating.score} / 10`;
  $('scoreReason').textContent=rating.reason;
@@ -121,9 +123,11 @@ async function refreshHistory(id=selected,days=chartDays){
 for(const range of ranges){const button=node('button',range.label);button.type='button';button.dataset.days=range.days;button.setAttribute('aria-label',`${range.name} price history`);button.setAttribute('aria-pressed',String(range.days===chartDays));button.onclick=()=>{chartDays=range.days;if(data)renderPriceChart();};$('chartRanges').append(button);}
 for(const id of ['search','privacy','sort'])$(id).addEventListener(id==='search'?'input':'change',()=>render());
 $('refresh').onclick=refreshMarkets;$('historyRefresh').onclick=()=>refreshHistory();
-try{const r=await fetch('data/snapshot.json');if(!r.ok)throw Error('Snapshot could not load');data=await r.json();if(!Array.isArray(data.coins)||!data.coins.length)throw Error('No market data');if(!current())selected=data.coins[0].id;render();void refreshMarkets();}
+try{const r=await fetch('data/snapshot.json');if(!r.ok)throw Error('Snapshot could not load');data=await r.json();if(!Array.isArray(data.coins)||!data.coins.length)throw Error('No market data');render();void refreshMarkets();}
 catch(e){note(`Market data unavailable: ${e.message}`);$('refresh').disabled=true;$('historyRefresh').disabled=true;}
 // A page restored from the back/forward cache does not run initialization again.
 window.addEventListener('pageshow',event=>{if(event.persisted&&data)void refreshMarkets();});
 if(document.modelContext?.registerTool){const lifecycle=new AbortController();try{Promise.resolve(document.modelContext.registerTool({name:'select_privacy_asset',description:'Select a covered cryptocurrency and show its market research. No transactions.',inputSchema:{type:'object',properties:{id:{type:'string'}},required:['id'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:true},execute(input){if(!input||typeof input.id!=='string'||Object.keys(input).some(k=>k!=='id')||!data)throw Error('Expected a covered asset id');select(input.id);return {id:selected,privacyScore:privacyRating(selected).score,source:'CoinGecko',quoteTime:current().last_updated};}},{signal:lifecycle.signal})).catch(()=>{});}catch{}window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true});}
 setInterval(()=>{if(data)render();},60000);
+
+document.addEventListener('development-updated',()=>{if(data)render();});

@@ -3,6 +3,7 @@ import json,pathlib,subprocess,concurrent.futures,datetime,sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 repos={'minotari':'tari-project/tari','zcoin':'firoorg/firo','dero':'deroproject/derohe','zephyr-protocol':'ZephyrProtocol/zephyr','beam':'BeamMW/beam','pivx':'PIVX-Project/PIVX','pirate-chain':'PirateNetwork/pirate','verge':'vergecurrency/verge','ycash':'ycashfoundation/ycash','particl':'particl/particl-core','nerva':'nerva-project/nerva','xelis':'xelis-project/xelis-blockchain','bitcoinz':'btcz/bitcoinz','karbo':'karbovanets/karbowanec','ryo':'ryo-currency/ryo-currency','salvium':'salvium/salvium','stellite':'scala-network/Scala','conceal':'ConcealNetwork/conceal-core','kryptokrona':'kryptokrona/kryptokrona','hush':'MyHush/hush3','ghost-by-mcafee':'ghost-coin/ghost-core','mimblewimblecoin':'mwcproject/mwc-node','neptune-cash':'Neptune-Crypto/neptune-core','nav-coin':'navcoin/navcoin-core'}
 repos['dash']='dashpay/dash'
+repos['zcash']='ZcashFoundation/zebra'
 if len(sys.argv)>1:
  repos={k:v for k,v in repos.items() if k in sys.argv[1].split(',')}
 def get(url):

@@ -89,3 +89,31 @@ across 53 assets. Karbo lacked enough verified 1-day prices; its longer ranges
 are available. All saved ranges pass a simulated provider-outage rendering test.
 
 Long ranges can be refreshed with `python scripts/extend-history.py`. All time requests maximum provider history, falling back to the public one-year window when unrestricted history is unavailable. Coverage limits and actual first/last sample dates are shown; this is not a promise of lifetime coverage. The saved coverage report records per-asset annual-fetch failures. No prices are synthesized.
+
+### Development activity
+
+The asset table includes a sortable development activity rating. Select an asset
+for the evidence, repository scope, observation dates and scoring breakdown.
+The 90-day score uses distinct eligible commit authors (35%, capped at 10),
+non-merge/non-bot commit volume (30%, capped at 150), active weekly buckets (20%,
+13 buckets) and eligible commit recency (15%). Recency awards 1.5/1/0.5/0 points
+for the latest eligible commit within 7/30/60/more days. Scores are rounded only
+after summing the components. Author identities are an imperfect proxy for
+active contributors, not verified developer headcount.
+
+Merged pull requests, stable releases, open issues plus PRs, repository status
+and last push are shown as context and do not affect the score. Repository
+activity is not a code-quality, security or investment rating. Scoring covers the
+tracked default branch, not the whole project; forks can include upstream work.
+The interface explains alias, bot, co-author, squash-merge and timestamp limits.
+
+`dist/data/development.json` contains dated aggregate observations and source
+URLs, not raw author emails or commit messages. `node scripts/development-snapshot.mjs`
+refreshes the saved evidence through GitHub's public API. Requests are paginated
+and pinned to a branch-head commit. The browser uses the same collector and
+scoring functions; a selected observation older than a day is refreshed once per
+page load, and the user can refresh manually. No browser API keys are required.
+Rate limits can prevent refreshes; the last complete observation is retained.
+Incomplete data receives no score, partial counts are lower bounds, saved data
+over 7 days old is flagged, and observations older than 30 days are not rated.
+Assets without a tracked repository remain explicitly unrated.
