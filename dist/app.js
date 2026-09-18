@@ -26,7 +26,8 @@ function render(){
  rows.sort((a,b)=>sort==='privacy_score'?(privacyRating(b.id).score??-1)-(privacyRating(a.id).score??-1):sort==='name'?a.name.localeCompare(b.name):(b[sort]??-Infinity)-(a[sort]??-Infinity));
  $('rows').replaceChildren();
  for(const c of rows){
-  const rating=privacyRating(c.id),tr=node('tr');if(c.id===selected)tr.className='selected';
+  const rating=privacyRating(c.id),tr=node('tr');tr.classList.add('project-row');if(c.id===selected)tr.classList.add('selected');
+  tr.onclick=event=>{if(!event.target.closest('button,a,input,select,textarea'))select(c.id);};
   const first=node('td'),b=node('button',c.name);b.setAttribute('aria-label',`Research ${c.name}`);b.onclick=()=>select(c.id);first.append(logo(c),b,node('small',c.symbol.toUpperCase()));
   const quote=node('td',usd(c.current_price));const age=Date.now()-Date.parse(c.last_updated);
   quote.title=`Provider quote: ${when(c.last_updated)}`;
@@ -91,7 +92,7 @@ function renderForecast(c,p){
  for(const url of p.sources){const link=node('a',new URL(url).hostname+' ↗ ');link.href=url;link.target='_blank';link.rel='noopener';sources.append(link);}
  basis.append(sources);
 }
-async function get(path){const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),18000);try{const r=await fetch(api+path,{signal:controller.signal});if(!r.ok)throw Error(r.status===429?'Provider rate limit. Try again later.':`Provider request failed (${r.status}).`);return await r.json();}finally{clearTimeout(timeout);}}
+async function get(path){const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),18000);try{const r=await fetch(api+path,{signal:controller.signal,cache:'no-store'});if(!r.ok)throw Error(r.status===429?'Provider rate limit. Try again later.':`Provider request failed (${r.status}).`);return await r.json();}finally{clearTimeout(timeout);}}
 async function refreshMarkets(){
  if(busy)return;busy=true;$('refresh').disabled=true;note('Refreshing provider quotes…');
  try{const all=[];for(let page=1;page<=20;page++){const rows=await get(`/coins/markets?vs_currency=usd&category=privacy-coins&per_page=250&page=${page}&sparkline=false&price_change_percentage=7d,30d`);if(!Array.isArray(rows)||rows.some(c=>!c.id||!c.name||!c.symbol))throw Error('Invalid provider response.');all.push(...rows);if(rows.length<250)break;if(page===20)throw Error('Coverage pagination incomplete.');}
@@ -108,7 +109,9 @@ async function refreshHistory(){
 }
 for(const id of ['search','privacy','sort'])$(id).addEventListener(id==='search'?'input':'change',()=>render());
 $('refresh').onclick=refreshMarkets;$('historyRefresh').onclick=refreshHistory;
-try{const r=await fetch('data/snapshot.json');if(!r.ok)throw Error('Snapshot could not load');data=await r.json();if(!Array.isArray(data.coins)||!data.coins.length)throw Error('No market data');if(!current())selected=data.coins[0].id;render();note('Sourced snapshot loaded. Use Refresh for newer quotes; privacy scores are editorial reviews.');}
+try{const r=await fetch('data/snapshot.json');if(!r.ok)throw Error('Snapshot could not load');data=await r.json();if(!Array.isArray(data.coins)||!data.coins.length)throw Error('No market data');if(!current())selected=data.coins[0].id;render();void refreshMarkets();}
 catch(e){note(`Market data unavailable: ${e.message}`);$('refresh').disabled=true;$('historyRefresh').disabled=true;}
+// A page restored from the back/forward cache does not run initialization again.
+window.addEventListener('pageshow',event=>{if(event.persisted&&data)void refreshMarkets();});
 if(document.modelContext?.registerTool){const lifecycle=new AbortController();try{Promise.resolve(document.modelContext.registerTool({name:'select_privacy_asset',description:'Select a covered cryptocurrency and show its market research. No transactions.',inputSchema:{type:'object',properties:{id:{type:'string'}},required:['id'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:true},execute(input){if(!input||typeof input.id!=='string'||Object.keys(input).some(k=>k!=='id')||!data)throw Error('Expected a covered asset id');select(input.id);return {id:selected,privacyScore:privacyRating(selected).score,source:'CoinGecko',quoteTime:current().last_updated};}},{signal:lifecycle.signal})).catch(()=>{});}catch{}window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true});}
 setInterval(()=>{if(data)render();},60000);

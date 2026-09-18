@@ -43,7 +43,11 @@ quotes recalculates the price anchor but does not update editorial research.
 
 Run `npm test` for valuation and forecast tests. Serve `dist/` over HTTP.
 `npm run snapshot` fetches the CoinGecko privacy-coins category and historical
-series. The browser can refresh markets and the selected asset's history.
+series. The browser automatically refreshes market prices on each page load and
+when a page is restored from the back/forward cache. Provider requests bypass the
+browser HTTP cache. The snapshot and its timestamps remain visible if a refresh
+fails. Manual market and selected-history refreshes are also available.
+Click anywhere on a cryptocurrency row to open its project details.
 API rate limits and CORS/network failures are surfaced without fabricated data.
 
 Coverage is the provider category, not all privacy coins. Unreviewed assets have
