@@ -1,4 +1,12 @@
-import {dailySamples} from './math.js';
+import {loadHistory,priceSamples,ranges} from './history.js';
+import {drawPriceChart} from './chart.js';
+import {newestHistory,readHistoryCache,saveHistoryCache} from './history-cache.js';
+import {mergeMarketCoins} from './markets.js';
+let chartDays=90,historyLoadTimer;
+let chartStorage;try{chartStorage=window.localStorage;}catch{}
+const historyCache=readHistoryCache(chartStorage);
+const bundledHistory=new Map(),historyBundlesLoaded=new Set(),historyBundleRequests=new Map();
+const historyPending=new Set(),historyAttempted=new Set(),historyErrors=new Map();
 import {profiles,unknown} from './profiles.js';
 import {privacyRating} from './privacy-scores.js';
 import {logo,renderProject} from './project-info.js';
@@ -43,7 +51,7 @@ function render(){
 }
 function select(id){if(!data.coins.some(c=>c.id===id))throw Error('Unknown asset');selected=id;render();$('detail').scrollIntoView({behavior:'auto',block:'start'});}
 function renderDetail(){
- const c=current();if(!c)return;const p=profile(c),rating=privacyRating(c.id),rows=dailySamples(data.histories[c.id]);
+ const c=current();if(!c)return;const p=profile(c),rating=privacyRating(c.id);
  renderProject(c,p);
  $('privacyScore').textContent=rating.score===null?'Not rated':`${rating.score} / 10`;
  $('scoreReason').textContent=rating.reason;
@@ -55,16 +63,30 @@ function renderDetail(){
  $('sources').replaceChildren();p.sources.forEach((url,i)=>{const a=node('a',`Project source ${i+1} · ${new URL(url).hostname} ↗`);a.href=url;a.target='_blank';a.rel='noopener';$('sources').append(a);});
  const finance=[['Provider quote time',when(c.last_updated)],['Price',usd(c.current_price)],['Market cap',compact(c.market_cap)],['Vendor FDV',compact(c.fully_diluted_valuation)],['24h reported volume',compact(c.total_volume)],['Volume / market cap',positive(c.market_cap)&&valid(c.total_volume)?(c.total_volume/c.market_cap*100).toFixed(2)+'%':'—'],['7d / 30d return',`${percent(c.price_change_percentage_7d_in_currency)} / ${percent(c.price_change_percentage_30d_in_currency)}`],['Circulating supply',num(c.circulating_supply)],['Total supply',num(c.total_supply)],['Vendor maximum supply',num(c.max_supply)],['Circulating / max',positive(c.max_supply)&&positive(c.circulating_supply)?(c.circulating_supply/c.max_supply*100).toFixed(2)+'%':'Not established'],['Below all-time high',valid(c.ath_change_percentage)?percent(c.ath_change_percentage):'—']];
  $('financials').replaceChildren();for(const [k,v]of finance)$('financials').append(node('dt',k),node('dd',v));
- $('chartInfo').textContent=rows.length?`${rows.length} UTC daily samples · through ${when(rows.at(-1)[0])}`:`No verified historical series. ${data.errors?.[c.id]??'Use Refresh selected history.'}`;
- draw(rows,c.name);
+ renderPriceChart();
  renderForecast(c,p);
 }
-function draw(rows,name){
- const svg=$('chart');svg.replaceChildren();svg.setAttribute('aria-label',`${name} daily USD prices, ${rows.length} samples`);
- if(rows.length<2){const text=document.createElementNS('http://www.w3.org/2000/svg','text');text.setAttribute('x','20');text.setAttribute('y','90');text.setAttribute('fill','#97a7b6');text.textContent='Historical prices unavailable';svg.append(text);return;}
- const values=rows.map(p=>p[1]),min=Math.min(...values),max=Math.max(...values),span=max-min||1;
- const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',rows.map((p,i)=>`${i?'L':'M'}${12+i/(rows.length-1)*616},${155-(p[1]-min)/span*130}`).join(' '));path.setAttribute('fill','none');path.setAttribute('stroke','#67e5c2');path.setAttribute('stroke-width','2.5');svg.append(path);
- for(const [y,v]of [[16,max],[177,min]]){const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x','12');t.setAttribute('y',String(y));t.setAttribute('fill','#97a7b6');t.setAttribute('font-size','12');t.textContent=usd(v);svg.append(t);}
+function renderPriceChart(){
+ const c=current();if(!c)return;
+ const days=chartDays,key=`${c.id}:${days}`,range=ranges.find(r=>r.days===days);
+ const bundled=days===90?{prices:data.histories?.[c.id]??[],...(data.historyMetadata?.[c.id]??{source:'CoinGecko',currency:'USD',description:'Saved daily price samples'})}:null;
+ const history=newestHistory(historyCache.get(key),bundledHistory.get(key),bundled)??{prices:[],source:'CoinGecko',currency:'USD'};
+ const referenceTime=history.asOf??(history.prices?.at(-1)?.[0]??Date.now());
+ const rows=priceSamples(history.prices,Math.min(referenceTime,Date.now()),days);
+ const bundleReady=historyBundlesLoaded.has(c.id);
+ const needsRefresh=bundleReady&&!historyAttempted.has(key)&&(rows.length<2||Date.now()-referenceTime>300000);
+ const loading=!bundleReady||historyPending.has(key)||needsRefresh;
+ $('historyRefresh').disabled=historyPending.has(key);
+ $('chartTitle').textContent=`Price history · ${range.label} · ${history.currency}`;
+ for(const button of $('chartRanges').children)button.setAttribute('aria-pressed',String(Number(button.dataset.days)===days));
+ const age=Date.now()-(rows.at(-1)?.[0]??0);
+ const status=loading?'Checking for newer prices…':historyErrors.get(key)??(age>3600000?'Saved history — latest point is over an hour old.':'');
+ $('chartInfo').textContent=rows.length>=2?`${history.source} · ${history.description} · ${rows.length} samples · ${when(rows[0][0])} to ${when(rows.at(-1)[0])}${status?' · '+status:''}`:(status??'No historical prices available for this range.');
+ if(history.url&&rows.length>=2){const link=node('a',' View source');link.href=history.url;link.target='_blank';link.rel='noopener';$('chartInfo').append(link);}
+ drawPriceChart($('chart'),$('chartReadout'),rows,c.name,history.currency,loading);
+ if(!bundleReady)void ensureHistoryBundle(c.id);
+ clearTimeout(historyLoadTimer);
+ if(needsRefresh)historyLoadTimer=setTimeout(()=>{if(selected===c.id&&chartDays===days)void refreshHistory(c.id,days);},250);
 }
 function renderForecast(c,p){
  const out=$('forecastResults'),basis=$('forecastBasis'),model=assumptions[c.id];
@@ -95,20 +117,38 @@ function renderForecast(c,p){
 async function get(path){const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),18000);try{const r=await fetch(api+path,{signal:controller.signal,cache:'no-store'});if(!r.ok)throw Error(r.status===429?'Provider rate limit. Try again later.':`Provider request failed (${r.status}).`);return await r.json();}finally{clearTimeout(timeout);}}
 async function refreshMarkets(){
  if(busy)return;busy=true;$('refresh').disabled=true;note('Refreshing provider quotes…');
- try{const all=[];for(let page=1;page<=20;page++){const rows=await get(`/coins/markets?vs_currency=usd&category=privacy-coins&per_page=250&page=${page}&sparkline=false&price_change_percentage=7d,30d`);if(!Array.isArray(rows)||rows.some(c=>!c.id||!c.name||!c.symbol))throw Error('Invalid provider response.');all.push(...rows);if(rows.length<250)break;if(page===20)throw Error('Coverage pagination incomplete.');}
-  const extras=await get('/coins/markets?vs_currency=usd&ids=beam,zephyr-protocol,dash&sparkline=false&price_change_percentage=7d,30d');
-  if(!Array.isArray(extras))throw Error('Supplemental quote response invalid.');
-  for(const c of extras)if(!all.some(x=>x.id===c.id))all.push(c);
-  if(!all.length)throw Error('Provider returned no assets.');data.coins=all;data.fetchedAt=new Date().toISOString();mode='Refreshed market data';if(!current())selected=all[0].id;render();note('Quotes refreshed. Historical prices keep their own timestamps. Forecast scenarios now use the refreshed prices and supply.');
- }catch(e){note(`${e.message} Retaining the last snapshot and its timestamps.`);}finally{busy=false;$('refresh').disabled=false;}
+ const updates=[],warnings=[];
+ try{
+  try{for(let page=1;page<=20;page++){const rows=await get(`/coins/markets?vs_currency=usd&category=privacy-coins&per_page=250&page=${page}&sparkline=false&price_change_percentage=7d,30d`);if(!Array.isArray(rows))throw Error('Invalid provider response');updates.push(...rows);if(rows.length<250)break;}}
+  catch(e){warnings.push(e.message);}
+  if(!warnings.some(w=>/rate limit/i.test(w)))try{const extras=await get('/coins/markets?vs_currency=usd&ids=beam,zephyr-protocol,dash&sparkline=false&price_change_percentage=7d,30d');if(Array.isArray(extras))updates.push(...extras);else warnings.push('Supplemental quotes unavailable.');}
+  catch(e){warnings.push(e.message);}
+  const merged=mergeMarketCoins(data.coins,updates),changed=merged.filter(c=>data.coins.find(old=>old.id===c.id)!==c).length;
+  if(changed){data.coins=merged;data.fetchedAt=new Date().toISOString();mode=warnings.length?'Partially refreshed market data':'Refreshed market data';render();}
+  note(changed?`${changed} quotes refreshed.${warnings.length?' Some requests failed; existing quotes and their timestamps were retained.':''}`:`Quotes could not refresh. Existing prices and their timestamps were retained. ${warnings[0]??''}`);
+ }finally{busy=false;$('refresh').disabled=false;}
 }
-async function refreshHistory(){
- const id=selected;$('historyRefresh').disabled=true;note('Fetching 90-day history for the selected asset…');
- try{const h=await get(`/coins/${encodeURIComponent(id)}/market_chart?vs_currency=usd&days=90&interval=daily`);if(!Array.isArray(h.prices)||!h.prices.length)throw Error('No historical data returned.');data.histories[id]=h.prices;render();note('Historical prices refreshed.');}
- catch(e){note(`${e.message} Existing history, if any, is unchanged.`);}finally{$('historyRefresh').disabled=false;}
+async function ensureHistoryBundle(id){
+ if(historyBundlesLoaded.has(id))return;
+ if(historyBundleRequests.has(id))return historyBundleRequests.get(id);
+ const request=(async()=>{
+  try{const response=await fetch(`data/history/${encodeURIComponent(id)}.json`);if(response.ok){const saved=await response.json();for(const range of ranges){const item=newestHistory(saved[range.days]);if(item)bundledHistory.set(`${id}:${range.days}`,item);}}}
+  catch{/* Live history and previous snapshots remain available. */}
+  finally{historyBundlesLoaded.add(id);historyBundleRequests.delete(id);if(selected===id)renderPriceChart();}
+ })();historyBundleRequests.set(id,request);return request;
 }
+async function refreshHistory(id=selected,days=chartDays){
+ const key=`${id}:${days}`;
+ if(historyPending.has(key))return;
+ historyPending.add(key);historyAttempted.add(key);historyErrors.delete(key);
+ if(selected===id&&chartDays===days)renderPriceChart();
+ try{const result=await loadHistory(id,{days});historyCache.delete(key);historyCache.set(key,result);saveHistoryCache(chartStorage,historyCache);}
+ catch(e){historyErrors.set(key,e.message+' Existing chart data, if any, is retained.');}
+ finally{historyPending.delete(key);if(selected===id&&chartDays===days)renderPriceChart();}
+}
+for(const range of ranges){const button=node('button',range.label);button.type='button';button.dataset.days=range.days;button.setAttribute('aria-label',`${range.name} price history`);button.setAttribute('aria-pressed',String(range.days===chartDays));button.onclick=()=>{chartDays=range.days;if(data)renderPriceChart();};$('chartRanges').append(button);}
 for(const id of ['search','privacy','sort'])$(id).addEventListener(id==='search'?'input':'change',()=>render());
-$('refresh').onclick=refreshMarkets;$('historyRefresh').onclick=refreshHistory;
+$('refresh').onclick=refreshMarkets;$('historyRefresh').onclick=()=>refreshHistory();
 try{const r=await fetch('data/snapshot.json');if(!r.ok)throw Error('Snapshot could not load');data=await r.json();if(!Array.isArray(data.coins)||!data.coins.length)throw Error('No market data');if(!current())selected=data.coins[0].id;render();void refreshMarkets();}
 catch(e){note(`Market data unavailable: ${e.message}`);$('refresh').disabled=true;$('historyRefresh').disabled=true;}
 // A page restored from the back/forward cache does not run initialization again.
