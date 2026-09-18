@@ -1,6 +1,6 @@
 import {loadHistory,priceSamples,ranges} from './history.js';
 import {drawPriceChart} from './chart.js';
-import {newestHistory,readHistoryCache,saveHistoryCache} from './history-cache.js';
+import {newestHistory,availableHistory,readHistoryCache,saveHistoryCache} from './history-cache.js';
 import {mergeMarketCoins} from './markets.js';
 let chartDays=90,historyLoadTimer;
 let chartStorage;try{chartStorage=window.localStorage;}catch{}
@@ -68,7 +68,7 @@ function renderPriceChart(){
  const c=current();if(!c)return;
  const days=chartDays,key=`${c.id}:${days}`,range=ranges.find(r=>r.days===days);
  const bundled=days===90?{prices:data.histories?.[c.id]??[],...(data.historyMetadata?.[c.id]??{source:'CoinGecko',currency:'USD',description:'Saved daily price samples'})}:null;
- const history=newestHistory(historyCache.get(key),bundledHistory.get(key),bundled)??{prices:[],source:'CoinGecko',currency:'USD'};
+ const history=(days==='max'?availableHistory:newestHistory)(historyCache.get(key),bundledHistory.get(key),bundled)??{prices:[],source:'CoinGecko',currency:'USD'};
  const referenceTime=history.asOf??(history.prices?.at(-1)?.[0]??Date.now());
  const rows=priceSamples(history.prices,Math.min(referenceTime,Date.now()),days);
  const bundleReady=historyBundlesLoaded.has(c.id);
@@ -76,7 +76,7 @@ function renderPriceChart(){
  const loading=!bundleReady||historyPending.has(key)||needsRefresh;
  $('historyRefresh').disabled=historyPending.has(key);
  $('chartTitle').textContent=`Price history · ${range.label} · ${history.currency}`;
- for(const button of $('chartRanges').children)button.setAttribute('aria-pressed',String(Number(button.dataset.days)===days));
+ for(const button of $('chartRanges').children)button.setAttribute('aria-pressed',String(button.dataset.days===String(days)));
  const age=Date.now()-(rows.at(-1)?.[0]??0);
  const status=loading?'Checking for newer prices…':historyErrors.get(key)??(age>3600000?'Saved history — latest point is over an hour old.':'');
  $('chartInfo').textContent=rows.length>=2?`${history.source} · ${history.description} · ${rows.length} samples · ${when(rows[0][0])} to ${when(rows.at(-1)[0])}${status?' · '+status:''}`:(status??'No historical prices available for this range.');
@@ -114,7 +114,7 @@ async function refreshHistory(id=selected,days=chartDays){
  if(historyPending.has(key))return;
  historyPending.add(key);historyAttempted.add(key);historyErrors.delete(key);
  if(selected===id&&chartDays===days)renderPriceChart();
- try{const result=await loadHistory(id,{days});historyCache.delete(key);historyCache.set(key,result);saveHistoryCache(chartStorage,historyCache);}
+ try{const result=await loadHistory(id,{days});historyCache.set(key,days==='max'?availableHistory(bundledHistory.get(key),historyCache.get(key),result):result);saveHistoryCache(chartStorage,historyCache);}
  catch(e){historyErrors.set(key,e.message+' Existing chart data, if any, is retained.');}
  finally{historyPending.delete(key);if(selected===id&&chartDays===days)renderPriceChart();}
 }

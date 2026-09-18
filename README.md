@@ -13,7 +13,6 @@ in contracts/artifacts for historical integrity, outside the served website.
 
 Cryptocurrency research dashboard with market comparisons, privacy protocol
 summaries, editorial privacy scores and interactive historical charts. No wallet connection is included.
-Click anywhere on a cryptocurrency row to open its project details.
 
 Each asset now has a project overview, developer/team field, repository ownership,
 GitHub push timestamp, source-license status and mining-algorithm field. Verified
@@ -45,7 +44,7 @@ browser HTTP cache. The snapshot and its timestamps remain visible if a refresh
 fails. Manual market and selected-history refreshes are also available.
 Charts load automatically when an asset or time frame is selected, with one
 automatic attempt per asset and range per page session. Ranges are 1D, 7D,
-1M (30 days), 3M (90 days) and 6M (180 days). Shorter ranges retain intraday
+1M (30 days), 3M (90 days), 6M (180 days), 1Y (365 days), and All time. Shorter ranges retain intraday
 samples. Hover, touch or keyboard arrows reveal the nearest recorded timestamp
 and price; the time axis uses actual timestamps. Each range has separate cached
 data and loading/error states, so late responses cannot replace another range. CoinGecko is the primary historical source.
@@ -70,7 +69,7 @@ supply does not establish a hard protocol cap. No audited unlock calendar, fee
 feed, revenue, or staking APY is provided. Browser and WebMCP execution have not
 been validated; syntax, source paths and numerical tests are checked locally.
 
-Monero includes timestamped CoinGecko fallback data for all five chart ranges.
+Monero includes timestamped CoinGecko fallback data for all seven chart ranges.
 Successful chart downloads are retained locally (up to 20 asset/range entries),
 with fresher data preferred over bundled copies. Saved windows retain their
 original dates so temporary API failures do not erase charts. Old data is labeled,
@@ -88,3 +87,5 @@ request fails, and never replace a good quote with a missing or older price.
 The 2026-09-18 coverage check saved 264 of 265 asset/range combinations
 across 53 assets. Karbo lacked enough verified 1-day prices; its longer ranges
 are available. All saved ranges pass a simulated provider-outage rendering test.
+
+Long ranges can be refreshed with `python scripts/extend-history.py`. All time requests maximum provider history, falling back to the public one-year window when unrestricted history is unavailable. Coverage limits and actual first/last sample dates are shown; this is not a promise of lifetime coverage. The saved coverage report records per-asset annual-fetch failures. No prices are synthesized.

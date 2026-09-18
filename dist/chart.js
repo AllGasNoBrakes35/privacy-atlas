@@ -16,7 +16,7 @@ export function drawPriceChart(svg,readout,rows,name,currency,loading=false){
  const x=t=>left+(t-start)/(end-start)*(right-left),y=v=>bottom-(v-min)/span*(bottom-top);
  for(const [v,ty]of [[max,18],[min,187]])svg.append(element('text',{x:left,y:ty,fill:'#97a7b6','font-size':14},price(v)));
  svg.append(element('path',{d:rows.map(([t,v],i)=>`${i?'L':'M'}${x(t)},${y(v)}`).join(' '),fill:'none',stroke:'#67e5c2','stroke-width':2.5,'vector-effect':'non-scaling-stroke'}));
- const date=t=>new Date(t).toLocaleString(undefined,{timeZone:'UTC',month:'short',day:'numeric',...(end-start<2*86400000?{hour:'2-digit',minute:'2-digit'}:{})});
+ const date=t=>new Date(t).toLocaleString(undefined,{timeZone:'UTC',month:'short',day:'numeric',...(end-start>=180*86400000?{year:'numeric'}:{}),...(end-start<2*86400000?{hour:'2-digit',minute:'2-digit'}:{})});
  svg.append(element('text',{x:left,y:217,fill:'#97a7b6','font-size':14},date(start)),element('text',{x:right,y:217,fill:'#97a7b6','font-size':14,'text-anchor':'end'},date(end)));
  const line=element('line',{x1:0,x2:0,y1:top,y2:bottom,stroke:'#97a7b6','stroke-dasharray':'4 4',visibility:'hidden'}),dot=element('circle',{cx:0,cy:0,r:4,fill:'#67e5c2',stroke:'#0a121b','stroke-width':2,visibility:'hidden'});svg.append(line,dot);
  let index=rows.length-1;

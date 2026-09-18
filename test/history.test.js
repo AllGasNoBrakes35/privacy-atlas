@@ -45,3 +45,11 @@ test('rate limit pauses repeated provider requests without discarding saved data
  await assert.rejects(loadHistory('zcash',{now,fetcher}),/temporarily rate limited/);
  assert.equal(calls,1);
 });
+test('all-time keeps older samples and labels the annual fallback honestly',async()=>{
+ const ancient=[[now-900*DAY,1],[now-DAY,2]];
+ assert.deepEqual(priceSamples(ancient,now,'max'),ancient);
+ assert.equal(priceSamples(ancient,now,365).length,1);
+ const urls=[];const h=await loadHistory('monero',{now,days:'max',fetcher:async u=>{urls.push(u);return urls.length===1?{ok:false,status:401}:ok({prices});}});
+ assert.equal(new URL(urls[1]).searchParams.get('days'),'365');
+ assert.match(h.description,/not lifetime history/);
+});
