@@ -10,7 +10,6 @@ const historyPending=new Set(),historyAttempted=new Set(),historyErrors=new Map(
 import {profiles,unknown} from './profiles.js';
 import {privacyRating} from './privacy-scores.js';
 import {logo,renderProject} from './project-info.js';
-import {assumptions,projectForecast,reviewed as forecastDate} from './forecasts.js';
 const $=id=>document.getElementById(id), api='https://api.coingecko.com/api/v3';
 let data,selected='monero',mode='Bundled snapshot',busy=false;
 const valid=n=>Number.isFinite(n);
@@ -64,7 +63,6 @@ function renderDetail(){
  const finance=[['Provider quote time',when(c.last_updated)],['Price',usd(c.current_price)],['Market cap',compact(c.market_cap)],['Vendor FDV',compact(c.fully_diluted_valuation)],['24h reported volume',compact(c.total_volume)],['Volume / market cap',positive(c.market_cap)&&valid(c.total_volume)?(c.total_volume/c.market_cap*100).toFixed(2)+'%':'—'],['7d / 30d return',`${percent(c.price_change_percentage_7d_in_currency)} / ${percent(c.price_change_percentage_30d_in_currency)}`],['Circulating supply',num(c.circulating_supply)],['Total supply',num(c.total_supply)],['Vendor maximum supply',num(c.max_supply)],['Circulating / max',positive(c.max_supply)&&positive(c.circulating_supply)?(c.circulating_supply/c.max_supply*100).toFixed(2)+'%':'Not established'],['Below all-time high',valid(c.ath_change_percentage)?percent(c.ath_change_percentage):'—']];
  $('financials').replaceChildren();for(const [k,v]of finance)$('financials').append(node('dt',k),node('dd',v));
  renderPriceChart();
- renderForecast(c,p);
 }
 function renderPriceChart(){
  const c=current();if(!c)return;
@@ -87,32 +85,6 @@ function renderPriceChart(){
  if(!bundleReady)void ensureHistoryBundle(c.id);
  clearTimeout(historyLoadTimer);
  if(needsRefresh)historyLoadTimer=setTimeout(()=>{if(selected===c.id&&chartDays===days)void refreshHistory(c.id,days);},250);
-}
-function renderForecast(c,p){
- const out=$('forecastResults'),basis=$('forecastBasis'),model=assumptions[c.id];
- out.replaceChildren();basis.replaceChildren();
- $('forecastCoverage').textContent=`Numeric scenario coverage: ${data.coins.filter(x=>projectForecast(x,1)).length} of ${data.coins.length} assets. Forecast research is separate from privacy scores.`;
- const age=Date.now()-Date.parse(c.last_updated);
- $('forecastStatus').textContent=`Model review: ${forecastDate} · Price anchor: ${usd(c.current_price)} · Quote: ${when(c.last_updated)}${!valid(age)||age>3600000?' · STALE QUOTE — refresh prices before interpreting estimates.':''}`;
- for(const years of [1,3,5]){
-  const r=projectForecast(c,years),box=node('div');
-  box.append(node('h4',`${years}-year price prediction`));
-  if(!r){box.append(node('b','Unavailable'),node('p',!model?'Insufficient reviewed project, adoption and tokenomics evidence.':'A positive price and circulating supply are required.'));out.append(box);continue;}
-  box.append(node('span','BASE SCENARIO'),node('b',usd(r.price)),node('p',`Downside ${usd(r.low)} · Upside ${usd(r.high)}`),node('p',`Implied market cap: ${compact(r.cap)}`),node('span',`Assumed supply: ${num(r.futureSupply)} ${c.symbol.toUpperCase()}`));
-  out.append(box);
- }
- if(!model){basis.append(node('p','This asset stays in the comparison. Forecasts will appear only after a project-specific review; missing evidence is not a zero price target.'));return;}
- const details=[
-  ['Project merit',model.meritReason+` Editorial contribution to annual market-cap growth: ${percent(model.merit*100)} points.`],
-  ['Adoptability',model.adoptionReason+` Editorial contribution: ${percent(model.adoption*100)} points. This is a qualitative judgment, not measured user growth.`],
-  ['Tokenomics',p.economics],
-  ['Supply assumption',c.id==='monero'?'Approximate addition of 157,680 XMR/year: 0.6 per block at an assumed two-minute cadence; penalties and actual timing can reduce or vary issuance.':c.id==='grin'?'Approximate addition of 31,536,000 GRIN/year from one coin per second, using 365-day years.':`Illustrative ${(model.dilution*100).toFixed(0)}% annual circulating-supply growth, compounded. This is an editorial dilution assumption, not a verified emission or unlock schedule.${c.id==='zcash'?' Model supply is limited to the documented 21 million cap unless the starting vendor supply already exceeds it.':''}${c.id==='minotari'?' XTM issuance, vesting and burns could differ materially; Ootle use does not imply this assumed growth rate.':''}`]
- ];
- for(const [title,body]of details){const section=node('div');section.append(node('h4',title),node('p',body));basis.append(section);}
- $('forecastCoverage').textContent=`Numeric scenario coverage: ${data.coins.filter(x=>projectForecast(x,1)).length} of ${data.coins.length} assets. Forecast research is separate from privacy scores.`;
- const sources=node('p', 'Project evidence: ','small');
- for(const url of p.sources){const link=node('a',new URL(url).hostname+' ↗ ');link.href=url;link.target='_blank';link.rel='noopener';sources.append(link);}
- basis.append(sources);
 }
 async function get(path){const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),18000);try{const r=await fetch(api+path,{signal:controller.signal,cache:'no-store'});if(!r.ok)throw Error(r.status===429?'Provider rate limit. Try again later.':`Provider request failed (${r.status}).`);return await r.json();}finally{clearTimeout(timeout);}}
 async function refreshMarkets(){

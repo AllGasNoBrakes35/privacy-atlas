@@ -2,7 +2,6 @@ import {readFile,writeFile,mkdir,copyFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {profiles,unknown} from '../dist/profiles.js';
 import {privacyRating} from '../dist/privacy-scores.js';
-import {assumptions,projectForecast,reviewed} from '../dist/forecasts.js';
 
 const root=new URL('../',import.meta.url);
 const file=p=>new URL(p,root);
@@ -13,10 +12,10 @@ const market=JSON.parse(await readFile(file('dist/data/snapshot.json'),'utf8'));
 const wasm=await readFile(file('contracts/target/wasm32-unknown-unknown/release/privacy_atlas_snapshot.wasm'));
 if(wasm.length>1572864)throw Error('Template exceeds the documented 1.5 MiB limit');
 const snapshot={
- schema:'privacy-atlas-research-v1',marketSnapshotFetchedAt:market.fetchedAt,forecastModelReviewed:reviewed,
- limitations:'Editorial research and speculative scenarios, not verified facts or guaranteed returns. The on-chain commitment establishes data integrity only. Refreshed browser quotes are not part of this saved edition.',
- sourceFileHashes:Object.fromEntries(await Promise.all(['dist/profiles.js','dist/privacy-scores.js','dist/forecasts.js','dist/data/snapshot.json'].map(async p=>[p,hash(await readFile(file(p)))]))),
- assets:market.coins.map(c=>({id:c.id,name:c.name,symbol:c.symbol,quoteTime:c.last_updated,price:c.current_price,circulatingSupply:c.circulating_supply,profile:profiles[c.id]??unknown,privacy:privacyRating(c.id),assumptions:assumptions[c.id]??null,forecasts:[1,3,5].map(y=>({years:y,scenario:projectForecast(c,y)}))}))
+ schema:'privacy-atlas-research-v1',marketSnapshotFetchedAt:market.fetchedAt,
+ limitations:'Editorial research, not investment advice or guaranteed results. The on-chain commitment establishes data integrity only. Refreshed browser quotes are not part of this saved edition.',
+ sourceFileHashes:Object.fromEntries(await Promise.all(['dist/profiles.js','dist/privacy-scores.js','dist/data/snapshot.json'].map(async p=>[p,hash(await readFile(file(p)))]))),
+ assets:market.coins.map(c=>({id:c.id,name:c.name,symbol:c.symbol,quoteTime:c.last_updated,price:c.current_price,circulatingSupply:c.circulating_supply,profile:profiles[c.id]??unknown,privacy:privacyRating(c.id)}))
 };
 const bytes=Buffer.from(JSON.stringify(snapshot,null,2)+'\n');
 await mkdir(file('contracts/artifacts/'),{recursive:true});

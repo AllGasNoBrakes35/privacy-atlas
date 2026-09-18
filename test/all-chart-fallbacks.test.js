@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {priceSamples,ranges} from '../dist/history.js';import {newestHistory} from '../dist/history-cache.js';
 test('every saved asset/range stays drawable after an API failure',async()=>{
  const source=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
- const render=source.slice(source.indexOf('function renderPriceChart(){'),source.indexOf('function renderForecast('));
+ const render=source.slice(source.indexOf('function renderPriceChart(){'),source.indexOf('async function get('));
  const start=source.indexOf('async function refreshHistory('),refresh=source.slice(start,source.indexOf('for(const range of ranges)',start));
  const elements=new Map();let drawn=[];
  const context={asset:null,current:()=>context.asset,data:{},chartDays:90,historyLoadTimer:null,bundledHistory:new Map(),historyBundlesLoaded:new Set(),ensureHistoryBundle:async()=>{},historyCache:new Map(),historyPending:new Set(),historyAttempted:new Set(),historyErrors:new Map(),selected:null,priceSamples,newestHistory,ranges,Date,setTimeout:()=>0,clearTimeout:()=>{},when:t=>new Date(t).toISOString(),node:()=>({}),drawPriceChart:(svg,readout,rows)=>{drawn=rows},saveHistoryCache:()=>{},chartStorage:null,loadHistory:async()=>{throw Error('Provider request failed (429)')},$:id=>{if(!elements.has(id))elements.set(id,{children:[],append(){},textContent:''});return elements.get(id)}};

@@ -7,11 +7,12 @@ the immutable Ootle testnet record; making the site public does not change that 
 
 An immutable Ootle research-snapshot component is deployed on **Esmeralda testnet**.
 See [`contracts/`](contracts/README.md) for the accepted deployment details.
-The dashboard checks saved research bytes against the receipt-recorded fingerprint;
-it does not perform live indexer queries. Refreshed quotes are separate from that edition.
+The dashboard shows the historical receipt-recorded fingerprint; it does not verify
+the current website or perform live indexer queries. The original edition remains
+in contracts/artifacts for historical integrity, outside the served website.
 
 Cryptocurrency research dashboard with market comparisons, privacy protocol
-summaries, editorial privacy scores and valuation scenarios. No wallet connection is included.
+summaries, editorial privacy scores and interactive historical charts. No wallet connection is included.
 Click anywhere on a cryptocurrency row to open its project details.
 
 Each asset now has a project overview, developer/team field, repository ownership,
@@ -34,15 +35,9 @@ GitHub activity can be refreshed for the selected repository from the dashboard;
 this update lasts for the browser session. It is a push timestamp, not a release
 date or necessarily a default-branch code change. Source checks are timestamped.
 
-The forecast section has no inputs. It shows 1-, 3- and 5-year base, downside and
-upside scenarios for 13 reviewed projects, with project-specific merit and adoption
-judgments, explicit supply assumptions and linked project evidence. Other assets
-show insufficient evidence. These are editorial scenarios, not validated predictions
-or probability intervals. Most dilution rates are illustrative, not audited unlock
-schedules. Monero and Grin use approximate linear protocol issuance. Refreshing
-quotes recalculates the price anchor but does not update editorial research.
+Price forecasts and their model have been removed from the website.
 
-Run `npm test` for valuation and forecast tests. Serve `dist/` over HTTP.
+Run `npm test` for chart, market data and disclosure checks. Serve `dist/` over HTTP.
 `npm run snapshot` fetches the CoinGecko privacy-coins category and historical
 series. The browser automatically refreshes market prices on each page load and
 when a page is restored from the back/forward cache. Provider requests bypass the
@@ -65,7 +60,7 @@ API rate limits and CORS/network failures are surfaced without fabricated data.
 Coverage is the provider category, not all privacy coins. Unreviewed assets have
 explicitly unknown protocol and goal summaries. Zero/missing cap or supply is
 displayed as unreported. Editorial profiles cite project sources and review dates.
-Roadmaps are goals; forecast values are conditional editorial assumptions.
+Roadmaps are project-stated goals, not guaranteed outcomes.
 
 Privacy scores are ordinal editorial assessments with source links and rationales.
 15 covered assets have ratings; others explicitly show Not rated. They are not audits,
