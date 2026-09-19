@@ -2,17 +2,28 @@
 
 **Public website:** [Open Privacy Atlas](https://privacy-atlas-john.johnnytsunami14.chatgpt.site)
 
-The website is publicly accessible. Hosting access is managed separately from
-the immutable Ootle testnet record; making the site public does not change that record.
+The website is publicly accessible. Hosting access is managed separately from the immutable Ootle testnet record.
 
 An immutable Ootle research-snapshot component is deployed on **Esmeralda testnet**.
 See [`contracts/`](contracts/README.md) for the accepted deployment details.
-The dashboard shows the historical receipt-recorded fingerprint; it does not verify
-the current website or perform live indexer queries. The original edition remains
+The historical receipt-recorded fingerprint is retained in the source artifacts;
+the website no longer displays an Ootle research record section. The original edition remains
 in contracts/artifacts for historical integrity, outside the served website.
 
 Cryptocurrency research dashboard with market comparisons, privacy protocol
 summaries, editorial privacy scores and interactive historical charts. No wallet connection is included.
+
+Coverage combines CoinGecko's privacy-coins category with a curated privacy ecosystem.
+The September 18, 2026 expansion adds 21 projects, bringing the bundled list to 74.
+`dist/ecosystem.js` is the shared registry for supplemental market refreshes, research,
+profiles and overlapping focus labels: privacy payments, confidential computing,
+private smart contracts, privacy infrastructure and privacy-focused applications.
+Project focus is searchable and filterable. Inclusion does not imply private token
+transfers or an investment endorsement. New entries have source-linked privacy,
+security and future-direction summaries; their transfer privacy scores remain unrated.
+Identity matching uses CoinGecko IDs, not ticker symbols (Midnight is `midnight-3`).
+`dist/data/curated-identities.json` preserves coverage when quotes are unavailable;
+refreshes retain previous quotes and timestamps rather than removing missing assets.
 
 Each asset now has a project overview, developer/team field, repository ownership,
 GitHub push timestamp, source-license status and mining-algorithm field. Verified
@@ -37,8 +48,8 @@ date or necessarily a default-branch code change. Source checks are timestamped.
 Price forecasts and their model have been removed from the website.
 
 Run `npm test` for chart, market data and disclosure checks. Serve `dist/` over HTTP.
-`npm run snapshot` fetches the CoinGecko privacy-coins category and historical
-series. The browser automatically refreshes market prices on each page load and
+`npm run snapshot` fetches the CoinGecko privacy-coins category, curated supplemental
+quotes and historical series. The browser automatically refreshes market prices on each page load and
 when a page is restored from the back/forward cache. Provider requests bypass the
 browser HTTP cache. The snapshot and its timestamps remain visible if a refresh
 fails. Manual market and selected-history refreshes are also available.
@@ -56,13 +67,13 @@ saved CoinGecko history. The fallback has automated parsing tests; live MEXC
 availability could not be confirmed during this update.
 API rate limits and CORS/network failures are surfaced without fabricated data.
 
-Coverage is the provider category, not all privacy coins. Unreviewed assets have
-explicitly unknown protocol and goal summaries. Zero/missing cap or supply is
+Coverage combines the provider category and curated ecosystem additions; it is not exhaustive.
+Limited-evidence entries explicitly describe unknown protocol and roadmap details. Zero/missing cap or supply is
 displayed as unreported. Editorial profiles cite project sources and review dates.
 Roadmaps are project-stated goals, not guaranteed outcomes.
 
 Privacy scores are ordinal editorial assessments with source links and rationales.
-15 covered assets have ratings; others explicitly show Not rated. They are not audits,
+20 covered assets have ratings; others explicitly show N/A. They are not audits,
 anonymity probabilities, or investment ratings. Chart samples exclude intraday data.
 Vendor maximum
 supply does not establish a hard protocol cap. No audited unlock calendar, fee
@@ -117,3 +128,7 @@ Rate limits can prevent refreshes; the last complete observation is retained.
 Incomplete data receives no score, partial counts are lower bounds, saved data
 over 7 days old is flagged, and observations older than 30 days are not rated.
 Assets without a tracked repository remain explicitly unrated.
+
+September 19 evidence expansion: five provisional native-transfer privacy ratings cite project documentation (Ryo, Nerva, Ycash, Particl, Epic Cash). New ratings exclude planned upgrades. Development evidence now covers 44 assets; nine additional scores use complete 90-day histories from the selected repositories. API-limited histories remain unscored, and release/PR context is not substituted for commit evidence. Refresh missing scores with `node scripts/development-snapshot.mjs --missing`.
+
+September 19 category review: assigned documented roles to 19 previously unclassified assets. Categories describe project focus, not confirmed feature deployment or transfer confidentiality. Fourteen assets remain unclassified where source attribution or purpose is unresolved. Source links and limitations remain in each asset’s research.

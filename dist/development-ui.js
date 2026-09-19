@@ -8,6 +8,8 @@ const date=t=>t?new Date(t).toLocaleDateString(undefined,{timeZone:'UTC',year:'n
 function link(url,label){const a=el('a',label);if(/^https:\/\/(github\.com|api\.github\.com)\//.test(url??'')){a.href=url;a.target='_blank';a.rel='noopener';}return a;}
 export function developmentRating(id){return rateDevelopment(saved[id]);}
 export function renderDevelopment(c,g){
+ $('developmentSection').hidden=false;
+ $('developmentTitle').textContent=`${c.name??c.id} · Development activity`;
  current={c,g};const e=saved[c.id],rating=rateDevelopment(e),m=e?.metrics;
  $('developmentScore').textContent=rating.score===null?rating.label:`${rating.score.toFixed(1)} / 10`;
  $('developmentLabel').textContent=rating.score===null?'Insufficient current evidence':rating.label;
@@ -15,7 +17,7 @@ export function renderDevelopment(c,g){
  if(g){$('developmentScope').append(link(g.url,g.name),el('span',` · ${e?.branch??'default branch'} · 90-day observation`));}
  else $('developmentScope').textContent='No tracked GitHub repository is available for this asset.';
  $('developmentAsOf').textContent=e?.checkedAt?`Observed ${date(e.since)} – ${date(e.checkedAt)} (UTC). ${Date.now()-Date.parse(e.checkedAt)>7*86400000?'Saved evidence is over 7 days old.':''}`:'No saved development observation yet.';
- $('developmentReason').textContent=g?rating.reason:'Not rated — missing repository evidence does not mean inactive development.';
+ $('developmentReason').textContent=g?rating.reason:'N/A — missing repository evidence does not mean inactive development.';
  $('developmentMetrics').replaceChildren();
  const count=n=>n===undefined?'Unavailable':`${e?.complete?'':'≥ '}${n.toLocaleString()}`;
  for(const [label,value,detail]of [

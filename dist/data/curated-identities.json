@@ -1,0 +1,128 @@
+[
+  {
+    "id": "beldex",
+    "name": "Beldex",
+    "symbol": "bdx",
+    "image": "https://coin-images.coingecko.com/coins/images/5111/large/Beldex.png?1696505631"
+  },
+  {
+    "id": "midnight-3",
+    "name": "Midnight",
+    "symbol": "night",
+    "image": "https://coin-images.coingecko.com/coins/images/71015/large/midnight.png?1765193080"
+  },
+  {
+    "id": "railgun",
+    "name": "Railgun",
+    "symbol": "rail",
+    "image": "https://coin-images.coingecko.com/coins/images/16840/large/railgun.jpeg?1696516407"
+  },
+  {
+    "id": "zama",
+    "name": "Zama",
+    "symbol": "zama",
+    "image": "https://coin-images.coingecko.com/coins/images/70921/large/zama.png?1764591992"
+  },
+  {
+    "id": "oasis-network",
+    "name": "Oasis",
+    "symbol": "rose",
+    "image": "https://coin-images.coingecko.com/coins/images/13162/large/200x200_%28Rounded%29.png?1743579893"
+  },
+  {
+    "id": "threshold-network-token",
+    "name": "Threshold Network",
+    "symbol": "t",
+    "image": "https://coin-images.coingecko.com/coins/images/22228/large/nFPNiSbL_400x400.jpg?1696521570"
+  },
+  {
+    "id": "dusk-network",
+    "name": "DUSK",
+    "symbol": "dusk",
+    "image": "https://coin-images.coingecko.com/coins/images/5217/large/image_widget_biddfvxd454b1.png?1696505726"
+  },
+  {
+    "id": "aztec",
+    "name": "Aztec",
+    "symbol": "aztec",
+    "image": "https://coin-images.coingecko.com/coins/images/70681/large/aztec.png?1763091883"
+  },
+  {
+    "id": "status",
+    "name": "Status",
+    "symbol": "snt",
+    "image": "https://coin-images.coingecko.com/coins/images/779/large/status.png?1696501931"
+  },
+  {
+    "id": "pha",
+    "name": "PHALA",
+    "symbol": "pha",
+    "image": "https://coin-images.coingecko.com/coins/images/12451/large/phala.png?1696512270"
+  },
+  {
+    "id": "iexec-rlc",
+    "name": "iExec RLC",
+    "symbol": "rlc",
+    "image": "https://coin-images.coingecko.com/coins/images/646/large/pL1VuXm.png?1696501840"
+  },
+  {
+    "id": "aleo",
+    "name": "ALEO",
+    "symbol": "aleo",
+    "image": "https://coin-images.coingecko.com/coins/images/27916/large/secondary-icon-dark.png?1726770428"
+  },
+  {
+    "id": "nym",
+    "name": "Nym",
+    "symbol": "nym",
+    "image": "https://coin-images.coingecko.com/coins/images/24488/large/NYM_Token.png?1696523668"
+  },
+  {
+    "id": "orchid-protocol",
+    "name": "Orchid Protocol",
+    "symbol": "oxt",
+    "image": "https://coin-images.coingecko.com/coins/images/3916/large/download_%285%29.png?1696504574"
+  },
+  {
+    "id": "hopr",
+    "name": "HOPR",
+    "symbol": "hopr",
+    "image": "https://coin-images.coingecko.com/coins/images/14061/large/Shared_HOPR_logo_512px.png?1696513786"
+  },
+  {
+    "id": "secret",
+    "name": "Secret",
+    "symbol": "scrt",
+    "image": "https://coin-images.coingecko.com/coins/images/11871/large/Untitled_design_%284%29.png?1787211441"
+  },
+  {
+    "id": "session-token",
+    "name": "Session Token",
+    "symbol": "sesh",
+    "image": "https://coin-images.coingecko.com/coins/images/56073/large/SES_Logo_RGB_Brandmark_Colour.png?1748330955"
+  },
+  {
+    "id": "sentinel",
+    "name": "Sentinel",
+    "symbol": "p2p",
+    "image": "https://coin-images.coingecko.com/coins/images/14879/large/200x200.png?1762672966"
+  },
+  {
+    "id": "panther",
+    "name": "Panther Protocol",
+    "symbol": "zkp",
+    "image": "https://coin-images.coingecko.com/coins/images/18611/large/panther.jpg?1696518084"
+  },
+  {
+    "id": "lit-protocol",
+    "name": "Lit Protocol",
+    "symbol": "litkey",
+    "image": "https://coin-images.coingecko.com/coins/images/70287/large/litkey.png?1761400668"
+  },
+  {
+    "id": "automata",
+    "name": "Automata",
+    "symbol": "ata",
+    "image": "https://coin-images.coingecko.com/coins/images/15985/large/ATA_Icon_%28Profile_2%29.png?1720487988"
+  }
+]

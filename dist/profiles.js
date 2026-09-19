@@ -1,3 +1,4 @@
+import {ecosystemProfiles} from './ecosystem.js';
 // Editorial summaries of project sources, reviewed 2026-09-11. Not audits.
 const p=(mode,protocol,goal,economics,risks,sources)=>({mode,protocol,goal,economics,risks,sources,reviewed:'2026-09-11'});
 export const profiles={
@@ -16,4 +17,5 @@ export const profiles={
  minotari:p('Layer-dependent','Tari privacy properties must be evaluated separately for its base layer and Ootle resources; not every application state is private.','The September 2026 update targets programmable privacy through Ootle and community-led governance; launch plans are not proof of delivery.','21 billion XTM is an emission target, not a hard lifetime cap: the published policy includes perpetual 1% tail emission and a 30% premine with vesting.','Unlocks, application adoption and execution risk; wrapped XTM introduces distinct bridge and liquidity risks.',['https://tari.com/tokenomics','https://tari.com/updates/2026-09-01-update-143','https://ootle.tari.com/'])
 };
 profiles.zcoin=profiles.firo;
+Object.assign(profiles,ecosystemProfiles);
 export const unknown={mode:'Unreviewed',protocol:'No editorial protocol review yet. Category inclusion is not a privacy guarantee.',goal:'Project goals not yet independently summarized. Use the project links on the market-data source to investigate.',economics:'Supply and valuation fields below are vendor-reported. Emissions, unlocks, fees and insider allocation have not been verified.',risks:'Insufficient reviewed evidence to rank long-term prospects or privacy strength.',sources:[],reviewed:null};

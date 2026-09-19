@@ -1,0 +1,75 @@
+/* A compact market workspace; long-form research opens separately. */
+#siteContent>header{height:56px;padding:10px 24px;flex-wrap:nowrap}
+#aboutMarket{margin-left:auto;background:transparent;border:0;color:var(--muted)}
+.workspace{max-width:none;padding:16px 24px;margin:0}
+#marketView{min-height:calc(100dvh - 88px);height:auto;display:flex;flex-direction:column;gap:12px;}
+#marketView>:not(#marketTable){flex-shrink:0}
+#marketView .education-notice{margin:0;padding:0;border:0;font-size:14px;line-height:20px}
+#marketView .education-notice button{padding:0 8px}
+#marketView .top{gap:20px;flex-direction:row;align-items:center}
+#marketView h1{font-size:26px;letter-spacing:-.6px;margin:0;line-height:1.25}
+#marketView .refresh{display:flex;align-items:center;gap:14px;max-width:none}
+#marketView .refresh button{padding:7px 12px;white-space:nowrap}
+#freshness{max-width:310px;font-size:12px;line-height:1.4;margin:0;color:var(--muted)}
+#marketView .stats{margin:0;border-radius:6px;grid-template-columns:repeat(4,minmax(0,1fr))}
+#marketView .stats>div{padding:8px 16px}
+#marketView .stats strong{font-size:22px;line-height:1.3;font-variant-numeric:tabular-nums}
+#marketView .stats span{font-size:14px}
+#marketView .toolbar{display:grid;grid-template-columns:minmax(200px,1.4fr) repeat(3,minmax(150px,1fr));gap:12px}
+#marketView .toolbar label{min-width:0}
+#marketView input,#marketView select{margin-top:4px;padding:8px 10px;font-size:14px;height:38px}
+#notice{min-height:0;margin:0;font-size:12px;line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#notice:empty{display:none}
+#marketTable{flex:0 0 auto;min-height:0;overflow:visible;border-radius:6px}
+#marketTable table{table-layout:fixed;white-space:normal;font-size:14px}
+#marketTable caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+#marketTable th{height:44px;font-size:12px;letter-spacing:.02em;line-height:1.2;overflow-wrap:anywhere}
+#marketTable td{height:56px;line-height:1.25}
+#marketTable th,#marketTable td{padding:6px 10px}
+#marketTable .col-asset{width:18%}#marketTable .col-category{width:19%}
+#marketTable col[data-column="price"]{width:10%}#marketTable col[data-column="change"]{width:7%}
+#marketTable col[data-column="cap"]{width:10%}#marketTable col[data-column="volume"]{width:10%}
+#marketTable col[data-column="model"]{width:11%}#marketTable col[data-column="score"]{width:7%}#marketTable col[data-column="development"]{width:8%}
+#marketTable th:nth-child(2),#marketTable td:nth-child(2){text-align:left}
+#marketTable th:nth-child(6),#marketTable td:nth-child(6){text-align:right}
+.asset-cell{display:flex;align-items:center;min-width:0;gap:8px}.asset-cell .asset-logo{width:24px;height:24px;margin:0}
+.asset-cell>div{min-width:0}.asset-cell button{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;font-size:14px}
+#marketTable td:first-child small{display:block;margin:3px 0 0;font-size:12px}
+.category-label{display:block;color:#c3d4de;line-height:1.25;font-size:14px;overflow-wrap:anywhere}
+#marketTable td[data-column="price"]{font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+#marketTable td[data-column="price"] small{display:block;font-size:12px}
+#marketTable .tag{border:0;padding:0;border-radius:0;white-space:normal;font-size:14px;overflow-wrap:anywhere}
+#marketTable td[data-column="development"] button{padding:4px 0;border:0;background:transparent;font-size:14px;white-space:normal}
+.market-pagination{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:36px}
+.market-pagination>div{display:flex;align-items:center;gap:12px}.market-pagination p{margin:0;font-size:14px}
+.market-pagination button{padding:6px 12px}.market-pagination button:disabled{cursor:default}
+#pageStatus{font-size:14px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.market-footnote{font-size:12px;color:var(--muted);line-height:1.4;margin:0}
+#backToMarket{margin-bottom:12px}#detail .project-overview{margin-top:0}
+.metric-picker{display:none}
+@media(max-width:1100px){
+ .workspace{padding:12px 16px}#siteContent>header{padding:10px 16px}#marketView{min-height:calc(100dvh - 80px);height:auto;gap:10px}
+ #freshness{display:none}.metric-picker{display:flex;align-items:center;gap:12px;font-size:14px}.metric-picker select{max-width:200px;margin:0!important}
+ #marketView .toolbar{grid-template-columns:1.3fr 1fr 1fr 1fr;gap:8px}
+ #marketTable [data-column]{display:none}#marketTable .col-asset{width:34%}#marketTable .col-category{width:40%}
+ #marketTable [data-column].visible-metric{display:table-cell}#marketTable col[data-column].visible-metric{display:table-column;width:26%}
+}
+@media(max-width:650px){
+ #siteContent .label{display:none}#aboutMarket{font-size:12px;padding:5px}#siteContent>header{height:48px}
+ #marketView{min-height:calc(100dvh - 72px);height:auto;gap:8px}#marketView h1{font-size:21px}
+ #marketView .refresh button{font-size:12px;padding:6px 8px}#marketView .stats>div{padding:6px 8px}
+ #marketView .stats span{font-size:12px;line-height:1.25}#marketView .stats strong{font-size:18px}
+ #marketView .toolbar{grid-template-columns:1fr 1fr}#marketView .toolbar label{font-size:12px}
+ #marketView>:not(#marketTable){flex-shrink:0}
+#marketView .education-notice{font-size:12px}#marketView .education-notice button{padding-left:4px}
+ #marketTable th,#marketTable td{padding:5px 6px}.asset-cell{gap:6px}.asset-cell .asset-logo{display:none}
+ .market-pagination{gap:6px}.market-pagination>div{gap:6px}.market-pagination button{padding:6px 8px}.market-pagination p{font-size:12px}#pageStatus{font-size:12px}
+ .market-footnote{display:none}
+}
+/* Keep controls reachable on unusually short viewports and at large text zoom. */
+@media(max-height:560px){#marketView{height:auto;min-height:calc(100dvh - 88px)}#marketTable{min-height:156px}}
+
+/* Page controls follow the rows in normal flow and can never be clipped. */
+html,body{overflow-y:auto}#marketView{overflow:visible}.market-pagination{flex-wrap:wrap}.market-footnote{margin-top:auto}
+
+.range-navigation{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted)}#rangePages{display:flex;gap:8px;flex-wrap:wrap}#rangePages button{padding:7px 14px;font-variant-numeric:tabular-nums}#rangePages button[aria-current="page"]{background:#19433b;border-color:var(--accent);color:#b7ffe9}

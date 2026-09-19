@@ -1,4 +1,4 @@
-import {renderDevelopment} from './development-ui.js';
+import {rolesFor} from './ecosystem.js';
 const $=id=>document.getElementById(id);
 export const projectData=await fetch('data/projects.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(()=>({projects:{}}));
 const repoData=await fetch('data/repositories.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(()=>({}));
@@ -33,7 +33,6 @@ export function logo(c,large=false){
 let currentCoin,currentProfile,refreshing=false;
 export function renderProject(c,profile){
  currentCoin=c;currentProfile=profile;const m=projectData.projects[c.id]??{},e=editorial[c.id]??{},g=m.github;
- renderDevelopment(c,g);
  $('projectTitle').replaceChildren(logo(c,true),document.createTextNode(`${c.name} · Project overview`));
  let summary=e.summary;
  if(!summary&&profile.reviewed)summary=`${profile.goal} ${profile.protocol}`;
@@ -43,6 +42,7 @@ export function renderProject(c,profile){
  $('projectSummary').textContent=summary;
  $('projectSummarySource').replaceChildren(link(e.source||(profile.reviewed?profile.sources[0]:g?.url)||m.marketSource||`https://www.coingecko.com/en/coins/${encodeURIComponent(c.id)}`,'Summary source ↗'));
  $('projectFacts').replaceChildren();
+ field('Project focus',rolesFor(c.id).join(' · '));
  field('Main developers / teams',e.team||'Current lead developers not verified',e.teamSource);
  if(g)field('Repository owner',g.owner+' (not necessarily the lead developer)',g.ownerUrl);
  const people=contributors[c.id];

@@ -16,7 +16,7 @@ const {renderDevelopment,refreshDevelopment,developmentRating}=await import('../
 const first={id:'first'},second={id:'second'},g=id=>({name:'test/'+id,url:'https://github.com/test/'+id});
 test('renders actual HTML targets; unknown projects stay unrated',()=>{
  renderDevelopment(first,g('first'));assert.match(elements.get('developmentScore').textContent,/\/ 10/);assert.equal(elements.get('developmentMetrics').children.length,4);
- renderDevelopment({id:'unknown'},null);assert.equal(elements.get('developmentScore').textContent,'Not rated');assert.equal(elements.get('developmentRefresh').disabled,true);assert.match(elements.get('developmentReason').textContent,/does not mean inactive/);
+ renderDevelopment({id:'unknown'},null);assert.equal(elements.get('developmentScore').textContent,'N/A');assert.equal(elements.get('developmentRefresh').disabled,true);assert.match(elements.get('developmentReason').textContent,/does not mean inactive/);
 });
 test('failed refresh preserves complete evidence and cannot replace another selected project',async()=>{
  let release;globalThis.fetch=()=>new Promise(resolve=>{release=resolve;});

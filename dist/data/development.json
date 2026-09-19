@@ -1814,5 +1814,639 @@
     "releasesChecked": true,
     "mergedPRs90": 0,
     "pullsComplete": true
+  },
+  "beldex": {
+    "repository": "Beldex-Coin/beldex",
+    "checkedAt": "2026-09-19T00:12:20.052Z",
+    "since": "2026-06-21T00:12:20.052Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 36,
+      "commits30": 15,
+      "authors90": 6,
+      "activeWeeks": 9,
+      "weeks": [
+        1,
+        0,
+        2,
+        7,
+        0,
+        0,
+        7,
+        4,
+        3,
+        3,
+        6,
+        3,
+        0
+      ],
+      "lastCommitAt": "2026-09-09T13:49:05.000Z",
+      "botCommits": 0,
+      "mergeCommits": 23,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/Beldex-Coin/beldex",
+      "commits": "https://api.github.com/repos/Beldex-Coin/beldex/commits?sha=c919b68484f19c20d423da031bc542c1824effa0&since=2026-06-21T00%3A12%3A20.052Z&until=2026-09-19T00%3A12%3A20.052Z&per_page=100",
+      "releases": "https://api.github.com/repos/Beldex-Coin/beldex/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/Beldex-Coin/beldex/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "dev",
+    "archived": false,
+    "fork": true,
+    "pushedAt": "2026-09-15T05:53:25Z",
+    "openItems": 11,
+    "head": "c919b68484f19c20d423da031bc542c1824effa0",
+    "latestRelease": {
+      "name": "v7.0.3",
+      "date": "2026-09-10T06:52:46Z",
+      "url": "https://github.com/Beldex-Coin/beldex/releases/tag/v7.0.3"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 31,
+    "pullsComplete": true
+  },
+  "midnight-3": {
+    "repository": "midnightntwrk/midnight-node",
+    "checkedAt": "2026-09-19T00:12:20.056Z",
+    "since": "2026-06-21T00:12:20.056Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 128,
+      "commits30": 41,
+      "authors90": 14,
+      "activeWeeks": 13,
+      "weeks": [
+        7,
+        7,
+        13,
+        11,
+        9,
+        17,
+        9,
+        8,
+        10,
+        3,
+        12,
+        15,
+        7
+      ],
+      "lastCommitAt": "2026-09-17T08:44:12.000Z",
+      "botCommits": 39,
+      "mergeCommits": 0,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/midnightntwrk/midnight-node",
+      "commits": "https://api.github.com/repos/midnightntwrk/midnight-node/commits?sha=1efc605cf08ca36f8aee0fc447ea8ae917661067&since=2026-06-21T00%3A12%3A20.056Z&until=2026-09-19T00%3A12%3A20.056Z&per_page=100",
+      "releases": "https://api.github.com/repos/midnightntwrk/midnight-node/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/midnightntwrk/midnight-node/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "main",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-18T19:34:29Z",
+    "openItems": 310,
+    "head": "1efc605cf08ca36f8aee0fc447ea8ae917661067",
+    "latestRelease": {
+      "name": "node-2.1.0-rc.1",
+      "date": "2026-09-15T15:53:11Z",
+      "url": "https://github.com/midnightntwrk/midnight-node/releases/tag/node-2.1.0-rc.1"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 212,
+    "pullsComplete": true
+  },
+  "oasis-network": {
+    "repository": "oasisprotocol/oasis-core",
+    "checkedAt": "2026-09-19T00:12:47.012Z",
+    "since": "2026-06-21T00:12:47.012Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 76,
+      "commits30": 36,
+      "authors90": 3,
+      "activeWeeks": 8,
+      "weeks": [
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        10,
+        16,
+        16,
+        22,
+        0,
+        7,
+        2
+      ],
+      "lastCommitAt": "2026-09-15T09:02:05.000Z",
+      "botCommits": 0,
+      "mergeCommits": 23,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/oasisprotocol/oasis-core",
+      "commits": "https://api.github.com/repos/oasisprotocol/oasis-core/commits?sha=6d2f95be071b8d4c26552ebb309a855677072c06&since=2026-06-21T00%3A12%3A47.012Z&until=2026-09-19T00%3A12%3A47.012Z&per_page=100",
+      "releases": "https://api.github.com/repos/oasisprotocol/oasis-core/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/oasisprotocol/oasis-core/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "master",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-15T11:32:01Z",
+    "openItems": 423,
+    "head": "6d2f95be071b8d4c26552ebb309a855677072c06",
+    "latestRelease": {
+      "name": "v26.1",
+      "date": "2026-06-08T15:04:20Z",
+      "url": "https://github.com/oasisprotocol/oasis-core/releases/tag/v26.1"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 23,
+    "pullsComplete": true
+  },
+  "dusk-network": {
+    "repository": "dusk-network/rusk",
+    "checkedAt": "2026-09-19T00:13:11.523Z",
+    "since": "2026-06-21T00:13:11.523Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 0,
+      "commits30": 0,
+      "authors90": 0,
+      "activeWeeks": 0,
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lastCommitAt": null,
+      "botCommits": 0,
+      "mergeCommits": 0,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/dusk-network/rusk",
+      "commits": "https://api.github.com/repos/dusk-network/rusk/commits?sha=311cc64df1018a9960babd19bc2b6d2e7bc3d4f3&since=2026-06-21T00%3A13%3A11.523Z&until=2026-09-19T00%3A13%3A11.523Z&per_page=100",
+      "releases": "https://api.github.com/repos/dusk-network/rusk/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/dusk-network/rusk/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "master",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-08-16T17:07:08Z",
+    "openItems": 150,
+    "head": "311cc64df1018a9960babd19bc2b6d2e7bc3d4f3",
+    "latestRelease": {
+      "name": "dusk-rusk-1.7.1",
+      "date": "2026-06-22T13:11:03Z",
+      "url": "https://github.com/dusk-network/rusk/releases/tag/dusk-rusk-1.7.1"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 0,
+    "pullsComplete": true
+  },
+  "threshold-network-token": {
+    "repository": "threshold-network/tbtc-v2",
+    "checkedAt": "2026-09-19T00:13:06.599Z",
+    "since": "2026-06-21T00:13:06.599Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 13,
+      "commits30": 3,
+      "authors90": 3,
+      "activeWeeks": 5,
+      "weeks": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        5,
+        2,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      "lastCommitAt": "2026-09-10T16:16:49.000Z",
+      "botCommits": 0,
+      "mergeCommits": 2,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/threshold-network/tbtc-v2",
+      "commits": "https://api.github.com/repos/threshold-network/tbtc-v2/commits?sha=40a11d1dcdcf82d3962e430067cfe3f97be81483&since=2026-06-21T00%3A13%3A06.599Z&until=2026-09-19T00%3A13%3A06.599Z&per_page=100",
+      "releases": "https://api.github.com/repos/threshold-network/tbtc-v2/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/threshold-network/tbtc-v2/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "main",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-14T10:28:27Z",
+    "openItems": 55,
+    "head": "40a11d1dcdcf82d3962e430067cfe3f97be81483",
+    "latestRelease": {
+      "name": "typescript/v3.2.0",
+      "date": "2026-03-13T16:50:38Z",
+      "url": "https://github.com/threshold-network/tbtc-v2/releases/tag/typescript/v3.2.0"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 116,
+    "pullsComplete": true
+  },
+  "zama": {
+    "repository": "zama-ai/fhevm",
+    "checkedAt": "2026-09-19T00:12:20.057Z",
+    "since": "2026-06-21T00:12:20.057Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 297,
+      "commits30": 130,
+      "authors90": 28,
+      "activeWeeks": 13,
+      "weeks": [
+        13,
+        29,
+        21,
+        26,
+        25,
+        19,
+        15,
+        14,
+        12,
+        16,
+        27,
+        24,
+        56
+      ],
+      "lastCommitAt": "2026-09-18T18:58:17.000Z",
+      "botCommits": 0,
+      "mergeCommits": 0,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/zama-ai/fhevm",
+      "commits": "https://api.github.com/repos/zama-ai/fhevm/commits?sha=debd274c26c209c9d81f27f9f785bf172c3560b8&since=2026-06-21T00%3A12%3A20.057Z&until=2026-09-19T00%3A12%3A20.057Z&per_page=100",
+      "releases": "https://api.github.com/repos/zama-ai/fhevm/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/zama-ai/fhevm/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "main",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-18T20:28:52Z",
+    "openItems": 109,
+    "head": "debd274c26c209c9d81f27f9f785bf172c3560b8",
+    "latestRelease": {
+      "name": "v0.13.5",
+      "date": "2026-09-14T08:28:10Z",
+      "url": "https://github.com/zama-ai/fhevm/releases/tag/v0.13.5"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 532,
+    "pullsComplete": false
+  },
+  "pha": {
+    "repository": "Phala-Network/phala-blockchain",
+    "checkedAt": "2026-09-19T00:13:40.544Z",
+    "since": "2026-06-21T00:13:40.544Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 1,
+      "commits30": 1,
+      "authors90": 1,
+      "activeWeeks": 1,
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "lastCommitAt": "2026-09-02T00:55:42.000Z",
+      "botCommits": 0,
+      "mergeCommits": 1,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/Phala-Network/phala-blockchain",
+      "commits": "https://api.github.com/repos/Phala-Network/phala-blockchain/commits?sha=a452ea9e6201026300943dc70ea05e5e7c46a7d8&since=2026-06-21T00%3A13%3A40.544Z&until=2026-09-19T00%3A13%3A40.544Z&per_page=100",
+      "releases": "https://api.github.com/repos/Phala-Network/phala-blockchain/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/Phala-Network/phala-blockchain/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "master",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-02T01:12:29Z",
+    "openItems": 134,
+    "head": "a452ea9e6201026300943dc70ea05e5e7c46a7d8",
+    "latestRelease": {
+      "name": "pruntime-v2.1.0",
+      "date": "2023-08-30T08:06:35Z",
+      "url": "https://github.com/Phala-Network/phala-blockchain/releases/tag/pruntime-v2.1.0"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 1,
+    "pullsComplete": true
+  },
+  "status": {
+    "repository": "status-im/status-go",
+    "checkedAt": "2026-09-19T00:13:35.347Z",
+    "since": "2026-06-21T00:13:35.347Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 242,
+      "commits30": 82,
+      "authors90": 18,
+      "activeWeeks": 13,
+      "weeks": [
+        14,
+        15,
+        8,
+        7,
+        16,
+        13,
+        44,
+        23,
+        39,
+        23,
+        15,
+        9,
+        16
+      ],
+      "lastCommitAt": "2026-09-15T09:02:26.000Z",
+      "botCommits": 0,
+      "mergeCommits": 0,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/status-im/status-go",
+      "commits": "https://api.github.com/repos/status-im/status-go/commits?sha=9f09f902762292fbe8264dd75a68e739ecd17444&since=2026-06-21T00%3A13%3A35.347Z&until=2026-09-19T00%3A13%3A35.347Z&per_page=100",
+      "releases": "https://api.github.com/repos/status-im/status-go/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/status-im/status-go/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "develop",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-18T12:50:56Z",
+    "openItems": 357,
+    "head": "9f09f902762292fbe8264dd75a68e739ecd17444",
+    "latestRelease": {
+      "name": "v0.179.25",
+      "date": "2024-05-30T12:20:30Z",
+      "url": "https://github.com/status-im/status-go/releases/tag/v0.179.25"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 163,
+    "pullsComplete": true
+  },
+  "iexec-rlc": {
+    "repository": "iExecBlockchainComputing/iexec-sdk",
+    "checkedAt": "2026-09-19T00:14:04.757Z",
+    "since": "2026-06-21T00:14:04.757Z",
+    "complete": true,
+    "metrics": {
+      "commits90": 0,
+      "commits30": 0,
+      "authors90": 0,
+      "activeWeeks": 0,
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lastCommitAt": null,
+      "botCommits": 0,
+      "mergeCommits": 0,
+      "unidentified": 0
+    },
+    "warnings": [],
+    "sources": {
+      "repository": "https://github.com/iExecBlockchainComputing/iexec-sdk",
+      "commits": "https://api.github.com/repos/iExecBlockchainComputing/iexec-sdk/commits?sha=251e439fcad61569bc06012fa50c267891b6e341&since=2026-06-21T00%3A14%3A04.757Z&until=2026-09-19T00%3A14%3A04.757Z&per_page=100",
+      "releases": "https://api.github.com/repos/iExecBlockchainComputing/iexec-sdk/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/iExecBlockchainComputing/iexec-sdk/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "master",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-07-09T14:55:03Z",
+    "openItems": 24,
+    "head": "251e439fcad61569bc06012fa50c267891b6e341",
+    "latestRelease": {
+      "name": "v9.0.1",
+      "date": "2026-05-19T09:34:12Z",
+      "url": "https://github.com/iExecBlockchainComputing/iexec-sdk/releases/tag/v9.0.1"
+    },
+    "releasesChecked": true,
+    "mergedPRs90": 0,
+    "pullsComplete": true
+  },
+  "aleo": {
+    "repository": "ProvableHQ/snarkOS",
+    "checkedAt": "2026-09-19T00:14:22.363Z",
+    "since": "2026-06-21T00:14:22.363Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/ProvableHQ/snarkOS",
+      "commits": "https://api.github.com/repos/ProvableHQ/snarkOS/commits?since=2026-06-21T00%3A14%3A22.363Z&until=2026-09-19T00%3A14%3A22.363Z&per_page=100"
+    },
+    "branch": "staging",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-18T18:43:22Z",
+    "openItems": 143
+  },
+  "nym": {
+    "repository": "nymtech/nym",
+    "checkedAt": "2026-09-19T00:14:28.675Z",
+    "since": "2026-06-21T00:14:28.675Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/nymtech/nym",
+      "commits": "https://api.github.com/repos/nymtech/nym/commits?since=2026-06-21T00%3A14%3A28.675Z&until=2026-09-19T00%3A14%3A28.675Z&per_page=100"
+    }
+  },
+  "orchid-protocol": {
+    "repository": "OrchidTechnologies/orchid",
+    "checkedAt": "2026-09-19T00:14:32.360Z",
+    "since": "2026-06-21T00:14:32.360Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/OrchidTechnologies/orchid",
+      "commits": "https://api.github.com/repos/OrchidTechnologies/orchid/commits?since=2026-06-21T00%3A14%3A32.360Z&until=2026-09-19T00%3A14%3A32.360Z&per_page=100"
+    }
+  },
+  "hopr": {
+    "repository": "hoprnet/hoprnet",
+    "checkedAt": "2026-09-19T00:14:32.424Z",
+    "since": "2026-06-21T00:14:32.424Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/hoprnet/hoprnet",
+      "commits": "https://api.github.com/repos/hoprnet/hoprnet/commits?since=2026-06-21T00%3A14%3A32.424Z&until=2026-09-19T00%3A14%3A32.424Z&per_page=100"
+    }
+  },
+  "sentinel": {
+    "repository": "sentinel-official/sentinelhub",
+    "checkedAt": "2026-09-19T00:14:37.586Z",
+    "since": "2026-06-21T00:14:37.586Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/sentinel-official/sentinelhub",
+      "commits": "https://api.github.com/repos/sentinel-official/sentinelhub/commits?since=2026-06-21T00%3A14%3A37.586Z&until=2026-09-19T00%3A14%3A37.586Z&per_page=100"
+    }
+  },
+  "aztec": {
+    "repository": "AztecProtocol/aztec-packages",
+    "checkedAt": "2026-09-19T00:13:35.186Z",
+    "since": "2026-06-21T00:13:35.186Z",
+    "complete": false,
+    "metrics": {
+      "commits90": 527,
+      "commits30": 106,
+      "authors90": 29,
+      "activeWeeks": 12,
+      "weeks": [
+        0,
+        12,
+        85,
+        35,
+        104,
+        46,
+        25,
+        37,
+        79,
+        14,
+        31,
+        37,
+        22
+      ],
+      "lastCommitAt": "2026-09-18T18:10:40.000Z",
+      "botCommits": 0,
+      "mergeCommits": 373,
+      "unidentified": 0
+    },
+    "warnings": [
+      "GitHub rate limit or access restriction",
+      "Incomplete history; counts are lower bounds and no rating is assigned.",
+      "Release information unavailable.",
+      "Merged pull request count unavailable."
+    ],
+    "sources": {
+      "repository": "https://github.com/AztecProtocol/aztec-packages",
+      "commits": "https://api.github.com/repos/AztecProtocol/aztec-packages/commits?sha=a2db7b7c2520036f52620d8ed910cc0d24287054&since=2026-06-21T00%3A13%3A35.186Z&until=2026-09-19T00%3A13%3A35.186Z&per_page=100",
+      "releases": "https://api.github.com/repos/AztecProtocol/aztec-packages/releases?per_page=100",
+      "pulls": "https://api.github.com/repos/AztecProtocol/aztec-packages/pulls?state=closed&sort=updated&direction=desc&per_page=100"
+    },
+    "branch": "next",
+    "archived": false,
+    "fork": false,
+    "pushedAt": "2026-09-18T22:55:59Z",
+    "openItems": 1158,
+    "head": "a2db7b7c2520036f52620d8ed910cc0d24287054"
+  },
+  "secret": {
+    "repository": "scrtlabs/SecretNetwork",
+    "checkedAt": "2026-09-19T00:14:37.441Z",
+    "since": "2026-06-21T00:14:37.441Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/scrtlabs/SecretNetwork",
+      "commits": "https://api.github.com/repos/scrtlabs/SecretNetwork/commits?since=2026-06-21T00%3A14%3A37.441Z&until=2026-09-19T00%3A14%3A37.441Z&per_page=100"
+    }
+  },
+  "automata": {
+    "repository": "automata-network/automata-dcap-attestation",
+    "checkedAt": "2026-09-19T00:14:42.485Z",
+    "since": "2026-06-21T00:14:42.485Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/automata-network/automata-dcap-attestation",
+      "commits": "https://api.github.com/repos/automata-network/automata-dcap-attestation/commits?since=2026-06-21T00%3A14%3A42.485Z&until=2026-09-19T00%3A14%3A42.485Z&per_page=100"
+    }
+  },
+  "panther": {
+    "repository": "pantherprotocol/panther-core",
+    "checkedAt": "2026-09-19T00:14:42.448Z",
+    "since": "2026-06-21T00:14:42.448Z",
+    "complete": false,
+    "metrics": null,
+    "warnings": [
+      "GitHub rate limit or access restriction"
+    ],
+    "sources": {
+      "repository": "https://github.com/pantherprotocol/panther-core",
+      "commits": "https://api.github.com/repos/pantherprotocol/panther-core/commits?since=2026-06-21T00%3A14%3A42.448Z&until=2026-09-19T00%3A14%3A42.448Z&per_page=100"
+    }
   }
 }

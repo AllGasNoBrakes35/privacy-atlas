@@ -1135,6 +1135,345 @@
       "error": "Source unavailable or rate limited",
       "logo": "logos/zephyr-protocol.png",
       "logoSource": "https://coin-images.coingecko.com/coins/images/30865/large/ZephyrLogo200x200.png?1696529712"
+    },
+    "beldex": {
+      "id": "beldex",
+      "name": "Beldex",
+      "marketSource": "https://www.coingecko.com/en/coins/beldex",
+      "checkedAt": "2026-09-18T23:43:32.562Z",
+      "hashingAlgorithm": "Cryptonight",
+      "platform": "binance-smart-chain",
+      "categories": [
+        "Privacy payments",
+        "Privacy infrastructure",
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://beldex.io/"
+      ],
+      "repositories": [
+        "https://github.com/Beldex-Coin/beldex"
+      ]
+    },
+    "midnight-3": {
+      "id": "midnight-3",
+      "name": "Midnight",
+      "marketSource": "https://www.coingecko.com/en/coins/midnight-3",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": "cardano",
+      "categories": [
+        "Private smart contracts"
+      ],
+      "websites": [
+        "https://midnight.network/"
+      ],
+      "repositories": [
+        "https://github.com/midnightntwrk"
+      ]
+    },
+    "railgun": {
+      "id": "railgun",
+      "name": "Railgun",
+      "marketSource": "https://www.coingecko.com/en/coins/railgun",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": "ethereum",
+      "categories": [
+        "Privacy infrastructure",
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://docs.railgun.org/wiki/learn"
+      ],
+      "repositories": [
+        "https://github.com/Railgun-Privacy/"
+      ]
+    },
+    "zama": {
+      "id": "zama",
+      "name": "Zama",
+      "marketSource": "https://www.coingecko.com/en/coins/zama",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Confidential computing",
+        "Private smart contracts",
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://www.zama.org/"
+      ],
+      "repositories": []
+    },
+    "oasis-network": {
+      "id": "oasis-network",
+      "name": "Oasis",
+      "marketSource": "https://www.coingecko.com/en/coins/oasis-network",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Confidential computing",
+        "Private smart contracts"
+      ],
+      "websites": [
+        "https://oasis.net/"
+      ],
+      "repositories": []
+    },
+    "threshold-network-token": {
+      "id": "threshold-network-token",
+      "name": "Threshold Network",
+      "marketSource": "https://www.coingecko.com/en/coins/threshold-network-token",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://www.threshold.network/"
+      ],
+      "repositories": []
+    },
+    "dusk-network": {
+      "id": "dusk-network",
+      "name": "DUSK",
+      "marketSource": "https://www.coingecko.com/en/coins/dusk-network",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Private smart contracts",
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://dusk.network/"
+      ],
+      "repositories": []
+    },
+    "aztec": {
+      "id": "aztec",
+      "name": "Aztec",
+      "marketSource": "https://www.coingecko.com/en/coins/aztec",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Private smart contracts",
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://aztec.network/"
+      ],
+      "repositories": []
+    },
+    "status": {
+      "id": "status",
+      "name": "Status",
+      "marketSource": "https://www.coingecko.com/en/coins/status",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://status.app/"
+      ],
+      "repositories": []
+    },
+    "pha": {
+      "id": "pha",
+      "name": "PHALA",
+      "marketSource": "https://www.coingecko.com/en/coins/pha",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Confidential computing"
+      ],
+      "websites": [
+        "https://phala.com/"
+      ],
+      "repositories": []
+    },
+    "iexec-rlc": {
+      "id": "iexec-rlc",
+      "name": "iExec RLC",
+      "marketSource": "https://www.coingecko.com/en/coins/iexec-rlc",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Confidential computing",
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://iex.ec/"
+      ],
+      "repositories": []
+    },
+    "aleo": {
+      "id": "aleo",
+      "name": "ALEO",
+      "marketSource": "https://www.coingecko.com/en/coins/aleo",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Private smart contracts",
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://aleo.org/"
+      ],
+      "repositories": []
+    },
+    "nym": {
+      "id": "nym",
+      "name": "Nym",
+      "marketSource": "https://www.coingecko.com/en/coins/nym",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy infrastructure",
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://nym.com/"
+      ],
+      "repositories": []
+    },
+    "orchid-protocol": {
+      "id": "orchid-protocol",
+      "name": "Orchid Protocol",
+      "marketSource": "https://www.coingecko.com/en/coins/orchid-protocol",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy infrastructure",
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://www.orchid.com/"
+      ],
+      "repositories": []
+    },
+    "hopr": {
+      "id": "hopr",
+      "name": "HOPR",
+      "marketSource": "https://www.coingecko.com/en/coins/hopr",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://hoprnet.org/"
+      ],
+      "repositories": []
+    },
+    "secret": {
+      "id": "secret",
+      "name": "Secret",
+      "marketSource": "https://www.coingecko.com/en/coins/secret",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Confidential computing",
+        "Private smart contracts"
+      ],
+      "websites": [
+        "https://scrt.network/"
+      ],
+      "repositories": []
+    },
+    "session-token": {
+      "id": "session-token",
+      "name": "Session Token",
+      "marketSource": "https://www.coingecko.com/en/coins/session-token",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy-focused applications",
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://token.getsession.org/"
+      ],
+      "repositories": []
+    },
+    "sentinel": {
+      "id": "sentinel",
+      "name": "Sentinel",
+      "marketSource": "https://www.coingecko.com/en/coins/sentinel",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy infrastructure",
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://sentinel.co/"
+      ],
+      "repositories": []
+    },
+    "panther": {
+      "id": "panther",
+      "name": "Panther Protocol",
+      "marketSource": "https://www.coingecko.com/en/coins/panther",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy infrastructure",
+        "Privacy-focused applications"
+      ],
+      "websites": [
+        "https://docs.pantherprotocol.io/docs"
+      ],
+      "repositories": []
+    },
+    "lit-protocol": {
+      "id": "lit-protocol",
+      "name": "Lit Protocol",
+      "marketSource": "https://www.coingecko.com/en/coins/lit-protocol",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Privacy infrastructure",
+        "Confidential computing"
+      ],
+      "websites": [
+        "https://www.litprotocol.com/"
+      ],
+      "repositories": []
+    },
+    "automata": {
+      "id": "automata",
+      "name": "Automata",
+      "marketSource": "https://www.coingecko.com/en/coins/automata",
+      "checkedAt": "2026-09-18T23:43:32.563Z",
+      "hashingAlgorithm": null,
+      "platform": null,
+      "categories": [
+        "Confidential computing",
+        "Privacy infrastructure"
+      ],
+      "websites": [
+        "https://www.ata.network/"
+      ],
+      "repositories": []
     }
   },
   "checkedAt": "2026-09-12T00:01:41.201667+00:00"

@@ -1,6 +1,13 @@
+import {ecosystem} from './ecosystem.js';
 // Editorial assessments, not protocol-issued metrics or security audits.
 const rating=(score,reason,sources)=>({score,reason,sources,reviewed:'2026-09-11'});
+const documented=(score,mode,reason,sources)=>({score,mode,reason,sources,reviewed:'2026-09-19',basis:'Provisional · project documentation'});
 export const privacyScores={
+ ryo:documented(8,'Default','RingCT and one-time addresses provide default sender, recipient and amount protections. Decoy selection, output merging and network metadata remain risks. The planned Halo 2 migration earns no credit until verified live.',['https://ryo-currency.com/']),
+ nerva:documented(8,'Default','The documented CryptoNote design hides sender, recipient and amount by default. Decoy and endpoint risks remain; this is not an independent implementation audit. Planned HF14 privacy improvements are excluded.',['https://nerva.one/']),
+ ycash:documented(7,'Optional','Native Ycash supports shielded transfers concealing sender, recipient and amount. Protection depends on using the shielded path; public transfers and shielding boundaries can expose context. Wrapped Ycash is excluded. Limited independent validation keeps this provisional.',['https://y.cash/shielded-transactions/','https://y.cash/']),
+ particl:documented(7,'Optional','Private-mode native PART uses RingCT and stealth addresses; confidential amounts also feature in Blind mode. Public, Blind and Private modes provide different protections. Mode transitions, decoys and endpoint metadata remain relevant. Marketplace and swap privacy are outside this score.',['https://particl.io/coin']),
+ 'epic-cash':documented(6,'Default','Mimblewimble conceals amounts and avoids conventional stored ledger addresses. Cut-through and aggregation do not by themselves establish complete transaction-graph privacy against observers. This provisional rating covers native payments, not the project’s absolute-privacy claims.',['https://epic.tech/','https://docs.grin.mw/']),
  monero:rating(9,'Mandatory sender, recipient and amount protections provide strong everyday transaction privacy. Ring-based decoys and network or user metadata still leave analysis risks.',['https://www.getmonero.org/get-started/faq/']),
  zcash:rating(8,'Shielded-to-shielded transfers conceal transaction details with zero-knowledge proofs. Transparent transfers and movement between pools make privacy dependent on the chosen path.',['https://z.cash/learn/what-is-the-difference-between-shielded-and-transparent-zcash/']),
  zano:rating(9,'Amounts, addresses and asset types are hidden by default. This is strong protocol coverage, but does not remove wallet, network or implementation risks.',['https://docs.zano.org/']),
@@ -19,4 +26,4 @@ export const privacyScores={
 };
 privacyScores.firo=privacyScores.zcoin;
 export const unrated={score:null,reason:'Insufficient verified protocol evidence for a defensible numerical rating. This is not a zero score and does not imply that the asset has no privacy.',sources:[],reviewed:null};
-export const privacyRating=id=>privacyScores[id]??unrated;
+export const privacyRating=id=>privacyScores[id]??(ecosystem[id]?{score:null,reason:'Included for the documented privacy use case. This review does not assign a numerical score to its native-token transfer privacy; application, compute and network protections are assessed separately below.',sources:ecosystem[id].sources,reviewed:ecosystem[id].reviewed}:unrated);

@@ -19,10 +19,10 @@ export function summarizeCommits(commits,checkedAt){
  return {commits90,commits30,authors90:authors.size,activeWeeks:weeks.filter(n=>n>0).length,weeks:weeks.reverse(),lastCommitAt,botCommits,mergeCommits,unidentified};
 }
 export function rateDevelopment(evidence,now=Date.now()){
- if(!evidence||!evidence.complete||!evidence.metrics)return {score:null,label:'Not rated',reason:'A complete 90-day commit history is needed to rate activity.'};
+ if(!evidence||!evidence.complete||!evidence.metrics)return {score:null,label:'N/A',reason:'A complete 90-day commit history is needed to rate activity.'};
  if(now-date(evidence.checkedAt)>30*DAY)return {score:null,label:'Needs refresh',reason:'The saved observation is over 30 days old. Refresh to calculate a current rating.'};
  const m=evidence.metrics;
- if(m.unidentified)return {score:null,label:'Not rated',reason:'Some commit authors could not be identified.'};
+ if(m.unidentified)return {score:null,label:'N/A',reason:'Some commit authors could not be identified.'};
  const last=m.lastCommitAt?Math.max(0,(date(evidence.checkedAt)-date(m.lastCommitAt))/DAY):Infinity;
  const components=[
   {label:'Active contributors',points:3.5*Math.min(m.authors90/10,1),max:3.5},
