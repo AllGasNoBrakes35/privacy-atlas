@@ -1,3 +1,4 @@
+import {privacyModel} from './privacy-models.js';
 import {pageCapacity} from './pagination.js';
 import {rolesFor,supplementalIds,coverageScope} from './ecosystem.js';
 import {renderResearch} from './research.js';
@@ -24,7 +25,7 @@ const compact=n=>positive(n)?'$'+new Intl.NumberFormat('en-US',{notation:'compac
 const num=n=>positive(n)?new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(n):'Unreported';
 const percent=n=>valid(n)?`${n>=0?'+':''}${n.toFixed(2)}%`:'—';
 const when=t=>t&&Number.isFinite(new Date(t).getTime())?new Date(t).toLocaleString(undefined,{timeZone:'UTC'})+' UTC':'Unknown';
-const profile=c=>profiles[c.id]??(c.symbol.toLowerCase()==='xtm'?profiles.minotari:unknown);
+const profile=c=>({...profiles[c.id]??unknown,mode:privacyModel(c.id).mode});
 const note=t=>{$('notice').textContent=t;};
 function node(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;}
 function tag(text){return node('span',text,'tag');}
@@ -48,7 +49,7 @@ function render(){
   quote.title=`Provider quote: ${when(c.last_updated)}`;
   if(!valid(c.current_price))quote.append(node('small','Not available','muted'));else if(!valid(age)||age>3600000)quote.append(node('small',' · stale','down'));
   const change=node('td',percent(c.price_change_percentage_24h),c.price_change_percentage_24h<0?'down':'up');
-  const privacyCell=node('td');privacyCell.append(tag(rating.mode??profile(c).mode));
+  const privacyCell=node('td');privacyCell.append(tag(profile(c).mode));
   const cap=node('td',compact(c.market_cap)),volume=node('td',compact(c.total_volume)),score=node('td',rating.score===null?'N/A':`${rating.score} / 10`);
   score.title=rating.score===null?rating.reason:`${rating.basis??'Editorial assessment'} · ${rating.reviewed}. ${rating.reason}`;
   for(const [cell,column] of [[quote,'price'],[change,'change'],[cap,'cap'],[volume,'volume'],[privacyCell,'model'],[score,'score']])cell.dataset.column=column;
@@ -76,6 +77,11 @@ function renderDetail(){
  $('assetName').textContent=`${c.name} / ${c.symbol.toUpperCase()}`;$('marketLink').href=`https://www.coingecko.com/en/coins/${encodeURIComponent(c.id)}`;
  $('protocol').textContent=p.protocol;$('goals').textContent=p.goal;$('risks').textContent=p.risks;$('economics').textContent=p.economics;
  renderResearch(c);
+ const model=privacyModel(c.id);
+ $('modelSummary').textContent=`${model.mode} · ${model.reason}`;
+ $('modelEvidenceDate').textContent=`${model.basis}${model.reviewed?' · Checked '+model.reviewed:''}`;
+ $('modelSources').replaceChildren();
+ for(const url of model.sources){const a=node('a',`Model evidence · ${new URL(url).hostname} ↗`);a.href=url;a.target='_blank';a.rel='noopener noreferrer';$('modelSources').append(a,node('br'));}
  $('reviewed').textContent=p.reviewed?`Editorial review: ${p.reviewed}. See source status for subsequent changes.`:'Editorial review pending.';
  $('sources').replaceChildren();p.sources.forEach((url,i)=>{const a=node('a',`Project source ${i+1} · ${new URL(url).hostname} ↗`);a.href=url;a.target='_blank';a.rel='noopener';$('sources').append(a);});
  const finance=[['Provider quote time',when(c.last_updated)],['Price',usd(c.current_price)],['Market cap',compact(c.market_cap)],['Vendor FDV',compact(c.fully_diluted_valuation)],['24h reported volume',compact(c.total_volume)],['Volume / market cap',positive(c.market_cap)&&valid(c.total_volume)?(c.total_volume/c.market_cap*100).toFixed(2)+'%':'—'],['7d / 30d return',`${percent(c.price_change_percentage_7d_in_currency)} / ${percent(c.price_change_percentage_30d_in_currency)}`],['Circulating supply',num(c.circulating_supply)],['Total supply',num(c.total_supply)],['Vendor maximum supply',num(c.max_supply)],['Circulating / max',positive(c.max_supply)&&positive(c.circulating_supply)?(c.circulating_supply/c.max_supply*100).toFixed(2)+'%':'Not established'],['Below all-time high',valid(c.ath_change_percentage)?percent(c.ath_change_percentage):'—']];

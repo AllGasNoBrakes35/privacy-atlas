@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {pageCapacity} from '../dist/pagination.js';
 import {rolesFor} from '../dist/ecosystem.js';
+import {privacyModel} from '../dist/privacy-models.js';
 import {profiles,unknown} from '../dist/profiles.js';
 test('all viewport sizes retain fixed groups of 25',()=>{
  for(const height of [0,NaN,320,500,600,720,768,800,900,1000,1440])assert.equal(pageCapacity(height),25);
@@ -14,7 +15,7 @@ test('actual market renderer exposes every asset through reachable page controls
  class El{constructor(text){this.children=[];this.dataset={};this.classList={add(){}};this.value='';this.textContent=text??'';}append(...c){this.children.push(...c)}replaceChildren(){this.children=[]}setAttribute(){}}
  const targets=Object.fromEntries([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new El()]));targets.sort.value='name';
  const coins=JSON.parse(fs.readFileSync(new URL('../dist/data/snapshot.json',import.meta.url))).coins;
- const ctx=vm.createContext({data:{coins},selected:null,mode:'Saved',page:0,pageSize:pageCapacity(720),$:id=>targets[id],node:(tag,text)=>new El(text),logo:()=>new El(),tag:()=>new El(),sum:()=>1,compact:String,when:String,usd:String,percent:String,valid:Number.isFinite,rolesFor,profile:c=>profiles[c.id]??unknown,privacyRating:()=>({score:null}),developmentRating:()=>({score:null,label:'N/A'}),applyMetric(){},renderDetail(){},Date});
+ const ctx=vm.createContext({data:{coins},selected:null,mode:'Saved',page:0,pageSize:pageCapacity(720),$:id=>targets[id],node:(tag,text)=>new El(text),logo:()=>new El(),tag:text=>new El(text),sum:()=>1,compact:String,when:String,usd:String,percent:String,valid:Number.isFinite,rolesFor,profile:c=>({...profiles[c.id]??unknown,mode:privacyModel(c.id).mode}),privacyRating:()=>({score:null}),developmentRating:()=>({score:null,label:'N/A'}),applyMetric(){},renderDetail(){},Date});
  vm.runInContext(source.slice(source.indexOf('function render(){'),source.indexOf('function select(')),ctx);
  const names=[];
  for(let page=0;page<Math.ceil(coins.length/ctx.pageSize);page++){
@@ -28,4 +29,10 @@ test('actual market renderer exposes every asset through reachable page controls
  targets.rangePages.children[1].onclick();assert.equal(ctx.page,1);assert.equal(targets.rows.children.length,25);
  targets.search.value='zcash';ctx.render();assert.equal(ctx.page,0);assert.equal(targets.rows.children.length,1);
  targets.search.value='';ctx.render();assert.equal(targets.rows.children.length,25);assert.equal(targets.nextPage.disabled,false);
+ for(const mode of ['Optional','Default','Planned','Unreviewed']){
+  targets.privacy.value=mode;ctx.page=0;ctx.render();
+  const expected=coins.filter(c=>privacyModel(c.id).mode===mode).sort((a,b)=>a.name.localeCompare(b.name)).slice(0,25);
+  assert.deepEqual(targets.rows.children.map(r=>r.children[0].children[0].children[1].children[0].textContent),expected.map(c=>c.name));
+  for(const row of targets.rows.children)assert.equal(row.children[6].children[0].textContent,mode);
+ }
 });
