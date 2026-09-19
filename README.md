@@ -136,3 +136,8 @@ September 19 evidence expansion: five provisional native-transfer privacy rating
 September 19 category review: assigned documented roles to 19 previously unclassified assets. Categories describe project focus, not confirmed feature deployment or transfer confidentiality. Fourteen assets remain unclassified where source attribution or purpose is unresolved. Source links and limitations remain in each asset’s research.
 
 Privacy-model review (September 19): eight additional models use wallet instructions, core repository documentation, cryptography documentation and a dated roadmap. Model labels are centralized in `dist/privacy-models.js` for table display, filtering and detail evidence. Visible unreviewed models fall from 35 to 27; five previously scored models also now filter consistently. Planned privacy is explicitly separate from live protection, and no numerical scores are changed.
+
+
+## License
+
+Privacy Atlas is released under [GNU AGPL v3 only](LICENSE) (SPDX: `AGPL-3.0-only`) beginning with the September 19, 2026 licensing-change commit. See [licensing and legacy MIT notices](LICENSING.md). Earlier MIT releases and third-party license notices remain valid.
