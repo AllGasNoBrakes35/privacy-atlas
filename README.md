@@ -1,5 +1,7 @@
 # Privacy Atlas
 
+**GitHub repository:** [johnnysessa/privacy-atlas](https://github.com/johnnysessa/privacy-atlas)
+
 **Public website:** [Open Privacy Atlas](https://privacy-atlas-john.johnnytsunami14.chatgpt.site)
 
 The website is publicly accessible. Hosting access is managed separately from the immutable Ootle testnet record.
