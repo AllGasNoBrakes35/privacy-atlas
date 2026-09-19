@@ -22,7 +22,7 @@ await mkdir(file('contracts/artifacts/'),{recursive:true});
 await writeFile(file('contracts/artifacts/research-snapshot.json'),bytes);
 await copyFile(file('contracts/target/wasm32-unknown-unknown/release/privacy_atlas_snapshot.wasm'),file('contracts/artifacts/privacy_atlas_snapshot.wasm'));
 const sha256=hash(bytes);
-const record={status:'prepared-not-deployed',network:'esmeralda',walletVersionChecked:'0.40.0',templateLibraryVersion:'0.31.1',templateAddress:null,componentAddress:null,transactionId:null,wasmSha256:hash(wasm),wasmBytes:wasm.length,researchSha256:sha256,constructor:{function:'new',arguments:[sha256,'https://raw.githubusercontent.com/AllGasNoBrakes35/privacy-atlas/main/contracts/artifacts/research-snapshot.json']}};
+const record={status:'prepared-not-deployed',network:'esmeralda',walletVersionChecked:'0.40.0',templateLibraryVersion:'0.31.1',templateAddress:null,componentAddress:null,transactionId:null,wasmSha256:hash(wasm),wasmBytes:wasm.length,researchSha256:sha256,constructor:{function:'new',arguments:[sha256,'https://raw.githubusercontent.com/johnnysessa/privacy-atlas/main/contracts/artifacts/research-snapshot.json']}};
 await writeFile(file('contracts/artifacts/deployment.json'),JSON.stringify(record,null,2)+'\n');
 await writeFile(file('contracts/artifacts/SHA256SUMS'),`${hash(wasm)}  privacy_atlas_snapshot.wasm\n${sha256}  research-snapshot.json\n`);
 console.log(`Prepared ${wasm.length}-byte template and ${snapshot.assets.length}-asset research snapshot. NOT deployed.`);
